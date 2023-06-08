@@ -1,0 +1,167 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_ajanta_qaoff/code/build/cpm(swbuildm_rel_ajanta_qaoff_rel_ajanta)
+!                 Nov  1 2019 19:16:13
+!                 YC.16.10.0002
+!                 721
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YC.16.01.0002
+! Active Boot ROM:     Primary
+! 
+! 
+!  Status and Counters - Module Information
+! 
+!   Chassis: 2540-48G-PoE+-4SFP+  JL357A         Serial Number:   TW06JYL0QB
+! 
+! 
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+!  49      SFP+SR      J9150A       PRO8C6819130       1990-4065 
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    21165429 11/02/19 YC.16.10.0002        
+! Secondary Image  :    21165429 11/02/19 YC.16.10.0002       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YC.16.01.0002
+! Secondary Boot ROM Version : YC.16.01.0002
+! 
+! Default Boot Image   : Primary
+! Default Boot ROM     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 4thfl-226-HP2540                                
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YC.16.10.0002        Base MAC Addr      : 883a30-43ff40    
+!   ROM Version        : YC.16.01.0002        Serial Number      : TW06JYL0QB  
+! 
+! 
+! 
+
+Running configuration:
+
+; JL357A Configuration Editor; Created on release #YC.16.10.0002
+; Ver #14:27.44.38.04.99.03.b3.b8.ef.74.61.fc.68.f3.8c.fc.e3.ff.37.2f:33
+
+hostname "4thfl-226-HP2540"
+module 1 type jl357a
+ip default-gateway 10.1.10.1
+interface 1
+   name "Wendy_Voip_4thFl_Dell_SW1_24"
+   exit
+interface 2
+   name "Wendy_Voip_4thFl_Dell_SW2_24"
+   exit
+interface 3
+   name "Wendy_Voip_4thFl_Dell_SW3_24"
+   exit
+interface 15
+   name "Wendy_4thFl_AP1"
+   exit
+interface 19
+   name "Wendy_4thFl_AP2"
+   exit
+interface 20
+   name "Wendy_Data_4thFl_NetGear_SW_1"
+   exit
+interface 23
+   name "Wendy_4thFl_AP3"
+   exit
+interface 49
+   name "Cisco_226_Distribution_T4"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-24,44-48
+   untagged 25-43,49-52
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 5
+   name "VLAN5"
+   tagged 49
+   no ip address
+   exit
+vlan 10
+   name "Network_Management"
+   tagged 49
+   ip address 10.1.10.12 255.255.255.0
+   exit
+vlan 147
+   name "VLAN147"
+   untagged 44-48
+   tagged 49
+   no ip address
+   exit
+vlan 431
+   name "VLAN431"
+   tagged 49
+   no ip address
+   exit
+vlan 441
+   name "VLAN441"
+   tagged 49
+   no ip address
+   exit
+vlan 451
+   name "VLAN451"
+   tagged 49
+   no ip address
+   exit
+vlan 461
+   name "VLAN461"
+   tagged 49
+   no ip address
+   exit
+vlan 471
+   name "VLAN471"
+   tagged 49
+   no ip address
+   exit
+vlan 481
+   name "VLAN481"
+   tagged 49
+   no ip address
+   exit
+vlan 555
+   name "VLAN555"
+   untagged 1-12
+   tagged 49
+   no ip address
+   exit
+vlan 556
+   name "VLAN556"
+   untagged 13-24
+   tagged 49
+   no ip address
+   exit
+vlan 998
+   name "VLAN998"
+   tagged 49
+   no ip address
+   exit
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+

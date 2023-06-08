@@ -1,0 +1,101 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_ukiah_qaoff/code/build/lakes(swbuildm_rel_ukiah_qaoff_rel_ukiah)
+!                 Jul 21 2017 13:28:25
+!                 YA.16.04.0008
+!                 485
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YA.15.19
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+!  49      1000SX      J4858C       OEM0900030D        1990-3657 
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    14579982 07/21/17 YA.16.04.0008        
+! Secondary Image  :    14579982 07/21/17 YA.16.04.0008       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YA.15.19
+! 
+! Default Boot Image   : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : Wedge_01                                        
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.16.04.0008        Base MAC Addr      : 20677c-2414c0
+!   ROM Version        : YA.15.19             Serial Number      : CN81FP329C  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.16.04.0008
+; Ver #10:19.02.13.98.82.34.61.18.28.f3.84.9c.63.ff.37.27:00
+hostname "Wedge_01"
+trunk 49 trk1 lacp
+ip default-gateway 10.57.5.1
+ip dns server-address priority 1 8.8.8.8
+ip dns server-address priority 2 8.8.4.4
+interface 49
+   name "trunk to core"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-48
+   untagged 50-52,Trk1
+   ip address dhcp-bootp
+   exit
+vlan 5
+   name "management"
+   tagged Trk1
+   ip address 10.57.5.13 255.255.255.0
+   exit
+vlan 7
+   name "voip-lan"
+   untagged 25-46
+   tagged Trk1
+   no ip address
+   exit
+vlan 24
+   name "client24-lan"
+   untagged 1-24
+   tagged Trk1
+   no ip address
+   exit
+vlan 30
+   name "accounting"
+   tagged Trk1
+   no ip address
+   exit
+vlan 100
+   name "oldwifi-lan"
+   untagged 47-48
+   tagged Trk1
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+no tftp server
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+

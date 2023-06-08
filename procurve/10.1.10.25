@@ -1,0 +1,124 @@
+! Image stamp:    /ws/swbuildm/YA_rel_knoxville_qaoff/code/build/lakes(swbuildm_YA_rel_knoxville_qaoff_rel_knoxville)
+!                 Mar  8 2013 15:37:47
+!                 YA.15.12.0007
+!                 1173
+! Boot Image:     Primary
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :     8533579 03/08/13 YA.15.12.0007        
+! Secondary Image  :     8533579 03/08/13 YA.15.12.0007       
+! 
+! Boot ROM Version : YA.15.12
+! Default Boot     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 221-2f-2                                        
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.12.0007        Base MAC Addr      : 40a8f0-8ec680
+!   ROM Version        : YA.15.12             Serial Number      : CN44FP315P  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.15.12.0007
+; Ver #04:01.ff.37.27:ea
+hostname "221-2f-2"
+trunk 48 trk1 lacp
+no telnet-server
+ip default-gateway 10.1.10.1
+interface 32
+   name "2FL_Zoom"
+   exit
+snmp-server community "public" unrestricted
+snmp-server community "AmV$tUd10s" operator
+snmp-server host 10.1.11.162 community "AmV$tUd10s"
+snmp-server trap-source 10.1.11.17
+snmpv3 enable
+snmpv3 restricted-access
+snmpv3 user "admin"
+snmpv3 user "initial"
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-47
+   untagged 49-52,Trk1
+   ip address dhcp-bootp
+   exit
+vlan 10
+   name "Network_Management"
+   tagged Trk1
+   ip address 10.1.10.25 255.255.255.0
+   exit
+vlan 102
+   name "VLAN102"
+   tagged Trk1
+   no ip address
+   exit
+vlan 147
+   name "VLAN147"
+   tagged Trk1
+   no ip address
+   exit
+vlan 212
+   name "VOIP"
+   tagged Trk1
+   no ip address
+   exit
+vlan 411
+   name "phones"
+   untagged 1-19,21-22,43
+   tagged 20,Trk1
+   no ip address
+   voice
+   exit
+vlan 481
+   name "internet"
+   untagged 20,23-40
+   tagged Trk1
+   no ip address
+   exit
+vlan 555
+   name "VLAN555"
+   tagged Trk1
+   no ip address
+   exit
+vlan 556
+   name "VLAN556"
+   tagged Trk1
+   no ip address
+   exit
+vlan 666
+   name "VLAN666"
+   no ip address
+   exit
+vlan 998
+   name "11net"
+   untagged 41-42,44-47
+   tagged Trk1
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+no tftp server
+no dhcp config-file-update
+password manager
+password operator
+

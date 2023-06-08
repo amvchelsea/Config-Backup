@@ -1,0 +1,118 @@
+! Image stamp:    /ws/swbuildm/YA_rel_knoxville_qaoff/code/build/lakes(swbuildm_YA_rel_knoxville_qaoff_rel_knoxville)
+!                 Mar 12 2014 08:30:18
+!                 YA.15.12.0015
+!                 1013
+! Boot Image:     Primary
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :     8538112 03/12/14 YA.15.12.0015        
+! Secondary Image  :     8538112 03/12/14 YA.15.12.0015       
+! 
+! Boot ROM Version : YA.15.12
+! Default Boot     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : HP-2530-48G-PoEP                                
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.12.0015        Base MAC Addr      : 70106f-d22600
+!   ROM Version        : YA.15.12             Serial Number      : CN61FP326G  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.15.12.0015
+; Ver #05:08.41.ff.37.27:a3
+hostname "HP-2530-48G-PoEP"
+trunk 48 trk1 lacp
+ip default-gateway 10.1.10.1
+interface 28
+   name "Studio_B_Video_Phone"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-47
+   untagged 49-52,Trk1
+   ip address dhcp-bootp
+   exit
+vlan 10
+   name "Network_Management"
+   tagged Trk1
+   ip address 10.1.10.21 255.255.255.0
+   exit
+vlan 40
+   name "VLAN40"
+   tagged Trk1
+   no ip address
+   exit
+vlan 42
+   name "VLAN42"
+   tagged Trk1
+   no ip address
+   exit
+vlan 147
+   name "VLAN147"
+   untagged 37-47
+   tagged Trk1
+   no ip address
+   exit
+vlan 212
+   name "VLAN212"
+   untagged 28
+   tagged Trk1
+   no ip address
+   exit
+vlan 411
+   name "VLAN411"
+   untagged 1
+   tagged Trk1
+   no ip address
+   exit
+vlan 555
+   name "VLAN555"
+   untagged 5-27,29-30
+   tagged Trk1
+   no ip address
+   exit
+vlan 556
+   name "VLAN556"
+   untagged 31-36
+   tagged Trk1
+   no ip address
+   exit
+vlan 666
+   name "VLAN666"
+   untagged 2-4
+   tagged Trk1
+   no ip address
+   exit
+vlan 998
+   name "VLAN998"
+   tagged Trk1
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+no tftp server
+no dhcp config-file-update
+password manager
+

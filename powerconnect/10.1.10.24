@@ -1,0 +1,294 @@
+! 
+! Image Descriptions 
+! 
+!  image1 : default image 
+!  image2 :  
+! 
+! 
+!  Images currently available on Flash 
+! 
+! --------------------------------------------------------------------
+!  unit      image1      image2     current-active        next-active 
+! -------------------------------------------------------------------- 
+! 
+!     1    3.3.16.1    3.3.1.10             image1             image1 
+! System Description: Dell Ethernet Switch
+! 1       Fan 4          OK
+! 1       Fan 5          OK
+
+!Current Configuration:
+!System Description "PowerConnect 6224P, 3.3.16.1, VxWorks 6.5"
+!System Software Version 3.3.16.1
+!Cut-through mode is configured as disabled
+!
+configure
+vlan database
+vlan 10,40,147,212,481
+exit
+hostname "NatENG_Rack1_Dell_SW1"
+stack
+member 1 4
+exit
+ip address 10.1.10.24 255.255.255.0
+ip default-gateway 10.1.10.1
+ip address vlan 10
+interface vlan 10
+name "Network_Management"
+exit
+interface vlan 40
+name "Security_Camerasexit"
+                     
+exit
+interface vlan 147
+name "Security_Cameras"
+exit
+interface vlan 212
+name "Voip"
+exit
+interface vlan 481
+name "Client06_Internet"
+exit
+username "admin" password e7a82566353ef32612be7682e615d0bb level 15 encrypted
+aaa authentication login "defaultList" local
+aaa authentication enable "enableList" enable
+voice vlan
+line telnet
+login authentication defaultList
+exit
+line ssh
+login authentication defaultList
+exit
+ip ssh server
+                     
+!
+interface ethernet 1/g1
+description "Security_Cameras"
+switchport access vlan 147
+lldp med
+exit
+!
+interface ethernet 1/g2
+description "Security_Cameras"
+switchport access vlan 147
+lldp med
+exit
+!
+interface ethernet 1/g3
+description "Security_Cameras"
+switchport access vlan 147
+lldp med
+exit
+!
+interface ethernet 1/g4
+description "Security_Cameras"
+                     
+switchport access vlan 147
+lldp med
+exit
+!
+interface ethernet 1/g5
+description "Security_Cameras"
+switchport access vlan 147
+lldp med
+exit
+!
+interface ethernet 1/g6
+description "Security_Cameras"
+switchport access vlan 147
+lldp med
+exit
+!
+interface ethernet 1/g7
+description "Security_Cameras"
+switchport access vlan 147
+lldp med
+exit
+                     
+!
+interface ethernet 1/g8
+description "Security_Cameras"
+switchport access vlan 147
+lldp med
+exit
+!
+interface ethernet 1/g9
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g10
+switchport voice detect auto
+description "Phone_PC"
+                     
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g11
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g12
+switchport voice detect auto
+                     
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g13
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g14
+                     
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g15
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+                     
+interface ethernet 1/g16
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g17
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+                     
+!
+interface ethernet 1/g18
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g19
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+                     
+exit
+!
+interface ethernet 1/g20
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g21
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+                     
+voice vlan 212
+exit
+!
+interface ethernet 1/g22
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g23
+switchport voice detect auto
+description "Phone_PC"
+switchport mode general
+switchport general pvid 481
+switchport general allowed vlan add 481
+switchport general allowed vlan remove 1
+                     
+lldp med
+voice vlan 212
+exit
+!
+interface ethernet 1/g24
+description "Cisco_Basement_Distribution_43"
+switchport mode trunk
+switchport trunk allowed vlan add 10,40,147,212,481
+exit
+snmp-server community AmV$tUd10s ro
+enable password 6a170d532797e572d445973579073bd0 encrypted
+exit

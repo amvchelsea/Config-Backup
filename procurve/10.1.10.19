@@ -1,0 +1,136 @@
+! Image stamp:    /ws/swbuildm/YA_rel_knoxville_qaoff/code/build/lakes(swbuildm_YA_rel_knoxville_qaoff_rel_knoxville)
+!                 Mar 12 2014 08:30:18
+!                 YA.15.12.0015
+!                 1013
+! Boot Image:     Primary
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :     8538112 03/12/14 YA.15.12.0015        
+! Secondary Image  :     8538112 03/12/14 YA.15.12.0015       
+! 
+! Boot ROM Version : YA.15.12
+! Default Boot     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 226-Mezz-Switch                                 
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.12.0015        Base MAC Addr      : ecb1d7-e53240
+!   ROM Version        : YA.15.12             Serial Number      : CN4BFP358D  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.15.12.0015
+; Ver #05:08.41.ff.37.27:a3
+hostname "226-Mezz-Switch"
+no telnet-server
+ip default-gateway 10.1.10.1
+interface 1
+   name "WiFi_StudioCEntrance_AP7C21.0E30.7D1C"
+   exit
+interface 2
+   name "WiFi_StudioD_AP7C21.0E30.7DA4"
+   exit
+interface 3
+   name "WiFi_StudioCAudio_AP6C31.0E67.E8FE"
+   exit
+interface 5
+   name "DISABLEADTRANHANDOFF"
+   exit
+interface 6
+   name "ADTRAN-HANDOFF"
+   exit
+interface 28
+   name "D_Green_Top_Left_Blue"
+   exit
+interface 47
+   name "PHONE_PC"
+   exit
+interface 48
+   name "Cisco_226_Distribution_G31"
+   exit
+snmp-server community "AmV$tUd10s" operator
+snmp-server host 10.1.11.162 community "AmV$tUd10s"
+snmp-server trap-source 10.1.11.121
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-47
+   untagged 48-52
+   ip address dhcp-bootp
+   exit
+vlan 10
+   name "Network_Management"
+   tagged 48
+   ip address 10.1.10.19 255.255.255.0
+   exit
+vlan 24
+   name "VLAN24"
+   untagged 7-14
+   tagged 48
+   ip address 10.221.25.249 255.255.252.0
+   exit
+vlan 212
+   name "VOIP"
+   tagged 29-48
+   no ip address
+   voice
+   exit
+vlan 411
+   name "old_wifi"
+   untagged 17-28,47
+   tagged 48
+   no ip address
+   exit
+vlan 451
+   name "VLAN451"
+   untagged 15-16
+   tagged 48
+   no ip address
+   exit
+vlan 481
+   name "client06"
+   untagged 29-46
+   tagged 48
+   no ip address
+   exit
+vlan 807
+   name "AIRESPRING20MB"
+   untagged 5-6
+   tagged 48
+   no ip address
+   exit
+vlan 811
+   name "VLAN811"
+   tagged 48
+   no ip address
+   exit
+vlan 998
+   name "VLAN998"
+   untagged 1-4
+   tagged 48
+   ip address 10.1.11.121 255.255.255.0
+   exit
+no tftp server
+no dhcp config-file-update
+password manager
+

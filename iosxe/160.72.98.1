@@ -1,0 +1,596 @@
+! Cisco IOS XE Software, Version 16.06.04
+! 
+! Image: Software: X86_64_LINUX_IOSD-UNIVERSALK9-M, 16.6.4, RELEASE SOFTWARE (fc3)
+! Image: Compiled: Sun 08-Jul-18 04:32 by mcpre
+! Image: bootflash:/asr1001x-universalk9.16.06.04.SPA.bin
+! Chassis type: ASR1001-X
+! Memory: main 3862176K/6147K
+! Processor ID: FXS2334Q08Q
+! CPU: 1NG
+! Memory: nvram 32768K
+! 
+! VTP: show vtp status
+! 
+! NAME: "Chassis", DESCR: "Cisco ASR1001-X Chassis"
+! PID: ASR1001-X         , VID: V04  , SN: FXS2334Q08Q
+! 
+! NAME: "Power Supply Module 0", DESCR: "Cisco ASR1001-X AC Power Supply"
+! PID: ASR1001-X-PWR-AC  , VID: V02  , SN: LIT232845J5
+! 
+! NAME: "Power Supply Module 1", DESCR: "Cisco ASR1001-X AC Power Supply"
+! PID: ASR1001-X-PWR-AC  , VID: V02  , SN: LIT232845GP
+! 
+! NAME: "Fan Tray", DESCR: "Cisco ASR1001-X Fan Tray"
+! PID: ASR1001-X-FANTRAY , VID:      , SN:            
+! 
+! NAME: "module 0", DESCR: "Cisco ASR1001-X SPA Interface Processor"
+! PID: ASR1001-X         , VID:      , SN:            
+! 
+! NAME: "SPA subslot 0/0", DESCR: "Built-in GE SPA with 2 port 10G and 6 port 1G Interfaces"
+! PID: BUILT-IN-2T+6X1GE , VID:      , SN:            
+! 
+! NAME: "subslot 0/0 transceiver 0", DESCR: "SFP+ 10GBASE-LR"
+! PID: SFP-10G-LR          , VID: V02  , SN: FNS24090DTK     
+! 
+! NAME: "subslot 0/0 transceiver 1", DESCR: "SFP+ 10GBASE-SR"
+! PID: SFP-10G-SR          , VID: V03  , SN: PROB48BA8591    
+! 
+! NAME: "subslot 0/0 transceiver 2", DESCR: "GE T"
+! PID: GLC-TE              , VID: V02  , SN: MTC231201VY     
+! 
+! NAME: "subslot 0/0 transceiver 3", DESCR: "GE T"
+! PID: GLC-TE              , VID: V02  , SN: MTC2312030K     
+! 
+! NAME: "subslot 0/0 transceiver 4", DESCR: "GE T"
+! PID: GLC-TE              , VID: V02  , SN: MTC23120AYW     
+! 
+! NAME: "subslot 0/0 transceiver 5", DESCR: "GE T"
+! PID: GLC-TE              , VID: V02  , SN: MTC231209UR     
+! 
+! NAME: "subslot 0/0 transceiver 6", DESCR: "GE T"
+! PID: GLC-TE              , VID: V03  , SN: PRO6422E0500    
+! 
+! NAME: "subslot 0/0 transceiver 7", DESCR: "GE T"
+! PID: GLC-TE              , VID: V03  , SN: PRO6422E0506    
+! 
+! NAME: "module R0", DESCR: "Cisco ASR1001-X Route Processor"
+! PID: ASR1001-X         , VID: V04  , SN: JAD23420QW9
+! 
+! NAME: "module F0", DESCR: "Cisco ASR1001-X Embedded Services Processor"
+! PID: ASR1001-X         , VID:      , SN:            
+! 
+! 
+!
+!
+version 16.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform hardware throughput level 10000000
+!
+hostname Router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+enable secret 5 $1$7gdZ$/U/AtYUgTFC1gNCmA0/ia.
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid ASR1001-X sn JAD23420QW9
+spanning-tree extend system-id
+diagnostic bootup level minimal
+!
+!
+!
+username itdept secret 5 $1$0aSi$kjj4yRtoJgjvT5rH2xZRJ1
+!
+redundancy
+ mode none
+!
+!
+!
+!
+!
+!
+!
+class-map match-all DSCP_VOICE
+ match dscp ef 
+class-map match-all DSCP_SIGNAL
+ match dscp cs3 
+!
+policy-map QUEUE_VOICE_SIGNAL
+ class DSCP_VOICE
+  priority level 1 100000
+ class DSCP_SIGNAL
+  priority level 2 1000
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Loopback0
+ no ip address
+!
+interface TenGigabitEthernet0/0/0
+ description Te0/0/0_CrownCastle
+ ip address 160.72.95.190 255.255.255.252
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ ip access-group BLOCK in
+!
+interface TenGigabitEthernet0/0/1
+ description 802do1Q_Trunk_DirtySwitch_HP_50
+ no ip address
+!
+interface TenGigabitEthernet0/0/1.811
+ description Te0/0/1.811_OfficeInternet_Vlan811
+ encapsulation dot1Q 811
+ ip address 160.72.98.1 255.255.255.128
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface TenGigabitEthernet0/0/1.812
+ description Te0/0/1.812_ClientInternet_Vlan812
+ encapsulation dot1Q 812
+ ip address 160.72.98.129 255.255.255.192
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/2
+ ip address 160.72.98.193 255.255.255.224
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ negotiation auto
+!
+interface GigabitEthernet0/0/3
+ description Gi0/0/3_Client6/CBS_Vlan814
+ ip address 160.72.98.225 255.255.255.248
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ negotiation auto
+!
+interface GigabitEthernet0/0/4
+ description Gi0/0/4_WendyInternet
+ ip address 160.72.98.233 255.255.255.248
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ negotiation auto
+!
+interface GigabitEthernet0/0/5
+ description 226_B_GrassValley
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/0/5.510
+ description 226_B_GrassValley
+ encapsulation dot1Q 510
+ ip address 160.72.98.249 255.255.255.248
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface GigabitEthernet0
+ vrf forwarding Mgmt-intf
+ no ip address
+ shutdown
+ negotiation auto
+!
+ip forward-protocol nd
+no ip http server
+ip http access-class 23
+ip http authentication local
+ip http secure-server
+ip http timeout-policy idle 60 life 86400 requests 10000 
+ip tftp source-interface GigabitEthernet0
+ip route 0.0.0.0 0.0.0.0 160.72.95.189
+!
+!
+!
+ip access-list standard BLOCK
+ deny   165.154.6.57
+ deny   154.3.10.145
+ deny   45.33.63.55
+ deny   50.56.178.190
+ deny   35.87.242.141
+ deny   142.93.59.228
+ deny   178.32.197.90
+ deny   43.131.68.225
+ deny   142.93.191.98
+ deny   157.245.67.37
+ deny   5.255.124.150
+ deny   193.32.127.138
+ deny   198.199.97.121
+ deny   87.251.67.244
+ deny   45.56.82.91
+ deny   89.248.172.16
+ deny   128.1.134.26
+ deny   194.187.177.214
+ deny   3.15.46.61
+ deny   43.129.36.145
+ deny   64.227.141.15
+ deny   107.170.245.21
+ deny   152.32.134.31
+ deny   107.170.237.14
+ deny   107.170.250.24
+ deny   107.170.235.15
+ deny   107.170.233.14
+ deny   104.200.152.30
+ deny   119.28.161.236
+ deny   45.87.104.59
+ deny   118.193.57.165
+ deny   179.60.147.48
+ deny   71.6.165.200
+ deny   176.33.65.253
+ deny   179.60.146.51
+ deny   107.170.249.23
+ deny   107.170.251.10
+ deny   94.158.247.5
+ deny   107.170.238.27
+ deny   107.170.253.8
+ deny   45.79.67.20
+ deny   185.129.62.62
+ deny   185.11.61.182
+ deny   128.14.133.50
+ deny   43.131.66.209
+ deny   185.122.204.52
+ deny   69.55.61.115
+ deny   107.170.240.12
+ deny   43.129.39.176
+ deny   146.88.240.4
+ deny   157.230.84.16
+ deny   37.19.218.173
+ deny   149.18.73.140
+ deny   113.161.208.69
+ deny   71.6.135.131
+ deny   69.197.191.122
+ deny   23.224.189.15
+ deny   14.161.49.219
+ deny   193.138.218.215
+ deny   43.129.35.207
+ deny   45.83.67.122
+ deny   198.199.116.50
+ deny   174.216.216.224
+ deny   167.94.146.59
+ deny   92.255.57.203
+ deny   103.14.33.25
+ deny   193.201.9.83
+ deny   45.155.204.40
+ deny   128.1.248.42
+ deny   168.80.174.2
+ deny   194.187.176.157
+ deny   198.199.119.35
+ deny   212.70.149.82
+ deny   138.197.149.143
+ deny   174.216.212.245
+ deny   188.166.26.88
+ deny   23.147.226.62
+ deny   119.9.131.164
+ deny   43.157.5.232
+ deny   199.102.107.145
+ deny   152.32.143.105
+ deny   45.79.181.179
+ deny   194.26.135.58
+ deny   174.64.199.79
+ deny   23.90.160.138
+ deny   94.232.43.250
+ deny   141.11.87.182
+ deny   89.248.165.99
+ deny   94.131.113.196
+ deny   152.32.170.123
+ deny   165.154.134.208
+ deny   193.37.255.114
+ deny   152.32.151.70
+ deny   192.241.201.146
+ deny   109.205.213.30
+ deny   104.131.144.20
+ deny   97.101.25.114
+ deny   139.28.218.34
+ deny   117.2.75.76
+ deny   104.131.128.26
+ deny   188.241.120.70
+ deny   45.249.244.84
+ deny   194.187.178.190
+ deny   162.62.33.200
+ deny   87.251.64.153
+ deny   104.131.144.14
+ deny   193.29.13.166
+ deny   71.6.158.166
+ deny   51.81.155.128
+ deny   45.83.67.71
+ deny   157.245.216.203
+ deny   174.216.211.217
+ deny   172.105.130.59
+ deny   167.172.55.65
+ deny   195.144.21.56
+ deny   152.32.247.49
+ deny   146.190.226.176
+ deny   89.248.167.131
+ deny   172.107.95.30
+ deny   103.218.243.201
+ deny   159.203.57.230
+ deny   68.183.53.77
+ deny   5.188.158.171
+ deny   165.154.44.158
+ deny   179.60.150.150
+ deny   89.248.163.141
+ deny   87.251.75.119
+ deny   159.203.208.20
+ deny   71.6.199.23
+ deny   209.159.153.66
+ deny   146.70.161.226
+ deny   185.161.248.121
+ deny   152.32.245.214
+ deny   14.161.253.204
+ deny   152.32.214.240
+ deny   213.32.25.76
+ deny   141.98.81.31
+ deny   34.79.57.245
+ deny   67.201.33.10
+ deny   64.227.112.120
+ deny   193.36.119.62
+ deny   36.156.22.2
+ deny   45.79.67.140
+ deny   45.227.255.156
+ deny   159.203.240.9
+ deny   167.99.209.184
+ deny   118.193.32.39
+ deny   118.193.40.46
+ deny   14.161.38.58
+ deny   15.204.252.138
+ deny   185.65.134.200
+ deny   185.153.181.34
+ deny   152.32.141.130
+ deny   72.37.217.3
+ deny   193.42.33.113
+ deny   198.199.92.225
+ deny   45.134.26.13
+ deny   162.243.140.29
+ deny   185.155.54.213
+ deny   193.37.69.99
+ deny   152.32.132.248
+ deny   93.174.95.106
+ deny   206.189.7.178
+ deny   152.32.149.235
+ deny   45.83.64.249
+ deny   128.1.131.197
+ deny   94.102.49.193
+ deny   192.241.235.19
+ deny   198.199.108.164
+ deny   192.241.195.34
+ deny   140.99.157.162
+ deny   45.93.201.104
+ deny   162.243.144.19
+ deny   162.243.142.13
+ deny   162.243.147.17
+ deny   165.22.39.64
+ deny   162.243.152.28
+ deny   113.170.128.142
+ deny   115.79.137.99
+ deny   162.243.141.11
+ deny   192.241.200.33
+ deny   169.228.66.212
+ deny   45.83.65.228
+ deny   68.183.180.156
+ deny   192.241.227.9
+ deny   139.144.52.241
+ deny   192.241.230.8
+ deny   139.59.33.78
+ deny   178.128.160.114
+ deny   138.68.147.190
+ deny   192.155.88.231
+ deny   45.79.107.237
+ deny   192.241.217.12
+ deny   104.248.203.191
+ deny   124.132.136.148
+ deny   192.241.199.19
+ deny   23.94.255.80
+ deny   192.241.211.4
+ deny   45.83.64.217
+ deny   185.65.135.151
+ deny   45.227.255.216
+ deny   92.63.197.74
+ deny   187.72.29.2
+ deny   128.1.138.230
+ deny   194.187.178.59
+ deny   128.1.132.247
+ deny   91.213.50.78
+ deny   103.56.61.144
+ deny   172.82.87.90
+ deny   45.79.77.218
+ deny   176.100.42.8
+ deny   171.244.23.190
+ deny   115.75.184.119
+ deny   185.142.236.34
+ deny   192.241.232.32
+ deny   159.203.6.171
+ deny   47.243.182.147
+ deny   45.33.62.201
+ deny   154.89.5.0 0.0.0.255
+ deny   45.143.200.0 0.0.0.255
+ deny   185.73.124.0 0.0.0.255
+ deny   185.170.144.0 0.0.0.255
+ deny   62.233.50.0 0.0.0.255
+ deny   104.156.155.0 0.0.0.255
+ deny   64.62.197.0 0.0.0.255
+ deny   5.188.206.0 0.0.0.255
+ deny   45.227.252.0 0.0.0.255
+ deny   147.78.47.0 0.0.0.255
+ deny   5.8.18.0 0.0.0.255
+ deny   77.83.36.0 0.0.0.255
+ deny   78.128.112.0 0.0.0.255
+ deny   65.49.20.0 0.0.0.255
+ deny   184.105.247.0 0.0.0.255
+ deny   167.248.133.0 0.0.0.255
+ deny   146.88.241.0 0.0.0.255
+ deny   162.142.125.0 0.0.0.255
+ deny   183.136.225.0 0.0.0.255
+ deny   205.210.31.0 0.0.0.255
+ deny   185.233.19.0 0.0.0.255
+ deny   91.240.118.0 0.0.0.255
+ deny   185.165.190.0 0.0.0.255
+ deny   71.6.231.0 0.0.0.255
+ deny   167.94.138.0 0.0.0.255
+ deny   80.82.77.0 0.0.0.255
+ deny   45.83.66.0 0.0.0.255
+ deny   62.204.41.0 0.0.0.255
+ deny   87.236.176.0 0.0.0.255
+ deny   185.180.143.0 0.0.0.255
+ deny   184.105.139.0 0.0.0.255
+ deny   15.204.49.0 0.0.0.255
+ deny   94.102.61.0 0.0.0.255
+ deny   74.82.47.0 0.0.0.255
+ deny   165.154.119.0 0.0.0.255
+ deny   152.32.131.0 0.0.0.255
+ deny   152.32.187.0 0.0.0.255
+ deny   152.32.253.0 0.0.0.255
+ deny   165.154.36.0 0.0.0.255
+ deny   194.110.203.0 0.0.0.255
+ deny   198.235.24.0 0.0.0.255
+ deny   198.199.114.0 0.0.0.255
+ deny   71.6.134.0 0.0.0.255
+ deny   162.216.150.0 0.0.0.255
+ deny   35.203.210.0 0.0.0.255
+ deny   91.134.185.0 0.0.0.255
+ deny   51.254.49.0 0.0.0.255
+ deny   162.216.149.0 0.0.0.255
+ deny   185.224.128.0 0.0.0.255
+ deny   216.218.206.0 0.0.0.255
+ deny   213.32.39.0 0.0.0.255
+ deny   203.161.32.0 0.0.0.255
+ deny   46.161.27.0 0.0.0.255
+ deny   152.32.129.0 0.0.0.255
+ deny   23.151.232.0 0.0.0.255
+ deny   185.220.101.0 0.0.0.255
+ deny   198.20.101.0 0.0.0.255
+ deny   138.99.216.0 0.0.0.255
+ deny   167.94.145.0 0.0.0.255
+ deny   162.243.130.0 0.0.0.255
+ deny   193.118.53.0 0.0.0.255
+ deny   152.89.196.0 0.0.0.255
+ deny   107.170.241.0 0.0.0.255
+ deny   179.60.149.0 0.0.0.255
+ deny   95.214.27.0 0.0.0.255
+ deny   145.239.154.0 0.0.0.255
+ deny   92.118.36.0 0.0.0.255
+ deny   118.123.105.0 0.0.0.255
+ deny   109.207.200.0 0.0.0.255
+ permit any
+ip access-list standard MGMT
+ permit 160.72.98.23
+ permit 160.72.98.20
+ip access-list standard MGMT_LibreNMS
+ permit 160.72.98.20
+ip access-list standard MGMT_PRTG
+ permit 160.72.98.21
+!
+!
+snmp-server community public RW MGMT_PRTG
+snmp-server community AmV$tUd10s RW MGMT_LibreNMS
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+line con 0
+ login local
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ access-class MGMT in
+ privilege level 15
+ login local
+ transport input ssh
+!
+wsma agent exec
+!
+wsma agent config
+!
+wsma agent filesys
+!
+wsma agent notify
+!
+!
+end
+

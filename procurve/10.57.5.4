@@ -1,0 +1,300 @@
+! Management Module 1: Standby
+! Image stamp:    /ws/swbuildm/rel_ajanta_qaoff/code/build/bom(swbuildm_rel_ajanta_qaoff_rel_ajanta)
+!                 Jun  7 2021 21:36:04
+!                 KB.16.10.0015
+!                 881
+! Boot Image:     Primary
+! 
+! Management Module 2: Active
+! 
+! Image stamp:    /ws/swbuildm/rel_ajanta_qaoff/code/build/bom(swbuildm_rel_ajanta_qaoff_rel_ajanta)
+!                 Jun  7 2021 21:36:04
+!                 KB.16.10.0015
+!                 881
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    KB.16.01.0006
+! Active Boot ROM:     Primary
+! 
+! 
+!  Status and Counters - Module Information
+! 
+!   Chassis: 5412Rzl2 J9851A         Serial Number:   SG4BGM5145
+! 
+!   Allow V2 Modules:   Yes
+! 
+!                                                                        Core  Mod
+!   Slot  Module Description                     Serial Number  Status   Dump  Ver
+!   ----- -------------------------------------- -------------- -------- ----- ---
+!   MM1   HP J9827A Management Module 5400Rzl2   SG4AG4C04C     Standby  YES   1  
+!   MM2   HP J9827A Management Module 5400Rzl2   SG62G4CBPV     Active   YES   1  
+! 
+! 
+!   A     HP J9536A 20p GT PoE+/2p SFP+ v2 zl... SG4477T03K     Up       YES      
+!   B     HP J9536A 20p GT PoE+/2p SFP+ v2 zl... SG4387T02L     Up       YES      
+!   C     HP J9536A 20p GT PoE+/2p SFP+ v2 zl... SG4277T0NP     Up       YES      
+!   D     HP J9536A 20p GT PoE+/2p SFP+ v2 zl... SG2197T054     Up       YES      
+!   E     HP J9534A 24p Gig-T PoE+ v2 zl Module  SG4367R0BB     Up       YES      
+!   F     HP J9534A 24p Gig-T PoE+ v2 zl Module  SG4367R01Z     Up       YES      
+!   G     HP J9534A 24p Gig-T PoE+ v2 zl Module  SG4367R0G6     Up       YES      
+!   H     HP J9534A 24p Gig-T PoE+ v2 zl Module  SG4367R0GD     Up       YES      
+!   K     HP J9534A 24p Gig-T PoE+ v2 zl Module  SG4317R1DQ     Up       YES      
+!   L     HP J9534A 24p Gig-T PoE+ v2 zl Module  SG4357R15H     Up       YES      
+! 
+! 
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+!  A21     SFP+SR      J9150A       PRO8C6819134       1990-4065 
+!  A22     1000SX      J4858C       OEM0900030A        1990-3657 
+!  B21     SFP+SR      J9150A       PRO8C6819135       1990-4065 
+!  B22     1000SX      J4858C       OEM0900030B        1990-3657 
+!  C21     SFP+SR      J9150A       PRO8C6819136       1990-4065 
+!  C22     SFP+SR      J9150A       PRO95ADB2085       1990-4065 
+!  D21     SFP+SR      J9150A       PRO95ADB2088       1990-4065 
+!  D22     SFP+LR      J9151A       PRO93D3D4983       1990-3883 
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    34332474 06/08/21 KB.16.10.0015        
+! Secondary Image  :    34092730 08/04/21 KB.16.08.0022       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : KB.16.01.0006
+! Secondary Boot ROM Version : KB.16.01.0006
+! 
+! Default Boot Image   : Primary
+! Default Boot ROM     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : HP-Switch-5412Rzl2                              
+!   System Contact     : 
+!   System Location    : 
+! 
+!   Allow V2 Modules   : Yes
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : KB.16.10.0015        Base MAC Addr      : 3464a9-b1c100    
+!   ROM Version        : KB.16.01.0006        Serial Number      : SG4BGM5145  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9851A Configuration Editor; Created on release #KB.16.10.0015
+; Ver #14:6f.6f.f8.1d.fb.7f.bf.bb.ff.7c.59.fc.7b.ff.ff.fc.ff.ff.3f.ef:00
+hostname "HP-Switch-5412Rzl2"
+module A type j9536a
+module B type j9536a
+module C type j9536a
+module D type j9536a
+module E type j9534a
+module F type j9534a
+module G type j9534a
+module H type j9534a
+module K type j9534a
+module L type j9534a
+trunk A21,B21 trk1 lacp
+trunk B20 trk5 lacp
+trunk B19 trk6 lacp
+trunk B18 trk7 lacp
+trunk B17 trk9 lacp
+trunk B16 trk10 lacp
+trunk B15 trk11 lacp
+trunk B14 trk12 lacp
+trunk A22 trk13 lacp
+trunk B22 trk14 lacp
+trunk B13 trk20 lacp
+ip default-gateway 10.57.5.1
+interface A3
+   name "Sip Handoff"
+   exit
+interface A4
+   name " Wifi Controller Trunk"
+   exit
+interface A6
+   name "Wifi Management Untagged"
+   exit
+interface A21
+   name "Trunk to Fortigate FW_23"
+   exit
+interface A22
+   name "1stFl_Wedge_01_HP_SW_49"
+   exit
+interface B13
+   name "1st-fl-ProdOffice_HP_SW_1"
+   exit
+interface B14
+   name "3rd-fl-East-2_HP_SW_48"
+   exit
+interface B15
+   name "3rd-fl-East-1_HP_SW_48"
+   exit
+interface B16
+   name "3rd-fl-West-2_HP_SW_1"
+   exit
+interface B17
+   name "3rd-fl-West-1_HP_SW_1"
+   exit
+interface B18
+   name "57-2ndfloor_HP_SW_48"
+   exit
+interface B19
+   name "57Access-F1-02_HP_SW_48"
+   exit
+interface B20
+   name "57Access-F1-01_HP_SW_48"
+   exit
+interface B21
+   name "Trunk to Fortigate FW_24"
+   exit
+interface B22
+   name "1stFl_Wedge_02_HP_SW_49"
+   exit
+interface C21
+   name "Editing_Mezzanine_Netgear_SW_1"
+   exit
+interface C22
+   name "Internet_Handoff_Juniper_SW_3"
+   exit
+interface D1
+   name "ITNODEPCBASEMENT"
+   exit
+interface D21
+   name "1stFl_TapeRoom_Netgear_SW_1"
+   exit
+interface D22
+   disable
+   name "221_TP_51_DirtySW"
+   exit
+snmp-server community "AmV$tUd10s" operator
+oobm
+   no ip address
+   exit
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged A3,A13,A20,C1,C20-C22,D1,D21,E1-E2,E24
+   untagged A1-A2,A4-A12,A14-A19,B1-B12,C2-C19,D2-D20,D22,E3-E23,F1-F24,G1-G24,H1-H24,K1-K24,L1-L24,Trk1,Trk5-Trk7,Trk9-Trk14,Trk20
+   no ip address
+   exit
+vlan 5
+   name "management"
+   untagged E2
+   tagged Trk1,Trk5-Trk7,Trk9-Trk14,Trk20
+   ip address 10.57.5.4 255.255.255.0
+   exit
+vlan 6
+   name "Wifi"
+   tagged A4,Trk1
+   no ip address
+   exit
+vlan 7
+   name "voip-lan"
+   untagged C1,E24
+   tagged Trk1,Trk5-Trk7,Trk9-Trk14,Trk20
+   no ip address
+   exit
+vlan 16
+   name "office-lan"
+   tagged Trk1
+   no ip address
+   exit
+vlan 24
+   name "Studio Lan"
+   untagged C21,D1,D21,E1
+   tagged A4,Trk1,Trk5-Trk7,Trk9-Trk14,Trk20
+   no ip address
+   exit
+vlan 30
+   name "Client 30-lan"
+   tagged A4,Trk1,Trk5-Trk7,Trk9-Trk14,Trk20
+   no ip address
+   exit
+vlan 31
+   name "DMZ"
+   tagged Trk1
+   no ip address
+   exit
+vlan 32
+   name "editing"
+   tagged Trk1,Trk5-Trk6
+   no ip address
+   exit
+vlan 36
+   name "client 36"
+   tagged A4,Trk1
+   no ip address
+   exit
+vlan 60
+   name "old-office-lan"
+   tagged A4,Trk1
+   no ip address
+   exit
+vlan 80
+   name "Voip-SIP"
+   untagged A3
+   tagged Trk1
+   no ip address
+   exit
+vlan 100
+   name "oldwifi-lan"
+   untagged A13
+   tagged Trk1,Trk5-Trk7,Trk9-Trk14,Trk20
+   no ip address
+   exit
+vlan 192
+   name "Client 192-lan"
+   tagged A4,Trk1
+   no ip address
+   exit
+vlan 801
+   name "VLAN801"
+   untagged C20,C22
+   tagged Trk1
+   no ip address
+   exit
+vlan 805
+   name "ISP04-PILOT"
+   untagged A20
+   tagged Trk1
+   no ip address
+   exit
+vlan 813
+   name "isp03-router"
+   tagged Trk1
+   no ip address
+   exit
+vlan 920
+   name "VLAN920"
+   tagged Trk1
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+spanning-tree Trk5 priority 4
+spanning-tree Trk6 priority 4
+spanning-tree Trk7 priority 4
+spanning-tree Trk9 priority 4
+spanning-tree Trk10 priority 4
+spanning-tree Trk11 priority 4
+spanning-tree Trk12 priority 4
+spanning-tree Trk13 priority 4
+spanning-tree Trk14 priority 4
+spanning-tree Trk20 priority 4
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+password manager
+

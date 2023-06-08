@@ -1,0 +1,157 @@
+! Image stamp:    /ws/swbuildm/rel_irvine_qaoff/code/build/lakes(swbuildm_rel_irvine_qaoff_rel_irvine)
+!                 Aug 24 2012 09:18:47
+!                 YA.15.10.0003
+!                 17
+! Boot Image:     Primary
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :     8792643 08/24/12 YA.15.10.0003        
+! Secondary Image  :     8792643 08/24/12 YA.15.10.0003       
+! 
+! Boot ROM Version : YA.15.09
+! Default Boot     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 221_TapeRoom                                    
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.10.0003        Base MAC Addr      : 7446a0-1bfa40
+!   ROM Version        : YA.15.09             Serial Number      : CN35FP3040  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.15.10.0003
+; Ver #03:03.17.27:30
+hostname "221_TapeRoom"
+trunk 48 trk10 lacp
+ip default-gateway 10.1.10.1
+interface 2
+   name "WiFi_BackHallway_APF4DB.E638.179E"
+   exit
+interface 9
+   name "ERIC-BACK-OFFICE-ROOM"
+   exit
+interface 12
+   name "JDUKE-TEST-PORT"
+   exit
+interface 14
+   name "TapeRoom_Rack403_HP_SW_24"
+   exit
+interface 25
+   name "TapeRoom_Rack405_Dell_SW_24"
+   exit
+interface 47
+   name "WiFi_FrontHallway_AP7C21.0E31.0756"
+   exit
+interface 48
+   name "48_HP_Basement_Distribution_B20"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-47
+   untagged 49-52,Trk10
+   ip address dhcp-bootp
+   exit
+vlan 5
+   name "Management"
+   tagged Trk10
+   no ip address
+   exit
+vlan 7
+   name "FGVOIP"
+   no ip address
+   exit
+vlan 10
+   name "Network_Management"
+   untagged 5
+   tagged Trk10
+   ip address 10.1.10.101 255.255.255.0
+   exit
+vlan 24
+   name "VLAN24"
+   untagged 14
+   tagged Trk10
+   no ip address
+   exit
+vlan 40
+   name "LAN"
+   tagged Trk10
+   no ip address
+   exit
+vlan 102
+   name "Transcoding"
+   untagged 25,27-28
+   tagged Trk10
+   no ip address
+   exit
+vlan 116
+   name "AMVOTT-lan"
+   untagged 29-30
+   tagged Trk10
+   no ip address
+   exit
+vlan 147
+   name "security"
+   untagged 16-24,32,34-46
+   tagged Trk10
+   no ip address
+   exit
+vlan 212
+   name "VOIP"
+   tagged Trk10
+   no ip address
+   voice
+   exit
+vlan 451
+   name "Client03"
+   untagged 1,3-4,6-13,15
+   tagged Trk10
+   no ip address
+   exit
+vlan 461
+   name "Client04"
+   tagged Trk10
+   no ip address
+   exit
+vlan 471
+   name "Client05"
+   tagged Trk10
+   no ip address
+   exit
+vlan 481
+   name "Client06"
+   untagged 26,31
+   tagged Trk10
+   no ip address
+   exit
+vlan 998
+   name "VLAN998"
+   untagged 2,33,47
+   tagged Trk10
+   no ip address
+   exit
+spanning-tree Trk10 priority 4
+no dhcp config-file-update
+password manager
+

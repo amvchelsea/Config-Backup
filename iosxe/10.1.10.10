@@ -1,0 +1,383 @@
+! Cisco IOS XE Software, Version 16.06.04a
+! 
+! Image: Software: CAT9K_IOSXE, 16.6.4a, RELEASE SOFTWARE (fc3)
+! Image: Compiled: Fri 26-Oct-18 18:15 by mcpre
+! Image: flash:cat9k_iosxe.16.06.04a.SPA.bin
+! Chassis type: C9300-48P
+! Memory: main 1392681K/6147K
+! Processor ID: FOC2249Q0VF
+! CPU: X86
+! Memory: nvram 2048K
+! 
+! VTP: VTP Version capable             : 1 to 3
+! VTP: VTP version running             : 1
+! VTP: VTP Domain Name                 : AMV
+! VTP: VTP Pruning Mode                : Enabled
+! VTP: VTP Traps Generation            : Disabled
+! VTP: Device ID                       : 002f.5c5c.4100
+! VTP: Local updater ID is 10.1.10.10 on interface Vl10 (lowest numbered VLAN interface found)
+! VTP: Feature VLAN:
+! VTP: --------------
+! VTP: VTP Operating Mode                : Server
+! VTP: Maximum VLANs supported locally   : 1005
+! VTP: Number of existing VLANs          : 59
+! VTP: Configuration Revision            : 112
+! VTP: MD5 digest                        : 0x10 0x95 0x25 0x49 0x57 0x26 0x54 0xE9 
+! VTP:                                     0xFD 0x45 0x74 0xFF 0xAB 0x7F 0xDA 0x9D 
+! 
+! NAME: "c93xx Stack", DESCR: "c93xx Stack"
+! PID: C9300-48P         , VID: V02  , SN: FOC2249Q0VF
+! 
+! NAME: "Switch 1", DESCR: "C9300-48P"
+! PID: C9300-48P         , VID: V02  , SN: FOC2249Q0VF
+! 
+! NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+! PID: PWR-C1-715WAC     , VID: V03  , SN: DCA2246G53G
+! 
+! NAME: "Switch 1 FRU Uplink Module 1", DESCR: "8x10G Uplink Module"
+! PID: C9300-NM-8X       , VID: V02  , SN: FOC224718K0
+! 
+! NAME: "Te1/1/1", DESCR: "SFP-10GBase-SR"
+! PID: SFP-10G-SR          , VID: V03  , SN: PRO860944857    
+! 
+! 
+!
+!
+version 16.6
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+!
+hostname NYHQ2-CS10
+!
+!
+vrf definition Mgmt-vrf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+enable secret 5 $1$IteO$YR/Ey7zpDK5o9cvjEieEZ.
+!
+no aaa new-model
+switch 1 provision c9300-48p
+!
+!
+!
+!
+!
+ip domain name amv.lan
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+diagnostic bootup level minimal
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+username itdept privilege 5 secret 5 $1$o3vZ$Va/06ulxOVtKVdxKXWeka0
+!
+redundancy
+ mode sso
+!
+lldp run
+!
+!
+class-map match-any system-cpp-police-topology-control
+  description Topology control
+class-map match-any system-cpp-police-sw-forward
+  description Sw forwarding, L2 LVX data, LOGGING
+class-map match-any system-cpp-default
+  description DHCP Snooping, EWLC control, EWCL data 
+class-map match-any system-cpp-police-sys-data
+  description Learning cache ovfl, Crypto Control, Exception, EGR Exception, NFL SAMPLED DATA, RPF Failed
+class-map match-any system-cpp-police-punt-webauth
+  description Punt Webauth
+class-map match-any system-cpp-police-l2lvx-control
+  description L2 LVX control packets
+class-map match-any system-cpp-police-forus
+  description Forus Address resolution and Forus traffic
+class-map match-any system-cpp-police-multicast-end-station
+  description MCAST END STATION
+class-map match-any system-cpp-police-multicast
+  description Transit Traffic and MCAST Data
+class-map match-any system-cpp-police-l2-control
+  description L2 control
+class-map match-any system-cpp-police-dot1x-auth
+  description DOT1X Auth
+class-map match-any system-cpp-police-data
+  description ICMP redirect, ICMP_GEN and BROADCAST
+class-map match-any system-cpp-police-stackwise-virt-control
+  description Stackwise Virtual
+class-map match-any non-client-nrt-class
+class-map match-any system-cpp-police-routing-control
+  description Routing control
+class-map match-any system-cpp-police-protocol-snooping
+  description Protocol snooping
+class-map match-any system-cpp-police-system-critical
+  description System Critical and Gold pkt
+!
+policy-map system-cpp-policy
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel2
+ description Cisco_226_Distribution_P2
+ switchport mode trunk
+!
+interface GigabitEthernet0/0
+ vrf forwarding Mgmt-vrf
+ no ip address
+ speed 1000
+ negotiation auto
+!
+interface GigabitEthernet1/0/1
+ switchport trunk allowed vlan 5,147,411,430,431,441,451,461,471,702,998
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+!
+interface GigabitEthernet1/0/3
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/0/25
+!
+interface GigabitEthernet1/0/26
+!
+interface GigabitEthernet1/0/27
+!
+interface GigabitEthernet1/0/28
+!
+interface GigabitEthernet1/0/29
+!
+interface GigabitEthernet1/0/30
+!
+interface GigabitEthernet1/0/31
+!
+interface GigabitEthernet1/0/32
+!
+interface GigabitEthernet1/0/33
+!
+interface GigabitEthernet1/0/34
+!
+interface GigabitEthernet1/0/35
+!
+interface GigabitEthernet1/0/36
+!
+interface GigabitEthernet1/0/37
+!
+interface GigabitEthernet1/0/38
+ switchport mode access
+!
+interface GigabitEthernet1/0/39
+!
+interface GigabitEthernet1/0/40
+!
+interface GigabitEthernet1/0/41
+!
+interface GigabitEthernet1/0/42
+!
+interface GigabitEthernet1/0/43
+!
+interface GigabitEthernet1/0/44
+ switchport trunk allowed vlan 998
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/45
+ switchport access vlan 441
+!
+interface GigabitEthernet1/0/46
+ description 10thFl_HP_SW2
+ switchport trunk allowed vlan 10,147,212,431,471,666,998
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/47
+ switchport trunk allowed vlan 7,147,555
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/48
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface TenGigabitEthernet1/1/1
+ description Po2_Cisco_226_Distribution_T1
+ switchport mode trunk
+ load-interval 30
+ channel-group 2 mode on
+!
+interface TenGigabitEthernet1/1/2
+!
+interface TenGigabitEthernet1/1/3
+!
+interface TenGigabitEthernet1/1/4
+!
+interface TenGigabitEthernet1/1/5
+!
+interface TenGigabitEthernet1/1/6
+!
+interface TenGigabitEthernet1/1/7
+!
+interface TenGigabitEthernet1/1/8
+!
+interface FortyGigabitEthernet1/1/1
+!
+interface FortyGigabitEthernet1/1/2
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan7
+ description CLIENT-VOIP
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan10
+ description << Network Management VLAN >>
+ ip address 10.1.10.10 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan311
+ no ip address
+!
+interface Vlan555
+ no ip address
+!
+interface Vlan556
+ no ip address
+!
+ip default-gateway 10.1.10.1
+ip forward-protocol nd
+ip http server
+ip http secure-server
+!
+ip ssh time-out 90
+ip ssh authentication-retries 2
+ip ssh version 2
+!
+!
+ip access-list standard MGMT_LibreNMS
+ permit 10.1.11.162
+ip access-list standard MGMT_PRTG
+ permit 10.1.11.166
+!
+!
+snmp-server community AmV$tUd10s RW MGMT_LibreNMS
+snmp-server community public RW MGMT_PRTG
+snmp-server location << 226 West 26th Street - HQ2 >>
+snmp-server contact << IT Department >>
+snmp-server system-shutdown
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server host 10.1.10.200 AmV$tUd10s 
+!
+!
+control-plane
+ service-policy input system-cpp-policy
+!
+!
+line con 0
+ session-timeout 15 
+ logging synchronous
+ login local
+ stopbits 1
+line vty 0 4
+ session-timeout 15 
+ logging synchronous
+ login local
+ transport input ssh
+ stopbits 1
+line vty 5 15
+ session-timeout 15 
+ logging synchronous
+ login
+ transport input ssh
+ stopbits 1
+!
+!
+mac address-table notification mac-move
+wsma agent exec
+!
+wsma agent config
+!
+wsma agent filesys
+!
+wsma agent notify
+!
+!
+end
+

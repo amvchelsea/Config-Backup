@@ -1,0 +1,193 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_venice_qaoff/code/build/cpm(swbuildm_rel_venice_qaoff_rel_venice)
+!                 Mar 26 2018 23:15:36
+!                 YC.16.05.0007
+!                 136
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YC.16.01.0002
+! Active Boot ROM:     Primary
+! 
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+!  49      SFP+SR      J9150A       PRO6A36F3194       1990-4065 
+!  50      SFP+SR      J9150A       PRO8C6819131       1990-4065 
+!  51      SFP+LR      J9151A       PRO93D3D4984       1990-3883 
+!  52      SFP+SR      J9150A       PRO8C6819132       1990-4065 
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    20672669 03/27/18 YC.16.05.0007        
+! Secondary Image  :    20672669 03/27/18 YC.16.05.0007       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YC.16.01.0002
+! Secondary Boot ROM Version : YC.16.01.0002
+! 
+! Default Boot Image   : Primary
+! Default Boot ROM     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : Aruba-2540-48G-4SFPP                            
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YC.16.05.0007        Base MAC Addr      : 20677c-ce5180    
+!   ROM Version        : YC.16.01.0002        Serial Number      : CN88JYJ0KG  
+! 
+! 
+! 
+
+Running configuration:
+
+; JL355A Configuration Editor; Created on release #YC.16.05.0007
+; Ver #12:08.04.99.03.b3.b8.ef.74.61.fc.68.f3.8c.fc.e3.ff.37.2f:66
+
+hostname "Aruba-2540-48G-4SFPP"
+module 1 type jl355a
+trunk 47-48 trk1 lacp
+trunk 11-12 trk10 lacp
+qos dscp-map 011000 priority 6 name "SIGNAL"
+qos dscp-map 101110 name "VOICE"
+qos type-of-service diff-services
+ip default-gateway 10.1.10.1
+interface 1
+   disable
+   exit
+interface 2
+   disable
+   exit
+interface 5
+   name "Int5_Office_Vlan811"
+   exit
+interface 16
+   name "Int16_Client6/CBS_Vlan814"
+   exit
+interface 25
+   disable
+   exit
+interface 27
+   name "Int37_226_B_GrassValley"
+   exit
+interface 31
+   name "Aire20mb-handoff"
+   exit
+interface 32
+   name "Aire20mb-amvfortigate"
+   exit
+interface 37
+   name "226_B_GrassValley"
+   exit
+interface 49
+   name "Cisco_TapeRoom_Distribution_T8"
+   exit
+interface 50
+   name "Cisco_TapeRoom_EdgeRouter_T1"
+   exit
+interface 51
+   disable
+   name "57th_Unitel_HP_D22"
+   exit
+interface 52
+   name "HP5K_Basement_Distribution_D24"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 5,7,9,13-24,26-27,29,31-32,35,38,40,42,44,46,50
+   untagged 1-4,6,8,10,25,28,30,33-34,36-37,39,41,43,45,49,51-52,Trk1,Trk10
+   ip address dhcp-bootp
+   exit
+vlan 10
+   name "VLAN10"
+   tagged 49,Trk1
+   ip address 10.1.10.7 255.255.255.0
+   exit
+vlan 14
+   name "SVRVOIP"
+   tagged 49,Trk1
+   no ip address
+   exit
+vlan 510
+   name "226_B_GrassValley"
+   tagged 37,49
+   no ip address
+   exit
+vlan 807
+   name "Airespring20mb"
+   untagged 31-32
+   tagged 49,Trk1
+   no ip address
+   exit
+vlan 811
+   name "VLAN811"
+   untagged 5,7,9
+   tagged 49-50
+   no ip address
+   exit
+vlan 812
+   name "VLAN812"
+   tagged 50,52
+   no ip address
+   exit
+vlan 813
+   name "VLAN813"
+   untagged 13,15,17,19,21,23
+   tagged 49
+   no ip address
+   exit
+vlan 814
+   name "VLAN814"
+   untagged 14,16,18,20,22,24
+   tagged 49
+   no ip address
+   exit
+vlan 815
+   name "VLAN815"
+   untagged 27,29,35
+   tagged 49
+   no ip address
+   exit
+vlan 816
+   name "VLAN816"
+   tagged 49
+   no ip address
+   exit
+vlan 818
+   name "VLAN818"
+   untagged 38,40,42,44,46
+   no ip address
+   exit
+vlan 820
+   name "VLAN820"
+   untagged 26
+   no ip address
+   exit
+vlan 998
+   name "VLAN998"
+   tagged 49,Trk1
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+spanning-tree Trk10 priority 4
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+

@@ -1,0 +1,741 @@
+! Cisco IOS XE Software, Version 17.06.04
+! 
+! Image: Software: C9800_IOSXE-K9, 17.6.4, RELEASE SOFTWARE (fc1)
+! Image: Compiled: Sun 14-Aug-22 08:54 by mcpre
+! Image: bootflash:packages.conf
+! Chassis type: C9800-L-C-K9
+! Memory: main 1688750K/6147K
+! Processor ID: FCL255100MM
+! CPU: KATAR
+! Memory: nvram 32768K
+! 
+! VTP: VTP Version capable             : 1 to 3
+! VTP: VTP version running             : 1
+! VTP: VTP Domain Name                 : 
+! VTP: VTP Pruning Mode                : Disabled (Operationally Disabled)
+! VTP: VTP Traps Generation            : Disabled
+! VTP: Device ID                       : f01d.2d38.fdc0
+! VTP: Feature VLAN:
+! VTP: --------------
+! VTP: VTP Operating Mode                : Off
+! VTP: Maximum VLANs supported locally   : 1005
+! VTP: Number of existing VLANs          : 11
+! VTP: Configuration Revision            : 0
+! VTP: MD5 digest                        : 0x5E 0x2F 0xFE 0x3F 0x32 0x52 0x34 0xC4 
+! VTP:                                     0x4D 0xA5 0xA8 0x22 0xB3 0xA3 0x73 0x73 
+! 
+! NAME: "Chassis 1", DESCR: "Cisco C9800-L-C-K9 Chassis"
+! PID: C9800-L-C-K9      , VID: 01   , SN: FCL255100MM
+! 
+! NAME: "Chassis 1 Power Supply Module 0", DESCR: "Cisco Catalyst Wireless Controller 12V DC Generic Power Supply"
+! PID: PWR-12V           , VID:      , SN:            
+! 
+! NAME: "Chassis 1 Fan Tray", DESCR: "Cisco C9800-L-C-K9 Fan Tray"
+! PID: C9800-L-C-K9-FAN  , VID:      , SN:            
+! 
+! NAME: "module 0", DESCR: "Cisco C9800-L-C-K9 Modular Interface Processor"
+! PID: C9800-L-C-K9      , VID:      , SN:            
+! 
+! NAME: "SPA subslot 0/0", DESCR: "Front Panel bay-0 4 ports 2.5 Gigabitethernet Module"
+! PID: BUILT-IN-4x2_5GE  , VID: V01  , SN: N/A        
+! 
+! NAME: "SPA subslot 0/1", DESCR: "Front Panel bay-1 2 ports Ten/Gigabitethernet Module"
+! PID: BUILT-IN-2x10GE-C , VID: V01  , SN: N/A        
+! 
+! NAME: "module R0", DESCR: "Cisco C9800-L-C-K9 Route Processor"
+! PID: C9800-L-C-K9      , VID: 01   , SN: FCL255100MM
+! 
+! NAME: "module F0", DESCR: "Cisco C9800-L-C-K9 Embedded Services Processor"
+! PID: C9800-L-C-K9      , VID:      , SN:            
+! 
+! 
+!
+!
+version 17.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service call-home
+platform qfp utilization monitor load 80
+platform punt-keepalive disable-kernel-core
+!
+hostname WLC
+!
+boot-start-marker
+boot system flash bootflash:packages.conf
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+enable secret 9 $9$1wxmzxeFybTvJ.$fO3O.DSUg9hLXH9GBJP.dmxzzs.ciwtXARfeKXz1Zbo
+!
+aaa new-model
+!
+!
+!
+!
+aaa attribute list wlan_lobby_access
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone Eastern 0 0
+vtp mode off
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip igmp snooping vlan 451
+no ip igmp snooping vlan 10
+no ip igmp snooping vlan 411
+no ip igmp snooping vlan 481
+no ip igmp snooping vlan 998
+no ip igmp snooping vlan 491
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+parameter-map type webauth global
+ virtual-ip ipv4 192.0.2.1
+!
+access-session mac-move deny
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1837664792
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1837664792
+ revocation-check none
+ rsakeypair TP-self-signed-1837664792
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment terminal
+ revocation-check crl
+!
+!
+crypto pki certificate chain TP-self-signed-1837664792
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31383337 36363437 3932301E 170D3232 30393237 31353436 
+  34325A17 0D333230 39323631 35343634 325A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 38333736 
+  36343739 32308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100867F 1767C9EB 1ABC6BCA F3A5DE2D 26F7AB63 423D45A9 70D66A0E 
+  7620F4A8 E1A6CD4E F70FCB33 A0927E8B 759669C8 A0D102C0 4F3E3CA0 BF6F0A3D 
+  62E1B667 CF470264 6007A527 792A4B31 4F544360 F9216C07 758EA953 A0815ADD 
+  DC7C1CD1 7B4E68B3 DD9CD770 2825B3DF 0DEE078B 3B0015FF D3728713 46D6692C 
+  973258CB 7DB3442F 30764E23 2E7D6BEB D6F33FED 01ABD38F 3E469937 B1D65002 
+  7EBF017E EAFC6D97 48446E5B D099BA72 552F4F75 204AF531 8C381A84 D78EDB7B 
+  25E656A8 850AE69F 0A0CAA6A AFC889CC 8DCB0500 4A4D511E 88CC1C98 461EBB3D 
+  CE7A457F 3875E674 1388219E 101A1042 3EDC6E9D 1444B0DF 7D5C1063 9151D8CE 
+  1FF74C83 337F0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 140F37DB E2C8AE26 32EE56B2 D5A594D7 25936B81 
+  AA301D06 03551D0E 04160414 0F37DBE2 C8AE2632 EE56B2D5 A594D725 936B81AA 
+  300D0609 2A864886 F70D0101 05050003 82010100 72572840 421A59D6 FE77A3CA 
+  E6B26D19 DD5B9944 6B6C063B 8C71CB95 5459FAEC B9C29C7A 783620EB A0122F92 
+  7572E8D3 EB3D9529 CDF934C3 8CBD7707 E2E6D3B3 6E2DEB27 684D830A 622FA7BD 
+  1292F681 8266469A 9BB99A3B 5C9000E3 C0BDEDA3 2E760D8D 99B2E405 459BA6B9 
+  0E63D302 271759DA 3320B48B 6E6908F0 6339EA75 5C22490C 80100CD2 C5B237B4 
+  C152166B A6E85776 5538B7F1 021C567A 0A7C2B79 3F9A1CFD 73FED44D 6FCD5D4C 
+  E762B033 763378E4 FA89A4B7 6856738B 0AB2840A 52D9EED6 A401130F 3858F788 
+  0E51E43B 0CC467EB 737D4403 E2FC8736 25047E9D 6D42E87D F12E5C80 E08E8E21 
+  85707EFC A84742B4 04A1B376 0E321DC2 7B6C6A41
+  	quit
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+!
+!
+license udi pid C9800-L-C-K9 sn FCL255100MM
+license smart url default
+license smart transport smart
+memory free low-watermark processor 170281
+!
+service-template webauth-global-inactive
+ inactivity-timer 3600 
+service-template DEFAULT_LINKSEC_POLICY_MUST_SECURE
+ linksec policy must-secure
+service-template DEFAULT_LINKSEC_POLICY_SHOULD_SECURE
+ linksec policy should-secure
+service-template DEFAULT_CRITICAL_VOICE_TEMPLATE
+ voice vlan
+service-template DEFAULT_CRITICAL_DATA_TEMPLATE
+diagnostic bootup level minimal
+!
+username itdept privilege 15 password 0 Sh31se4!
+!
+redundancy
+ mode sso
+!
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 10
+ name Network_Management
+!
+vlan 411
+ name Office_WiFi
+!
+vlan 451
+ name Client3
+!
+vlan 481
+ name Client6
+!
+vlan 491
+ name Client7
+!
+vlan 998
+ name AP_Management
+!
+!
+lldp run
+!
+class-map match-any AutoQos-4.0-RT1-Class
+ match dscp ef 
+ match dscp cs6 
+class-map match-any AutoQos-4.0-RT2-Class
+ match dscp cs4 
+ match dscp cs3 
+ match dscp af41 
+class-map match-any AutoQos-4.0-wlan-Voip-Signal-Class
+ match protocol skinny
+ match protocol cisco-jabber-control
+ match protocol sip
+ match protocol sip-tls
+class-map match-any AutoQos-4.0-wlan-Voip-Data-Class
+ match dscp ef 
+class-map match-any AVC-Reanchor-Class
+ match protocol cisco-jabber-audio
+ match protocol cisco-jabber-video
+ match protocol webex-media
+ match protocol webex-app-sharing
+ match protocol webex-control
+ match protocol webex-meeting
+ match protocol wifi-calling
+class-map match-any AutoQos-4.0-wlan-Multimedia-Conf-Class
+ match protocol cisco-phone-video
+ match protocol cisco-jabber-video
+ match protocol ms-lync-video
+ match protocol webex-media
+class-map match-any AutoQos-4.0-wlan-Bulk-Data-Class
+ match protocol ftp
+ match protocol ftp-data
+ match protocol ftps-data
+ match protocol cifs
+class-map match-any AutoQos-4.0-Output-CAPWAP-C-Class
+ match access-group name AutoQos-4.0-Output-Acl-CAPWAP-C
+class-map match-any AutoQos-4.0-wlan-Scavanger-Class
+ match protocol netflix
+ match protocol youtube
+ match protocol skype
+ match protocol bittorrent
+class-map match-any AutoQos-4.0-wlan-Transaction-Class
+ match protocol cisco-jabber-im
+ match protocol ms-office-web-apps
+ match protocol salesforce
+ match protocol sap
+class-map match-any AutoQos-4.0-Output-Voice-Class
+ match dscp ef 
+!
+!
+policy-map AutoQos-4.0-wlan-ET-SSID-Input-AVC-Policy
+ class AutoQos-4.0-wlan-Voip-Data-Class
+  set dscp ef
+ class AutoQos-4.0-wlan-Voip-Signal-Class
+  set dscp cs3
+ class AutoQos-4.0-wlan-Multimedia-Conf-Class
+  set dscp af41
+ class AutoQos-4.0-wlan-Transaction-Class
+  set dscp af21
+ class AutoQos-4.0-wlan-Bulk-Data-Class
+  set dscp af11
+ class AutoQos-4.0-wlan-Scavanger-Class
+  set dscp cs1
+ class class-default
+  set dscp default
+policy-map AutoQos-4.0-wlan-Port-Output-Policy
+ class AutoQos-4.0-Output-CAPWAP-C-Class
+  priority level 1
+ class AutoQos-4.0-Output-Voice-Class
+  priority level 2
+ class class-default
+policy-map AutoQos-4.0-wlan-ET-SSID-Output-Policy
+ class AutoQos-4.0-RT1-Class
+  set dscp ef
+ class AutoQos-4.0-RT2-Class
+  set dscp af31
+ class class-default
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface TwoGigabitEthernet0/0/0
+ switchport trunk allowed vlan 10,411,451,481,491,998
+ switchport mode trunk
+ speed 1000
+ no negotiation auto
+ no snmp trap link-status
+ service-policy output AutoQos-4.0-wlan-Port-Output-Policy
+!
+interface TwoGigabitEthernet0/0/1
+ switchport mode access
+ speed 1000
+ no negotiation auto
+ no snmp trap link-status
+ service-policy output AutoQos-4.0-wlan-Port-Output-Policy
+!
+interface TwoGigabitEthernet0/0/2
+ negotiation auto
+ no snmp trap link-status
+ service-policy output AutoQos-4.0-wlan-Port-Output-Policy
+!
+interface TwoGigabitEthernet0/0/3
+ negotiation auto
+ no snmp trap link-status
+ service-policy output AutoQos-4.0-wlan-Port-Output-Policy
+!
+interface TenGigabitEthernet0/1/0
+ negotiation auto
+ no snmp trap link-status
+ service-policy output AutoQos-4.0-wlan-Port-Output-Policy
+!
+interface TenGigabitEthernet0/1/1
+ negotiation auto
+ no snmp trap link-status
+ service-policy output AutoQos-4.0-wlan-Port-Output-Policy
+!
+interface GigabitEthernet0
+ vrf forwarding Mgmt-intf
+ no ip address
+ negotiation auto
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan10
+ description Network_Management
+ ip address 10.1.10.11 255.255.255.0
+ no mop enabled
+!
+interface Vlan411
+ description Office_WiFi
+ ip address 10.187.0.253 255.255.255.0
+!
+interface Vlan451
+ description Client3
+ ip address 10.221.112.253 255.255.255.0
+!
+interface Vlan481
+ description Client6
+ ip address 10.221.115.253 255.255.255.0
+!
+interface Vlan491
+ description Client7
+ ip address 10.221.117.253 255.255.255.0
+!
+interface Vlan998
+ description AP_Management
+ ip address 10.1.11.253 255.255.255.0
+!
+ip http server
+ip http authentication local
+ip http secure-server
+ip http client source-interface Vlan10
+ip http client secure-trustpoint TP-self-signed-1837664792
+ip forward-protocol nd
+!
+ip route 0.0.0.0 0.0.0.0 10.1.10.1
+!
+ip access-list standard MGMT_LibreNMS
+ 10 permit 10.1.11.162
+ip access-list standard MGMT_PRTG
+ 10 permit 10.1.11.166
+!
+ip access-list extended AutoQos-4.0-Output-Acl-CAPWAP-C
+ 10 permit udp any eq 5246 16666 any
+!
+!
+snmp-server community AmV$tUd10s RW MGMT_LibreNMS
+snmp-server community public RW MGMT_PRTG
+snmp-server manager
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line aux 0
+line vty 0 4
+ logging synchronous
+ length 0
+ transport input ssh
+line vty 5 15
+ logging synchronous
+ transport input ssh
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+!
+!
+!
+!
+!
+!
+wireless aaa policy default-aaa-policy
+wireless cts-sxp profile default-sxp-profile
+wireless management interface Vlan998
+wireless profile airtime-fairness default-atf-policy 0
+wireless profile flex default-flex-profile
+ description "default flex profile"
+wireless profile mesh default-mesh-profile
+ description "default mesh profile"
+wireless profile radio default-radio-profile
+ description "Preconfigured default radio profile"
+wireless profile policy 221-226_WLANID_1
+ autoqos mode enterprise-avc
+ description 221-226_AMV_OFFICE
+ idle-timeout 3600
+ ipv4 dhcp required
+ ipv4 dhcp server 10.1.11.10
+ service-policy input AutoQos-4.0-wlan-ET-SSID-Input-AVC-Policy
+ service-policy output AutoQos-4.0-wlan-ET-SSID-Output-Policy
+ session-timeout 86400
+ vlan Office_WiFi
+ no shutdown
+wireless profile policy 221-226_WLANID_2
+ autoqos mode enterprise-avc
+ description 221-226_amvclient
+ idle-timeout 3600
+ ipv4 dhcp required
+ ipv4 dhcp server 10.221.112.1
+ service-policy input AutoQos-4.0-wlan-ET-SSID-Input-AVC-Policy
+ service-policy output AutoQos-4.0-wlan-ET-SSID-Output-Policy
+ session-timeout 86400
+ vlan Client3
+ no shutdown
+wireless profile policy 221-226_WLANID_3
+ autoqos mode enterprise-avc
+ description 221-226_Client3
+ idle-timeout 3600
+ ipv4 dhcp required
+ ipv4 dhcp server 10.221.112.1
+ service-policy input AutoQos-4.0-wlan-ET-SSID-Input-AVC-Policy
+ service-policy output AutoQos-4.0-wlan-ET-SSID-Output-Policy
+ session-timeout 86400
+ vlan Client3
+ no shutdown
+wireless profile policy 221-226_WLANID_4
+ autoqos mode enterprise-avc
+ description "221-226_Studio A Wifi"
+ idle-timeout 3600
+ service-policy input AutoQos-4.0-wlan-ET-SSID-Input-AVC-Policy
+ service-policy output AutoQos-4.0-wlan-ET-SSID-Output-Policy
+ session-timeout 86400
+ vlan Client6
+ no shutdown
+wireless profile policy 221-226_WLANID_5
+ autoqos mode enterprise-avc
+ description 221-226_Client7
+ idle-timeout 3600
+ ipv4 dhcp required
+ ipv4 dhcp server 10.221.117.1
+ service-policy input AutoQos-4.0-wlan-ET-SSID-Input-AVC-Policy
+ service-policy output AutoQos-4.0-wlan-ET-SSID-Output-Policy
+ session-timeout 86400
+ vlan Client7
+ no shutdown
+wireless profile policy 221-226_WLANID_6
+ description 221-226_Serv_Direct
+ vlan AP_Management
+ no shutdown
+wireless profile policy default-policy-profile
+ autoqos mode voice
+ description "default policy profile"
+ ipv4 dhcp required
+ ipv4 dhcp server 10.1.11.10
+ service-policy input platinum-up
+ service-policy output platinum
+ vlan default
+ no shutdown
+wireless tag site 221-226
+ ap-profile 221-226
+wireless tag site default-site-tag
+ description "default site tag"
+wireless tag policy 221-226
+ wlan Client3 policy 221-226_WLANID_3
+ wlan Client7 policy 221-226_WLANID_5
+ wlan amvclient policy 221-226_WLANID_2
+ wlan AMV_OFFICE policy 221-226_WLANID_1
+ wlan Serv_Direct policy 221-226_WLANID_6
+ wlan "Studio A Wifi" policy 221-226_WLANID_4
+wireless tag policy default-policy-tag
+ description "default policy-tag"
+ wlan TEST-WIFI policy default-policy-profile
+wireless tag rf 221-226
+ 24ghz-rf-policy Typical_Client_Density_rf_24gh
+ 5ghz-rf-policy Typical_Client_Density_rf_5gh
+wireless tag rf default-rf-tag
+ description "default RF tag"
+wireless fabric control-plane default-control-plane
+wireless country US
+wlan Client3 3 Client3
+ security ft
+ security wpa psk set-key ascii 0 InternetC!
+ no security wpa akm dot1x
+ security wpa akm psk
+ security pmf optional
+ no shutdown
+wlan Client7 5 Bridge_Wifi
+ security ft
+ security wpa psk set-key ascii 0 99Bridge#
+ no security wpa akm dot1x
+ security wpa akm psk
+ security pmf optional
+ no shutdown
+wlan amvclient 2 amvclient
+ security ft
+ security wpa psk set-key ascii 0 Internet!
+ no security wpa akm dot1x
+ security wpa akm psk
+ security pmf optional
+ no shutdown
+wlan AMV_OFFICE 1 AMV_OFFICE
+ security ft
+ security wpa psk set-key ascii 0 @11M0bi13$
+ no security wpa akm dot1x
+ security wpa akm psk
+ security pmf optional
+ no shutdown
+wlan Serv_Direct 6 Serv_Direct
+ no broadcast-ssid
+ security ft
+ security wpa psk set-key ascii 0 Wifiserv
+ no security wpa akm dot1x
+ security wpa akm psk
+ security pmf optional
+ no shutdown
+wlan "Studio A Wifi" 4 "Studio A Wifi"
+ security ft
+ security wpa psk set-key ascii 0 RR226W1fi!
+ no security wpa akm dot1x
+ security wpa akm psk
+ security pmf optional
+ no shutdown
+ap dot11 24ghz rf-profile Low_Client_Density_rf_24gh
+ coverage data rssi threshold -90
+ coverage level 2
+ coverage voice rssi threshold -90
+ description "pre configured Low Client Density rfprofile for 2.4gh radio"
+ high-density rx-sop threshold low
+ rate RATE_12M supported
+ rate RATE_24M supported
+ rate RATE_6M supported
+ tx-power v1 threshold -65
+ no shutdown
+ap dot11 24ghz rf-profile High_Client_Density_rf_24gh
+ description "pre configured High Client Density rfprofile for 2.4gh radio"
+ high-density rx-sop threshold medium
+ rate RATE_11M disable
+ rate RATE_12M mandatory
+ rate RATE_1M disable
+ rate RATE_24M supported
+ rate RATE_2M disable
+ rate RATE_5_5M disable
+ rate RATE_6M disable
+ tx-power min 7
+ no shutdown
+ap dot11 24ghz rf-profile Typical_Client_Density_rf_24gh
+ description "pre configured Typical Client Density rfprofile for 2.4gh radio"
+ rate RATE_11M disable
+ rate RATE_12M mandatory
+ rate RATE_1M disable
+ rate RATE_24M supported
+ rate RATE_2M disable
+ rate RATE_5_5M disable
+ rate RATE_6M disable
+ no shutdown
+ap dot11 24ghz cac voice acm
+ap dot11 24ghz rate RATE_12M supported
+ap dot11 24ghz rate RATE_24M supported
+ap dot11 24ghz rate RATE_6M supported
+ap dot11 5ghz rf-profile Low_Client_Density_rf_5gh
+ coverage data rssi threshold -90
+ coverage level 2
+ coverage voice rssi threshold -90
+ description "pre configured Low Client Density rfprofile for 5gh radio"
+ high-density rx-sop threshold low
+ rate RATE_12M mandatory
+ rate RATE_24M mandatory
+ rate RATE_6M mandatory
+ tx-power v1 threshold -60
+ no shutdown
+ap dot11 5ghz rf-profile High_Client_Density_rf_5gh
+ description "pre configured High Client Density rfprofile for 5gh radio"
+ high-density rx-sop threshold medium
+ rate RATE_12M mandatory
+ rate RATE_24M mandatory
+ rate RATE_6M disable
+ rate RATE_9M disable
+ tx-power min 7
+ tx-power v1 threshold -65
+ no shutdown
+ap dot11 5ghz rf-profile Typical_Client_Density_rf_5gh
+ description "pre configured Typical Density rfprofile for 5gh radio"
+ rate RATE_12M mandatory
+ rate RATE_24M mandatory
+ rate RATE_6M mandatory
+ no shutdown
+ap dot11 5ghz cac voice acm
+ap dot11 5ghz rate RATE_12M mandatory
+ap dot11 5ghz rate RATE_24M mandatory
+ap dot11 5ghz rate RATE_6M mandatory
+ap tag-source-priority 2 source filter
+ap tag-source-priority 3 source ap
+ap location name 221-226
+ ap-eth-mac 502f.a8ec.aa76
+ ap-eth-mac 6c31.0e67.e8fe
+ ap-eth-mac 7c21.0e30.7d1c
+ ap-eth-mac 7c21.0e30.7da4
+ ap-eth-mac 7c21.0e31.0756
+ ap-eth-mac 7c21.0e31.077c
+ ap-eth-mac 8c94.1fb6.ecf0
+ ap-eth-mac a488.7349.3b02
+ ap-eth-mac a488.7349.6f86
+ ap-eth-mac a488.7349.7a80
+ ap-eth-mac b811.4b7a.3ba0
+ ap-eth-mac b811.4b7a.435c
+ ap-eth-mac ccdb.93c9.92f0
+ ap-eth-mac ccdb.93c9.a896
+ ap-eth-mac f4db.e638.179e
+ description 221-226
+ tag policy 221-226
+ tag rf 221-226
+ tag site 221-226
+ap profile 221-226
+ link-encryption
+ mgmtuser username itdept password 0 Sh31se4! secret 0 59thAve|
+ap profile default-ap-profile
+ description "default ap profile"
+ap 1006.edae.18b4
+ policy-tag 221-226
+ rf-tag 221-226
+ site-tag 221-226
+ap 1006.edae.18bc
+ policy-tag 221-226
+ rf-tag 221-226
+ site-tag 221-226
+ap 1006.edae.19c8
+ policy-tag 221-226
+ rf-tag 221-226
+ site-tag 221-226
+ap 2c1a.058c.08a8
+ policy-tag 221-226
+ rf-tag 221-226
+ site-tag 221-226
+ap 2c1a.058c.0904
+ policy-tag 221-226
+ rf-tag 221-226
+ site-tag 221-226
+ap e44e.2dd8.428c
+ policy-tag 221-226
+ rf-tag 221-226
+ site-tag 221-226
+ap e44e.2dd8.42d0
+ policy-tag 221-226
+ rf-tag 221-226
+ site-tag 221-226
+trapflags ap crash
+trapflags ap noradiocards
+trapflags ap register
+end
+

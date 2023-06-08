@@ -1,0 +1,118 @@
+! Image stamp:    /ws/swbuildm/YA_rel_knoxville_qaoff/code/build/lakes(swbuildm_YA_rel_knoxville_qaoff_rel_knoxville)
+!                 Mar  8 2013 15:37:47
+!                 YA.15.12.0007
+!                 1173
+! Boot Image:     Primary
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :     8533579 03/08/13 YA.15.12.0007        
+! Secondary Image  :     8533579 03/08/13 YA.15.12.0007       
+! 
+! Boot ROM Version : YA.15.12
+! Default Boot     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 57-2nd floor                                    
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.12.0007        Base MAC Addr      : a0d3c1-6caf40
+!   ROM Version        : YA.15.12             Serial Number      : CN3BFP30RS  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.15.12.0007
+; Ver #04:01.ff.37.27:ea
+hostname "57-2nd floor"
+trunk 48 trk1 lacp
+ip default-gateway 10.57.5.1
+interface 38
+   name "BADPORT"
+   exit
+interface 48
+   name "trunk-core"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-47
+   untagged 49-52,Trk1
+   ip address dhcp-bootp
+   exit
+vlan 5
+   name "management"
+   tagged Trk1
+   ip address 10.57.5.7 255.255.255.0
+   exit
+vlan 6
+   name "wifi"
+   tagged Trk1
+   no ip address
+   exit
+vlan 7
+   name "Voip Lan"
+   untagged 37-39,47
+   tagged Trk1
+   no ip address
+   exit
+vlan 24
+   name "studio_lan"
+   untagged 1-30,32,40
+   tagged Trk1
+   ip address 10.57.24.47 255.255.252.0
+   exit
+vlan 30
+   name "accounting"
+   tagged Trk1
+   no ip address
+   exit
+vlan 60
+   name "old-office-lan"
+   untagged 31,33-36,41
+   tagged Trk1
+   no ip address
+   exit
+vlan 100
+   name "old-wifi-lan"
+   untagged 42-46
+   tagged Trk1
+   no ip address
+   exit
+vlan 192
+   name "citicam-lan"
+   tagged Trk1
+   no ip address
+   exit
+vlan 804
+   name "VLAN804"
+   tagged Trk1
+   no ip address
+   exit
+vlan 987
+   name "test"
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+no tftp server
+no dhcp config-file-update
+password manager
+

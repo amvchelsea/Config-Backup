@@ -1,0 +1,131 @@
+! Image stamp:    /ws/swbuildm/rel_irvine_qaoff/code/build/lakes(swbuildm_rel_irvine_qaoff_rel_irvine)
+!                 Aug 24 2012 09:18:47
+!                 YA.15.10.0003
+!                 17
+! Boot Image:     Primary
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :     8792643 08/24/12 YA.15.10.0003        
+! Secondary Image  :     8792643 08/24/12 YA.15.10.0003       
+! 
+! Boot ROM Version : YA.15.09
+! Default Boot     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 57Access-F1-01                                  
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.10.0003        Base MAC Addr      : 2c59e5-85ad40
+!   ROM Version        : YA.15.09             Serial Number      : CN36FP301W  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.15.10.0003
+; Ver #03:03.17.27:30
+hostname "57Access-F1-01"
+trunk 47-48 trk1 lacp
+ip default-gateway 10.57.5.1
+ip dns server-address priority 1 8.8.8.8
+ip dns server-address priority 2 8.8.4.4
+interface 48
+   name "Server Room Trunk"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-46
+   untagged 49-52,Trk1
+   ip address dhcp-bootp
+   exit
+vlan 5
+   name "management"
+   untagged 43
+   tagged Trk1
+   ip address 10.57.5.5 255.255.255.0
+   exit
+vlan 6
+   name "WiFi"
+   tagged Trk1
+   no ip address
+   exit
+vlan 7
+   name "voip-lan"
+   untagged 24-42,44
+   tagged Trk1
+   no ip address
+   exit
+vlan 10
+   name "VLAN10"
+   no ip address
+   exit
+vlan 11
+   name "VLAN11"
+   no ip address
+   exit
+vlan 16
+   name "office-lan"
+   tagged Trk1
+   no ip address
+   exit
+vlan 24
+   name "client24-lan"
+   untagged 2-23
+   tagged Trk1
+   no ip address
+   exit
+vlan 30
+   name "accounting"
+   tagged Trk1
+   ip address 10.57.30.5 255.255.255.0
+   exit
+vlan 31
+   name "DMZ"
+   tagged Trk1
+   ip address 10.57.31.5 255.255.255.0
+   exit
+vlan 32
+   name "editing"
+   untagged 1
+   tagged Trk1
+   ip address 10.57.32.5 255.255.255.0
+   exit
+vlan 60
+   name "old-office-lan"
+   tagged Trk1
+   no ip address
+   exit
+vlan 100
+   name "oldwifi-lan"
+   untagged 45-46
+   tagged Trk1
+   no ip address
+   exit
+vlan 192
+   name "citycam-lan"
+   tagged Trk1
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+no dhcp config-file-update
+password manager
+

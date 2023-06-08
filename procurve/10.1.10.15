@@ -1,0 +1,96 @@
+! Image stamp:    /ws/swbuildm/YA_rel_knoxville_qaoff/code/build/lakes(swbuildm_YA_rel_knoxville_qaoff_rel_knoxville)
+!                 Mar  8 2013 15:37:47
+!                 YA.15.12.0007
+!                 1173
+! Boot Image:     Primary
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :     8533579 03/08/13 YA.15.12.0007        
+! Secondary Image  :     8533579 03/08/13 YA.15.12.0007       
+! 
+! Boot ROM Version : YA.15.12
+! Default Boot     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : StudioD                                         
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.12.0007        Base MAC Addr      : f0921c-6d6540
+!   ROM Version        : YA.15.12             Serial Number      : CN30FP3160  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.15.12.0007
+; Ver #04:01.ff.37.27:ea
+hostname "StudioD"
+ip default-gateway 10.1.10.1
+interface 1
+   name "Cisco_226_Distribution_G24"
+   exit
+interface 33
+   name "Y_6"
+   exit
+interface 36
+   name "Y_5"
+   exit
+interface 37
+   name "Y_1"
+   exit
+interface 38
+   name "Y_4"
+   exit
+interface 39
+   name "Y_2"
+   exit
+interface 40
+   name "Y_3"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 2-48
+   untagged 1,49-52
+   ip address dhcp-bootp
+   exit
+vlan 10
+   name "Network_Management"
+   tagged 1
+   ip address 10.1.10.15 255.255.255.0
+   exit
+vlan 24
+   name "Studio226"
+   untagged 2-32,34-35,41-48
+   tagged 1
+   no ip address
+   exit
+vlan 491
+   name "Client07"
+   untagged 33,36-40
+   tagged 1
+   no ip address
+   exit
+spanning-tree
+no tftp server
+no dhcp config-file-update
+password manager
+

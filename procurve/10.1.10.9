@@ -1,0 +1,143 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_xanadu_zeus_qaoff/code/build/cpm(swbuildm_rel_xanadu_zeus_qaoff_rel_xanadu_zeus)
+!                 Nov 19 2018 19:06:27
+!                 YC.16.07.0003
+!                 923
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YC.16.01.0002
+! Active Boot ROM:     Primary
+! 
+! 
+!  Status and Counters - Module Information
+! 
+!   Chassis: 2540-48G-PoE+-4SFP+  JL357A         Serial Number:   TW04JYL01K
+! 
+! 
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+!  49      SFP+SR      J9150A       PRO793031562       1990-4065 
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    20870678 11/19/18 YC.16.07.0003        
+! Secondary Image  :    20870678 11/19/18 YC.16.07.0003       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YC.16.01.0002
+! Secondary Boot ROM Version : YC.16.01.0002
+! 
+! Default Boot Image   : Primary
+! Default Boot ROM     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 226-10fl-02                                     
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YC.16.07.0003        Base MAC Addr      : 883a30-5da700    
+!   ROM Version        : YC.16.01.0002        Serial Number      : TW04JYL01K  
+! 
+! 
+! 
+
+Running configuration:
+
+; JL357A Configuration Editor; Created on release #YC.16.07.0003
+; Ver #14:01.44.38.04.99.03.b3.b8.ef.74.61.fc.68.f3.8c.fc.e3.ff.37.2f:15
+
+hostname "226-10fl-02"
+module 1 type jl357a
+ip default-gateway 10.1.10.1
+interface 37
+   name "Grandstream"
+   exit
+interface 38
+   name "Grandstream"
+   exit
+interface 39
+   name "Grandstream"
+   exit
+interface 46
+   name "WiFi_10Fl_APCCDB.93C9.A896"
+   exit
+interface 47
+   name "WiFi_10Fl_APCCDB.93C9.92F0"
+   exit
+snmp-server community "AmV$tUd10s" operator
+snmp-server host 10.1.11.162 community "AmV$tUd10s"
+snmp-server trap-source 10.1.11.131
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-48
+   untagged 49-52
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 10
+   name "VLAN10"
+   tagged 48
+   ip address 10.1.10.9 255.255.255.0
+   exit
+vlan 147
+   name "VLAN147"
+   untagged 43-45
+   tagged 48
+   no ip address
+   exit
+vlan 212
+   name "VLAN212"
+   untagged 37-41
+   tagged 48
+   no ip address
+   exit
+vlan 431
+   name "VLAN431"
+   untagged 42
+   tagged 48
+   no ip address
+   exit
+vlan 441
+   name "VLAN441"
+   no ip address
+   exit
+vlan 471
+   name "client5"
+   untagged 1-24
+   tagged 48
+   no ip address
+   exit
+vlan 666
+   name "VLAN666"
+   untagged 25-36
+   tagged 48
+   no ip address
+   exit
+vlan 998
+   name "VLAN998"
+   untagged 46-47
+   tagged 48
+   ip address 10.1.11.131 255.255.255.0
+   exit
+spanning-tree
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+

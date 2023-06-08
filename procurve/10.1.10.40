@@ -1,0 +1,224 @@
+! Image stamp:    /ws/swbuildm/YA_rel_knoxville_qaoff/code/build/lakes(swbuildm_YA_rel_knoxville_qaoff_rel_knoxville)
+!                 Mar 12 2014 08:30:18
+!                 YA.15.12.0015
+!                 1013
+! Boot Image:     Primary
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :     8538112 03/12/14 YA.15.12.0015        
+! Secondary Image  :     8538112 03/12/14 YA.15.12.0015       
+! 
+! Boot ROM Version : YA.15.12
+! Default Boot     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 221_Basement-Closet                             
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.12.0015        Base MAC Addr      : 1c98ec-377100
+!   ROM Version        : YA.15.12             Serial Number      : CN63FP31DZ  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.15.12.0015
+; Ver #05:08.41.ff.37.27:a3
+hostname "221_Basement-Closet"
+ip default-gateway 10.1.10.1
+interface 1
+   name "PHONE_PC"
+   exit
+interface 2
+   name "PHONE_PC"
+   exit
+interface 3
+   name "PHONE_PC"
+   exit
+interface 4
+   name "PHONE_PC"
+   exit
+interface 5
+   name "PHONE_PC"
+   exit
+interface 6
+   name "PHONE_PC"
+   exit
+interface 7
+   name "PHONE_PC"
+   exit
+interface 8
+   name "PHONE_PC"
+   exit
+interface 9
+   name "PHONE_PC"
+   exit
+interface 10
+   name "PHONE_PC"
+   exit
+interface 11
+   name "PHONE_PC"
+   exit
+interface 12
+   name "PHONE_PC"
+   exit
+interface 13
+   name "PHONE_PC"
+   exit
+interface 14
+   name "PHONE_PC"
+   exit
+interface 15
+   name "PHONE_PC"
+   exit
+interface 16
+   name "PHONE_PC"
+   exit
+interface 17
+   name "PHONE_PC"
+   exit
+interface 18
+   name "PHONE_PC"
+   exit
+interface 19
+   name "PHONE_PC"
+   exit
+interface 20
+   name "PHONE_PC"
+   exit
+interface 21
+   name "PHONE_PC"
+   exit
+interface 22
+   name "PHONE_PC"
+   exit
+interface 23
+   name "PHONE_PC"
+   exit
+interface 24
+   name "PHONE_PC"
+   exit
+interface 25
+   name "PHONE_PC"
+   exit
+interface 26
+   name "PHONE_PC"
+   exit
+interface 27
+   name "PHONE_PC"
+   exit
+interface 28
+   name "PHONE_PC"
+   exit
+interface 29
+   name "PHONE_PC"
+   exit
+interface 30
+   name "PHONE_PC"
+   exit
+interface 31
+   name "PHONE_PC"
+   exit
+interface 32
+   name "PHONE_PC"
+   exit
+interface 33
+   name "PHONE_PC"
+   exit
+interface 34
+   name "PHONE_PC"
+   exit
+interface 35
+   name "PHONE_PC"
+   exit
+interface 36
+   name "PHONE_PC"
+   exit
+interface 37
+   name "wendygroup-accounting"
+   exit
+interface 38
+   name "wendygroup-accounting"
+   exit
+interface 39
+   name "PHONE_PC"
+   exit
+interface 40
+   name "PHONE_PC"
+   exit
+interface 41
+   name "PHONE_PC"
+   exit
+interface 42
+   name "PHONE_PC"
+   exit
+interface 43
+   name "PHONE_PC"
+   exit
+interface 44
+   name "PHONE_PC"
+   exit
+interface 45
+   name "PHONE_PC"
+   exit
+interface 46
+   name "PHONE_PC"
+   exit
+interface 47
+   name "To_Account"
+   exit
+interface 48
+   name "Cisco_TapeRoom_Distribution_G48"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-47
+   untagged 48-52
+   ip address dhcp-bootp
+   exit
+vlan 10
+   name "Network_Management"
+   tagged 48
+   ip address 10.1.10.40 255.255.255.0
+   exit
+vlan 40
+   name "Data"
+   untagged 1-36,39-47
+   tagged 48
+   no ip address
+   exit
+vlan 212
+   name "Voip"
+   tagged 1-46,48
+   no ip address
+   voice
+   exit
+vlan 451
+   name "Client3"
+   untagged 37-38
+   tagged 48
+   no ip address
+   exit
+no tftp server
+no dhcp config-file-update
+password manager
+

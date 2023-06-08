@@ -1,0 +1,142 @@
+!  /ws/swbuildm/rel_orlando_qaoff/code/build/lakes(swbuildm_rel_orlando_qaoff_rel_
+! orlando)
+!                 Jan 30 2015 18:50:46
+!                 YA.15.16.0006
+!                 72
+! Boot Image:     Primary
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+!  50      SFP+SR      NON-HP  -B21 PRO793031554       NoSupport 
+! 
+! 
+! The following transceivers have extra information:
+!  Port #  	 Message   
+!  --------	 -------------------------------------
+!  Port  50	 Non-HP transceiver detected in port 50, which 
+! 		 may cause network problems. HP will not support or 
+! 		 troubleshoot problems with this transceiver.
+! 
+! 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    10587527 01/30/15 YA.15.16.0006        
+! Secondary Image  :    10587527 01/30/15 YA.15.16.0006       
+! 
+! Boot ROM Version : YA.15.17
+! Default Boot     : Primary
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 221-2F-1                                        
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.16.0006        Base MAC Addr      : 3ca82a-639d00
+!   ROM Version        : YA.15.17             Serial Number      : CN59G9F083  
+! 
+! 
+! 
+Running configuration:
+
+; J9855A Configuration Editor; Created on release #YA.15.16.0006
+; Ver #06:04.9c.63.ff.37.27:12
+hostname "221-2F-1"
+trunk 47 trk1 lacp
+ip default-gateway 10.1.10.1
+interface 50
+   name "Cisco_Basement_Distribution_T8"
+   exit
+snmp-server community "public" unrestricted
+snmp-server community "AmV$tUd10s" operator
+snmp-server host 10.1.11.162 community "AmV$tUd10s"
+snmp-server trap-source 10.1.11.120
+snmpv3 enable
+snmpv3 group managerpriv user "Manfred" sec-model ver3
+snmpv3 user "amvsnmp"
+snmpv3 user "initial"
+aaa authorization commands local
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-46,48
+   untagged 49-50,Trk1
+   ip address dhcp-bootp
+   exit
+vlan 10
+   name "Network_Management"
+   tagged 50,Trk1
+   ip address 10.1.10.24 255.255.255.0
+   exit
+vlan 20
+   name "Studio-A"
+   untagged 39-41
+   tagged 50,Trk1
+   no ip address
+   exit
+vlan 28
+   name "Studio-A-Work"
+   tagged 50
+   no ip address
+   exit
+vlan 40
+   name "VLAN40"
+   tagged 50
+   no ip address
+   exit
+vlan 102
+   name "VLAN102"
+   tagged 48,50,Trk1
+   no ip address
+   exit
+vlan 147
+   name "VLAN147"
+   tagged 48,50,Trk1
+   no ip address
+   exit
+vlan 411
+   name "VLAN411"
+   untagged 25-29
+   tagged 48,50,Trk1
+   no ip address
+   exit
+vlan 451
+   name "client3"
+   untagged 2
+   tagged 48,50,Trk1
+   no ip address
+   exit
+vlan 481
+   name "internet"
+   untagged 3-24,30-38,42-44
+   tagged 50,Trk1
+   no ip address
+   exit
+vlan 555
+   name "VLAN555"
+   tagged 48,50,Trk1
+   no ip address
+   exit
+vlan 556
+   name "VLAN556"
+   untagged 1
+   tagged 48,50,Trk1
+   no ip address
+   exit
+vlan 998
+   name "VLAN998"
+   untagged 45-46
+   tagged 48,50,Trk1
+   ip address 10.1.11.120 255.255.255.0
+   exit
+spanning-tree Trk1 priority 4
+no tftp server
+no dhcp config-file-update
+no dhcp image-file-update
+password manager
+

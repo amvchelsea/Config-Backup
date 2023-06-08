@@ -1,0 +1,97 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_ajanta_qaoff/code/build/cpm(swbuildm_rel_ajanta_qaoff_rel_ajanta)
+!                 Jun 26 2020 00:32:50
+!                 YC.16.10.0009
+!                 570
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YC.16.01.0002
+! Active Boot ROM:     Primary
+! 
+! 
+!  Status and Counters - Module Information
+! 
+!   Chassis: 2540-48G-PoE+-4SFP+  JL357A         Serial Number:   CN19JYL3HY
+! 
+! 
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    21226435 06/26/20 YC.16.10.0009        
+! Secondary Image  :    21226435 06/26/20 YC.16.10.0009       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YC.16.01.0002
+! Secondary Boot ROM Version : YC.16.01.0002
+! 
+! Default Boot Image   : Primary
+! Default Boot ROM     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 221-2F-3                                        
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YC.16.10.0009        Base MAC Addr      : 445bed-cfefc0    
+!   ROM Version        : YC.16.01.0002        Serial Number      : CN19JYL3HY  
+! 
+! 
+! 
+
+Running configuration:
+
+; JL357A Configuration Editor; Created on release #YC.16.10.0009
+; Ver #14:67.44.38.04.99.03.b3.b8.ef.74.61.fc.68.f3.8c.fc.e3.ff.37.2f:73
+
+hostname "221-2F-3"
+module 1 type jl357a
+ip default-gateway 10.1.10.1
+interface 2
+   name "Kitchen_Zoom"
+   exit
+interface 48
+   name "2ndFl_Closet_HP_SW1_46"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-47
+   untagged 48-52
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 10
+   name "Network_Management"
+   tagged 48
+   ip address 10.1.10.28 255.255.255.0
+   exit
+vlan 212
+   name "VOIP"
+   tagged 1-48
+   no ip address
+   voice
+   exit
+vlan 481
+   name "Client06_Internet"
+   untagged 1-47
+   tagged 48
+   no ip address
+   exit
+password manager
+

@@ -1,0 +1,103 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_washington_qaoff/code/build/lakes(swbuildm_rel_washington_qaoff_rel_washington)
+!                 Jun 22 2018 12:13:38
+!                 YA.16.06.0006
+!                 473
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YA.15.20
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    14907669 06/22/18 YA.16.06.0006        
+! Secondary Image  :    14907669 06/22/18 YA.16.06.0006       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YA.15.20
+! 
+! Default Boot Image   : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : StudioAB-24portHP                               
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.16.06.0006        Base MAC Addr      : 883a30-b94480
+!   ROM Version        : YA.15.20             Serial Number      : TW9BFP43WF  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9773A Configuration Editor; Created on release #YA.16.06.0006
+; Ver #13:44.00.04.19.02.13.98.82.34.61.18.28.f3.84.9c.63.ff.37.27:43
+hostname "StudioAB-24portHP"
+trunk 24 trk1 lacp
+ip default-gateway 10.1.10.1
+interface 18
+   name "18_NetGear_13_Vlan102"
+   exit
+interface 21
+   name "21_Dell_9_Vlan20"
+   exit
+interface 24
+   name "24_HP_Basement_Distribution_C22"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-23
+   untagged 25-28,Trk1
+   ip address dhcp-bootp
+   exit
+vlan 5
+   name "VLAN5"
+   tagged Trk1
+   ip address 10.221.5.11 255.255.255.0
+   exit
+vlan 10
+   name "Network_Management"
+   tagged Trk1
+   ip address 10.1.10.102 255.255.255.0
+   exit
+vlan 20
+   name "Studio A"
+   untagged 1-15,17,19-23
+   tagged Trk1
+   no ip address
+   exit
+vlan 21
+   name "Studio B"
+   tagged Trk1
+   no ip address
+   exit
+vlan 102
+   name "VLAN102"
+   untagged 16,18
+   tagged Trk1
+   ip address dhcp-bootp
+   exit
+spanning-tree Trk1 priority 4
+no tftp server
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+

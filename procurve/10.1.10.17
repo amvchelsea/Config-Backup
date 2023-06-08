@@ -1,0 +1,79 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_washington_qaoff/code/build/lakes(swbuildm_rel_washington_qaoff_rel_washington)
+!                 Jun 22 2018 12:13:38
+!                 YA.16.06.0006
+!                 473
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YA.15.20
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    14907669 06/22/18 YA.16.06.0006        
+! Secondary Image  :    14907669 06/22/18 YA.16.06.0006       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YA.15.20
+! 
+! Default Boot Image   : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 226-Sales                                       
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.16.06.0006        Base MAC Addr      : f860f0-7d2500
+!   ROM Version        : YA.15.20             Serial Number      : CN9AFP33PZ  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.16.06.0006
+; Ver #13:44.00.04.19.02.13.98.82.34.61.18.28.f3.84.9c.63.ff.37.27:43
+hostname "226-Sales"
+ip default-gateway 10.1.10.1
+interface 5
+   name "Cisco_226_Distribution_G15"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-48
+   untagged 49-52
+   no ip address
+   exit
+vlan 10
+   name "Network_Management"
+   tagged 5
+   ip address 10.1.10.17 255.255.255.0
+   exit
+vlan 40
+   name "VLAN40"
+   untagged 1-4,6-48
+   tagged 5
+   no ip address
+   exit
+no tftp server
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+

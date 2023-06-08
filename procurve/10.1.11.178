@@ -1,0 +1,70 @@
+!  /ws/swbuildm/rel_orlando_qaoff/code/build/lakes(swbuildm_rel_orlando_qaoff_rel_
+! orlando)
+!                 Jan 30 2015 18:50:46
+!                 YA.15.16.0006
+!                 72
+! Boot Image:     Primary
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    10587527 01/30/15 YA.15.16.0006        
+! Secondary Image  :    10587527 01/30/15 YA.15.16.0006       
+! 
+! Boot ROM Version : YA.15.17
+! Default Boot     : Primary
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : Basement_ESXserver_HP                           
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.15.16.0006        Base MAC Addr      : 1402ec-294180
+!   ROM Version        : YA.15.17             Serial Number      : CN64G9F07M  
+! 
+! 
+! 
+Running configuration:
+
+; J9855A Configuration Editor; Created on release #YA.15.16.0006
+; Ver #06:04.9c.63.ff.37.27:12
+hostname "Basement_ESXserver_HP"
+mirror-port 24
+interface 1
+   name "esx5host02.amvchelsea.com"
+   exit
+interface 3
+   name "esx5host04.amvchelsea.com"
+   exit
+interface 4
+   monitor
+   name "esx5host05.amvchelsea.com"
+   exit
+interface 42
+   name "esx5host01.amvchelsea.com"
+   exit
+interface 45
+   name "45_Cisco_Basement_Distribution_G24"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   untagged 1-50
+   ip address dhcp-bootp
+   exit
+no tftp server
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+

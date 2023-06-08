@@ -1,0 +1,117 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_ajanta_qaoff/code/build/cpm(swbuildm_rel_ajanta_qaoff_rel_ajanta)
+!                 Jun 26 2020 00:32:50
+!                 YC.16.10.0009
+!                 570
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YC.16.01.0002
+! Active Boot ROM:     Primary
+! 
+! 
+!  Status and Counters - Module Information
+! 
+!   Chassis: 2540-48G-PoE+-4SFP+  JL357A         Serial Number:   CN19JYL3DX
+! 
+! 
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+!  49      SFP+SR      J9150A       PRO793031560       1990-4065 
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    21226435 06/26/20 YC.16.10.0009        
+! Secondary Image  :    21226435 06/26/20 YC.16.10.0009       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YC.16.01.0002
+! Secondary Boot ROM Version : YC.16.01.0002
+! 
+! Default Boot Image   : Primary
+! Default Boot ROM     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 226-3rd-fl-1                                    
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YC.16.10.0009        Base MAC Addr      : 445bed-d0b080    
+!   ROM Version        : YC.16.01.0002        Serial Number      : CN19JYL3DX  
+! 
+! 
+! 
+
+Running configuration:
+
+; JL357A Configuration Editor; Created on release #YC.16.10.0009
+; Ver #14:67.44.38.04.99.03.b3.b8.ef.74.61.fc.68.f3.8c.fc.e3.ff.37.2f:73
+
+hostname "226-3rd-fl-1"
+module 1 type jl357a
+trunk 50 trk3 lacp
+ip default-gateway 10.1.10.1
+interface 31
+   name "2ndFL_Scuitycamera"
+   exit
+interface 32
+   name "2ndFL_Scuitycamera"
+   exit
+interface 33
+   name "2ndFL_Scuitycamera"
+   exit
+interface 34
+   name "2ndFL_Scuitycamera"
+   exit
+interface 49
+   name "Cisco_226_Distribution_T3"
+   exit
+interface 50
+   name "TRUNKtoHPbsmtYAHOO"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-34,40-46
+   untagged 35-39,47-49,51-52,Trk3
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 10
+   name "Ciscomanagement"
+   tagged 49,Trk3
+   ip address 10.1.10.31 255.255.255.0
+   exit
+vlan 147
+   name "Security"
+   untagged 31-34,43-46
+   tagged 49,Trk3
+   no ip address
+   exit
+vlan 491
+   name "Client7"
+   untagged 1-30
+   no ip address
+   exit
+vlan 998
+   name "WIFI-admin"
+   untagged 40-42
+   tagged 49
+   no ip address
+   exit
+spanning-tree Trk3 priority 4
+password manager
+

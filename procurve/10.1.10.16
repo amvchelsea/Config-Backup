@@ -1,0 +1,179 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_ajanta_qaoff/code/build/cpm(swbuildm_rel_ajanta_qaoff_rel_ajanta)
+!                 Jun 26 2020 00:32:50
+!                 YC.16.10.0009
+!                 570
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YC.16.01.0002
+! Active Boot ROM:     Primary
+! 
+! 
+!  Status and Counters - Module Information
+! 
+!   Chassis: 2540-48G-PoE+-4SFP+  JL357A         Serial Number:   TW1BJYL2SR
+! 
+! 
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    21226435 06/26/20 YC.16.10.0009        
+! Secondary Image  :    21226435 06/26/20 YC.16.10.0009       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YC.16.01.0002
+! Secondary Boot ROM Version : YC.16.01.0002
+! 
+! Default Boot Image   : Primary
+! Default Boot ROM     : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : Basement226DistroHP1                            
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YC.16.10.0009        Base MAC Addr      : bcd7a5-297800    
+!   ROM Version        : YC.16.01.0002        Serial Number      : TW1BJYL2SR  
+! 
+! 
+! 
+
+Running configuration:
+
+; JL357A Configuration Editor; Created on release #YC.16.10.0009
+; Ver #14:67.44.38.04.99.03.b3.b8.ef.74.61.fc.68.f3.8c.fc.e3.ff.37.2f:73
+
+hostname "Basement226DistroHP1"
+module 1 type jl357a
+mirror-port 24
+ip default-gateway 10.1.10.1
+interface 12
+   name "UPS-MONITORING"
+   exit
+interface 34
+   name "GlobalCitizen_NetGear_SW"
+   exit
+interface 41
+   name "Mgmt_FW_1_P14"
+   exit
+interface 42
+   name "Mgmt_FW_2_P14"
+   exit
+interface 43
+   name "Mgmt_Cisco_1_G0/0"
+   exit
+interface 44
+   name "Mgmt_Cisco_2_G0/0"
+   exit
+interface 45
+   monitor
+   name "PHONE-FOR-DOOR-BUZZER"
+   exit
+interface 46
+   name "WiFi_BackHallway_APA488.7349.6F86"
+   exit
+interface 48
+   name "Cisco_226_Distribution_G11"
+   exit
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-47
+   untagged 48-52
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 10
+   name "Network_Management"
+   untagged 12,41-44
+   tagged 48
+   ip address 10.1.10.16 255.255.255.0
+   exit
+vlan 14
+   name "VOIP"
+   tagged 48
+   no ip address
+   exit
+vlan 102
+   name "Transcoding"
+   untagged 30-39
+   tagged 48
+   no ip address
+   exit
+vlan 147
+   name "Security_Cams"
+   untagged 47
+   tagged 48
+   no ip address
+   exit
+vlan 212
+   name "voip666"
+   untagged 1-11,40,45
+   tagged 48
+   no ip address
+   exit
+vlan 411
+   name "wifi"
+   tagged 48
+   no ip address
+   exit
+vlan 431
+   name "Client1"
+   tagged 48
+   no ip address
+   exit
+vlan 441
+   name "Client2"
+   tagged 48
+   no ip address
+   exit
+vlan 451
+   name "Client3"
+   tagged 48
+   no ip address
+   exit
+vlan 461
+   name "Client4"
+   tagged 48
+   no ip address
+   exit
+vlan 471
+   name "Client5"
+   tagged 48
+   no ip address
+   exit
+vlan 481
+   name "Client6"
+   tagged 48
+   no ip address
+   exit
+vlan 491
+   name "Client07"
+   untagged 13-29
+   tagged 48
+   no ip address
+   exit
+vlan 998
+   name "11net"
+   untagged 46
+   tagged 48
+   no ip address
+   exit
+password manager
+

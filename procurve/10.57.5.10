@@ -1,0 +1,104 @@
+! 
+! Image stamp:    /ws/swbuildm/rel_ukiah_qaoff/code/build/lakes(swbuildm_rel_ukiah_qaoff_rel_ukiah)
+!                 Jul 21 2017 13:28:25
+!                 YA.16.04.0008
+!                 485
+! Boot Image:     Primary
+! 
+! Boot ROM Version:    YA.15.19
+! Invalid input: modules
+! 
+! Transceiver Technical Information:
+! 
+!                      Product      Serial             Part
+!  Port    Type        Number       Number             Number
+!  ------- ----------- ------------ ------------------ ----------
+! 
+! 
+! Image             Size (bytes) Date     Version 
+! ----------------- ------------ -------- --------------
+! Primary Image    :    14579982 07/21/17 YA.16.04.0008        
+! Secondary Image  :    14579982 07/21/17 YA.16.04.0008       
+! 
+! Boot ROM Version 
+! ----------------
+! Primary Boot ROM Version   : YA.15.19
+! 
+! Default Boot Image   : Primary
+! 
+! 
+!  Status and Counters - General System Information
+! 
+!   System Name        : 3rd-fl-west-2                                   
+!   System Contact     : 
+!   System Location    : 
+! 
+!   MAC Age Time (sec) : 300    
+! 
+!   Time Zone          : 0    
+!   Daylight Time Rule : None                      
+! 
+!   Software revision  : YA.16.04.0008        Base MAC Addr      : d06726-100c00
+!   ROM Version        : YA.15.19             Serial Number      : CN7BFP325N  
+! 
+! 
+! 
+
+Running configuration:
+
+; J9772A Configuration Editor; Created on release #YA.16.04.0008
+; Ver #10:19.02.13.98.82.34.61.18.28.f3.84.9c.63.ff.37.27:00
+hostname "3rd-fl-west-2"
+trunk 1 trk1 lacp
+ip default-gateway 10.57.5.1
+snmp-server community "AmV$tUd10s" operator
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 2-48
+   untagged 49-52,Trk1
+   ip address dhcp-bootp
+   exit
+vlan 5
+   name "MGMT"
+   tagged Trk1
+   ip address 10.57.5.10 255.255.255.0
+   exit
+vlan 7
+   name "VOIP"
+   untagged 25-46
+   tagged Trk1
+   no ip address
+   exit
+vlan 10
+   name "VLAN10"
+   no ip address
+   exit
+vlan 24
+   name "Studio"
+   untagged 2-24
+   tagged Trk1
+   no ip address
+   exit
+vlan 30
+   name "accounting"
+   tagged Trk1
+   no ip address
+   exit
+vlan 60
+   name "old-office-lan"
+   tagged Trk1
+   no ip address
+   exit
+vlan 100
+   name "wifi"
+   untagged 47-48
+   tagged Trk1
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+no tftp server
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+
