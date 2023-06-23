@@ -23,7 +23,7 @@
 !
 configure
 vlan database
-vlan 10,40,42,411,555-556,998
+vlan 10,555-556
 exit
 stack
 member 1 4
@@ -35,31 +35,18 @@ ip http server
 interface vlan 10
 name "Network_Management"
 exit
-interface vlan 40
-name "40net"
-                     
-exit
-interface vlan 42
-name "Avid Network"
-exit
-interface vlan 411
-name "wifi"
-exit
 interface vlan 555
 name "226VOIP"
+                     
 exit
 interface vlan 556
 name "WendyLAN"
-exit
-interface vlan 998
-name "manage"
 exit
 username "admin" password e7a82566353ef32612be7682e615d0bb level 15 encrypted
 aaa authentication login "defaultList" local
 aaa authentication enable "enableList" enable
 line telnet
 login authentication defaultList
-                     
 exit
 line ssh
 login authentication defaultList
@@ -72,6 +59,7 @@ interface ethernet 1/g1
 switchport access vlan 555
 lldp med
 exit
+                     
 !
 interface ethernet 1/g2
 switchport access vlan 555
@@ -81,7 +69,6 @@ exit
 interface ethernet 1/g3
 switchport access vlan 555
 lldp med
-                     
 exit
 !
 interface ethernet 1/g4
@@ -94,6 +81,7 @@ switchport access vlan 555
 lldp med
 exit
 !
+                     
 interface ethernet 1/g6
 switchport access vlan 555
 lldp med
@@ -103,7 +91,6 @@ interface ethernet 1/g7
 switchport access vlan 555
 lldp med
 exit
-                     
 !
 interface ethernet 1/g8
 switchport access vlan 555
@@ -116,6 +103,7 @@ lldp med
 exit
 !
 interface ethernet 1/g10
+                     
 switchport access vlan 555
 lldp med
 exit
@@ -125,7 +113,6 @@ switchport access vlan 555
 lldp med
 exit
 !
-                     
 interface ethernet 1/g12
 switchport access vlan 555
 lldp med
@@ -138,6 +125,7 @@ exit
 !
 interface ethernet 1/g14
 switchport access vlan 555
+                     
 lldp med
 exit
 !
@@ -147,7 +135,6 @@ lldp med
 exit
 !
 interface ethernet 1/g16
-                     
 switchport access vlan 555
 lldp med
 exit
@@ -160,6 +147,7 @@ exit
 interface ethernet 1/g18
 switchport access vlan 555
 lldp med
+                     
 exit
 !
 interface ethernet 1/g19
@@ -169,7 +157,6 @@ exit
 !
 interface ethernet 1/g20
 switchport access vlan 555
-                     
 lldp med
 exit
 !
@@ -182,6 +169,7 @@ interface ethernet 1/g22
 switchport access vlan 555
 lldp med
 exit
+                     
 !
 interface ethernet 1/g23
 switchport access vlan 555
@@ -190,8 +178,7 @@ exit
 !
 interface ethernet 1/g24
 switchport mode general
-switchport general allowed vlan add 10,40,42,411,555-556,998 tagged
-                     
+switchport general allowed vlan add 10,555-556 tagged
 exit
 !
 interface ethernet 1/xg1
@@ -204,6 +191,7 @@ exit
 !
 interface ethernet 1/xg3
 lldp med
+                     
 exit
 !
 interface ethernet 1/xg4

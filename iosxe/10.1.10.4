@@ -350,11 +350,6 @@ interface Port-channel2
  switchport trunk allowed vlan 1-800,802-811,813-4094
  switchport mode trunk
 !
-interface Port-channel5
- description Po5_4thFl_GreenRoom_Cisco_SW_P5
- switchport trunk allowed vlan 10,147,212,555
- switchport mode trunk
-!
 interface GigabitEthernet0/0
  vrf forwarding Mgmt-vrf
  no ip address
@@ -380,9 +375,8 @@ interface GigabitEthernet1/0/7
 !
 interface GigabitEthernet1/0/8
  description Gi1/0/8_4thFl_GreenRoom_Cisco_SW_G48
- switchport trunk allowed vlan 10,147,212,555
+ switchport trunk allowed vlan 10,147,555,556
  switchport mode trunk
- channel-group 5 mode on
 !
 interface GigabitEthernet1/0/9
 !

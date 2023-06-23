@@ -43,75 +43,70 @@ Running configuration:
 ; J9772A Configuration Editor; Created on release #YA.15.12.0015
 ; Ver #05:08.41.ff.37.27:a3
 hostname "HP-2530-48G-PoEP"
-trunk 48 trk1 lacp
 ip default-gateway 10.1.10.1
 interface 28
    name "Studio_B_Video_Phone"
    exit
+interface 47
+   name "47_4thFl_Dell_SW_24"
+   exit
 snmp-server community "AmV$tUd10s" operator
 vlan 1
    name "DEFAULT_VLAN"
-   no untagged 1-47
-   untagged 49-52,Trk1
+   no untagged 1-46
+   untagged 47-52
    ip address dhcp-bootp
    exit
 vlan 10
    name "Network_Management"
-   tagged Trk1
+   tagged 47-48
    ip address 10.1.10.21 255.255.255.0
    exit
 vlan 40
    name "VLAN40"
-   tagged Trk1
    no ip address
    exit
 vlan 42
    name "VLAN42"
-   tagged Trk1
    no ip address
    exit
 vlan 147
    name "VLAN147"
-   untagged 37-47
-   tagged Trk1
+   untagged 37-46
+   tagged 48
    no ip address
    exit
 vlan 212
    name "VLAN212"
    untagged 28
-   tagged Trk1
    no ip address
    exit
 vlan 411
    name "VLAN411"
    untagged 1
-   tagged Trk1
    no ip address
    exit
 vlan 555
    name "VLAN555"
    untagged 5-27,29-30
-   tagged Trk1
+   tagged 47-48
    no ip address
    exit
 vlan 556
    name "VLAN556"
    untagged 31-36
-   tagged Trk1
+   tagged 47-48
    no ip address
    exit
 vlan 666
    name "VLAN666"
    untagged 2-4
-   tagged Trk1
    no ip address
    exit
 vlan 998
    name "VLAN998"
-   tagged Trk1
    no ip address
    exit
-spanning-tree Trk1 priority 4
 no tftp server
 no dhcp config-file-update
 password manager
