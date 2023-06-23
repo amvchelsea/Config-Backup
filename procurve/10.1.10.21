@@ -48,7 +48,10 @@ interface 28
    name "Studio_B_Video_Phone"
    exit
 interface 47
-   name "47_4thFl_Dell_SW_24"
+   name "47_4thFl_GreenRoom_Dell_SW_24"
+   exit
+interface 48
+   name "48_Cisco_Basement_Distribution_G8"
    exit
 snmp-server community "AmV$tUd10s" operator
 vlan 1
@@ -62,14 +65,6 @@ vlan 10
    tagged 47-48
    ip address 10.1.10.21 255.255.255.0
    exit
-vlan 40
-   name "VLAN40"
-   no ip address
-   exit
-vlan 42
-   name "VLAN42"
-   no ip address
-   exit
 vlan 147
    name "VLAN147"
    untagged 37-46
@@ -79,11 +74,13 @@ vlan 147
 vlan 212
    name "VLAN212"
    untagged 28
+   tagged 48
    no ip address
    exit
 vlan 411
    name "VLAN411"
    untagged 1
+   tagged 48
    no ip address
    exit
 vlan 555
@@ -101,6 +98,7 @@ vlan 556
 vlan 666
    name "VLAN666"
    untagged 2-4
+   tagged 48
    no ip address
    exit
 vlan 998

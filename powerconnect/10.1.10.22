@@ -177,6 +177,7 @@ lldp med
 exit
 !
 interface ethernet 1/g24
+description "24_4thFl_GreenRoom_HP_SW_47"
 switchport mode general
 switchport general allowed vlan add 10,555-556 tagged
 exit
@@ -190,8 +191,8 @@ lldp med
 exit
 !
 interface ethernet 1/xg3
-lldp med
                      
+lldp med
 exit
 !
 interface ethernet 1/xg4
