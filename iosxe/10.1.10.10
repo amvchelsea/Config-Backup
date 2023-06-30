@@ -1,41 +1,40 @@
-! Cisco IOS XE Software, Version 16.06.04a
+! Cisco IOS XE Software, Version 17.06.04
 ! 
-! Image: Software: CAT9K_IOSXE, 16.6.4a, RELEASE SOFTWARE (fc3)
-! Image: Compiled: Fri 26-Oct-18 18:15 by mcpre
-! Image: flash:cat9k_iosxe.16.06.04a.SPA.bin
+! Image: Software: CAT9K_IOSXE, 17.6.4, RELEASE SOFTWARE (fc1)
+! Image: Compiled: Sun 14-Aug-22 08:58 by mcpre
+! Image: flash:packages.conf
 ! Chassis type: C9300-48P
-! Memory: main 1392681K/6147K
-! Processor ID: FOC2249Q0VF
+! Memory: main 1317097K/6147K
+! Processor ID: FOC2249Q0WY
 ! CPU: X86
 ! Memory: nvram 2048K
 ! 
 ! VTP: VTP Version capable             : 1 to 3
 ! VTP: VTP version running             : 1
-! VTP: VTP Domain Name                 : AMV
-! VTP: VTP Pruning Mode                : Enabled
+! VTP: VTP Domain Name                 : default
+! VTP: VTP Pruning Mode                : Disabled (Operationally Disabled)
 ! VTP: VTP Traps Generation            : Disabled
-! VTP: Device ID                       : 002f.5c5c.4100
-! VTP: Local updater ID is 10.1.10.10 on interface Vl10 (lowest numbered VLAN interface found)
+! VTP: Device ID                       : 0029.c297.8600
 ! VTP: Feature VLAN:
 ! VTP: --------------
-! VTP: VTP Operating Mode                : Server
+! VTP: VTP Operating Mode                : Transparent
 ! VTP: Maximum VLANs supported locally   : 1005
-! VTP: Number of existing VLANs          : 59
-! VTP: Configuration Revision            : 112
-! VTP: MD5 digest                        : 0x10 0x95 0x25 0x49 0x57 0x26 0x54 0xE9 
-! VTP:                                     0xFD 0x45 0x74 0xFF 0xAB 0x7F 0xDA 0x9D 
+! VTP: Number of existing VLANs          : 12
+! VTP: Configuration Revision            : 0
+! VTP: MD5 digest                        : 0x5E 0x8C 0x71 0x4F 0xFE 0x6D 0x7F 0xB2 
+! VTP:                                     0x6D 0x14 0x0C 0x31 0x91 0x08 0xEC 0x6C 
 ! 
 ! NAME: "c93xx Stack", DESCR: "c93xx Stack"
-! PID: C9300-48P         , VID: V02  , SN: FOC2249Q0VF
+! PID: C9300-48P         , VID: V02  , SN: FOC2249Q0WY
 ! 
 ! NAME: "Switch 1", DESCR: "C9300-48P"
-! PID: C9300-48P         , VID: V02  , SN: FOC2249Q0VF
+! PID: C9300-48P         , VID: V02  , SN: FOC2249Q0WY
 ! 
 ! NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
-! PID: PWR-C1-715WAC     , VID: V03  , SN: DCA2246G53G
+! PID: PWR-C1-715WAC     , VID: V03  , SN: DCA2246G51M
 ! 
 ! NAME: "Switch 1 FRU Uplink Module 1", DESCR: "8x10G Uplink Module"
-! PID: C9300-NM-8X       , VID: V02  , SN: FOC224718K0
+! PID: C9300-NM-8X       , VID: V02  , SN: FOC224718BQ
 ! 
 ! NAME: "Te1/1/1", DESCR: "SFP-10GBase-SR"
 ! PID: SFP-10G-SR          , VID: V03  , SN: PRO860944857    
@@ -43,10 +42,10 @@
 ! 
 !
 !
-version 16.6
-no service pad
+version 17.6
 service timestamps debug datetime msec
 service timestamps log datetime msec
+service call-home
 no platform punt-keepalive disable-kernel-core
 !
 hostname NYHQ2-CS10
@@ -60,16 +59,28 @@ vrf definition Mgmt-vrf
  address-family ipv6
  exit-address-family
 !
-enable secret 5 $1$IteO$YR/Ey7zpDK5o9cvjEieEZ.
+enable secret 9 $14$n9u3$8WZWurd3m9iFck$j8Gpi3ykw59YwK3EwKGJg/pErAEA5yNW9c2LFiiF/8k
 !
 no aaa new-model
+boot system switch all flash:packages.conf
+clock timezone EST -5 0
+clock summer-time EDT recurring
 switch 1 provision c9300-48p
 !
 !
 !
 !
 !
-ip domain name amv.lan
+!
+!
+!
+!
+no ip domain lookup
+ip domain name amvchelsea.com
+!
+!
+!
+login on-success log
 !
 !
 !
@@ -77,34 +88,136 @@ ip domain name amv.lan
 !
 !
 !
+vtp domain default
+vtp mode transparent
 !
 !
+crypto pki trustpoint TP-self-signed-1712630803
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1712630803
+ revocation-check none
+ rsakeypair TP-self-signed-1712630803
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
 !
 !
+crypto pki certificate chain TP-self-signed-1712630803
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31373132 36333038 3033301E 170D3139 30323139 32313033 
+  34385A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 37313236 
+  33303830 33308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100B612 94FB2C18 2AAAB0EF 42A8902B 54C47D7C 97318C6A BA08923F 
+  49159A89 98181056 DA339017 6D5ECD3F 8E1EB946 13D7EF35 70FC368C D6DBBC82 
+  911616F3 4ABE1A1D 6F5584A4 E76512EA 4F67BC24 B1F419F6 BB948AEA CB595FB8 
+  21359066 2FA1A2FD 672942A9 39CBCB3B C2AE8160 E67F3826 476A3C87 46E050C5 
+  AC5356F7 EBA90F90 1E97C096 476802E2 F5871BE3 A87B912A 8E3A0AE1 2BE3BAF3 
+  0F0F8D9C 7D6E5D34 A2EFDE0A C3407B29 B56D1DFB 42371B23 418D64FE F4D2C7E9 
+  0D7A1337 2BA49717 439E3A60 1425FFC9 380F055B 96483882 5894040E B35E9687 
+  2C4D025F 588CB3B2 0E9D0A8E 97CB58CE 5A31AFE0 133C7C40 C8F4D486 1D8E36FE 
+  AA5B59B7 31D10203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 1478CD89 84218634 283C23B5 4C0E0780 F18D6DFE 
+  3D301D06 03551D0E 04160414 78CD8984 21863428 3C23B54C 0E0780F1 8D6DFE3D 
+  300D0609 2A864886 F70D0101 05050003 82010100 452240C7 06792960 E1BC9347 
+  A4290795 95B9FE29 3A1F42A0 384F507F 1304CF60 6D53020D 6CBD53DD 7A627856 
+  4E20A830 EC9A07CF 6EF233B9 BA0BBC4C EF71AD3A 3C95F31A F95295BB 246EACF6 
+  738BD58B E18ECCB8 15ADCCB0 747F1D45 7529C870 548F8B50 4C6FC40B 1537A3E9 
+  0DC5BFFB A994F421 8C855F4F 90C562CB 819D9D52 08FDAC47 F81969F0 1373ED93 
+  869E843C 499A2C7F DB2D4CCA A6B1F800 46A22882 F814998C DE8D3FB8 6C7EC3E0 
+  7595F37A 8C7E047F B77AF6E3 EA426915 BCBC041C 7690834A 32E5A7E6 8CE866EA 
+  E003FD9B B1E719D0 4FAACA7C 3F729619 7C92C137 2A51C7FB 98E00008 76CF5ADD 
+  683AEAF3 CC18D051 33B46FA1 F9F742C1 EA1FC193
+  	quit
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
 !
 !
+license boot level network-advantage addon dna-advantage
 !
 !
 diagnostic bootup level minimal
+!
 spanning-tree mode rapid-pvst
 spanning-tree extend system-id
+memory free low-watermark processor 131696
 !
-username itdept privilege 5 secret 5 $1$o3vZ$Va/06ulxOVtKVdxKXWeka0
+username itdept secret 9 $9$9tZ7..LfmO8BGk$El.sFfKAOHIVU4AlflMCrEgQmxhU5HDQ8ifJFME87wI
 !
 redundancy
  mode sso
 !
+!
+!
+!
+!
+!
+transceiver type all
+ monitoring
+!
+vlan 10
+ name Network_Management
+!
+vlan 147
+ name Security_Camera
+!
+vlan 212
+ name Office_Voip
+!
+vlan 431
+ name Client01
+!
+vlan 471
+ name Client05
+!
+vlan 666
+ name Enterprise_WiFi
+!
+vlan 998
+ name Internet_Vlan
 lldp run
 !
 !
+class-map match-any system-cpp-police-ewlc-control
+  description EWLC Control 
 class-map match-any system-cpp-police-topology-control
   description Topology control
 class-map match-any system-cpp-police-sw-forward
-  description Sw forwarding, L2 LVX data, LOGGING
+  description Sw forwarding, L2 LVX data packets, LOGGING, Transit Traffic
 class-map match-any system-cpp-default
-  description DHCP Snooping, EWLC control, EWCL data 
+  description EWLC Data, Inter FED Traffic 
 class-map match-any system-cpp-police-sys-data
-  description Learning cache ovfl, Crypto Control, Exception, EGR Exception, NFL SAMPLED DATA, RPF Failed
+  description Openflow, Exception, EGR Exception, NFL Sampled Data, RPF Failed
 class-map match-any system-cpp-police-punt-webauth
   description Punt Webauth
 class-map match-any system-cpp-police-l2lvx-control
@@ -113,8 +226,10 @@ class-map match-any system-cpp-police-forus
   description Forus Address resolution and Forus traffic
 class-map match-any system-cpp-police-multicast-end-station
   description MCAST END STATION
+class-map match-any system-cpp-police-high-rate-app
+  description High Rate Applications 
 class-map match-any system-cpp-police-multicast
-  description Transit Traffic and MCAST Data
+  description MCAST Data
 class-map match-any system-cpp-police-l2-control
   description L2 control
 class-map match-any system-cpp-police-dot1x-auth
@@ -122,16 +237,25 @@ class-map match-any system-cpp-police-dot1x-auth
 class-map match-any system-cpp-police-data
   description ICMP redirect, ICMP_GEN and BROADCAST
 class-map match-any system-cpp-police-stackwise-virt-control
-  description Stackwise Virtual
+  description Stackwise Virtual OOB
+class-map match-any system-cpp-police-control-low-priority
+  description General punt
 class-map match-any non-client-nrt-class
 class-map match-any system-cpp-police-routing-control
-  description Routing control
+  description Routing control and Low Latency
 class-map match-any system-cpp-police-protocol-snooping
   description Protocol snooping
+class-map match-any system-cpp-police-dhcp-snooping
+  description DHCP snooping
+class-map match-any system-cpp-police-ios-routing
+  description L2 control, Topology control, Routing control, Low Latency
 class-map match-any system-cpp-police-system-critical
-  description System Critical and Gold pkt
+  description System Critical and Gold Pkt
+class-map match-any system-cpp-police-ios-feature
+  description ICMPGEN,BROADCAST,ICMP,L2LVXCntrl,ProtoSnoop,PuntWebauth,MCASTData,Transit,DOT1XAuth,Swfwd,LOGGING,L2LVXData,ForusTraffic,ForusARP,McastEndStn,Openflow,Exception,EGRExcption,NflSampled,RpfFailed
 !
 policy-map system-cpp-policy
+ class system-cpp-police-control-low-priority
 !
 ! 
 !
@@ -144,21 +268,13 @@ policy-map system-cpp-policy
 !
 !
 !
-!
-!
-interface Port-channel2
- description Cisco_226_Distribution_P2
- switchport mode trunk
-!
 interface GigabitEthernet0/0
  vrf forwarding Mgmt-vrf
  no ip address
- speed 1000
+ shutdown
  negotiation auto
 !
 interface GigabitEthernet1/0/1
- switchport trunk allowed vlan 5,147,411,430,431,441,451,461,471,702,998
- switchport mode trunk
 !
 interface GigabitEthernet1/0/2
 !
@@ -233,7 +349,6 @@ interface GigabitEthernet1/0/36
 interface GigabitEthernet1/0/37
 !
 interface GigabitEthernet1/0/38
- switchport mode access
 !
 interface GigabitEthernet1/0/39
 !
@@ -246,20 +361,18 @@ interface GigabitEthernet1/0/42
 interface GigabitEthernet1/0/43
 !
 interface GigabitEthernet1/0/44
+ description Gi1/0/44_226-10th-Dante_HP_SW_48
  switchport trunk allowed vlan 998
  switchport mode trunk
 !
 interface GigabitEthernet1/0/45
- switchport access vlan 441
 !
 interface GigabitEthernet1/0/46
- description 10thFl_HP_SW2
+ description Gi1/0/46_226-10fl-02_HP_SW_48
  switchport trunk allowed vlan 10,147,212,431,471,666,998
  switchport mode trunk
 !
 interface GigabitEthernet1/0/47
- switchport trunk allowed vlan 7,147,555
- switchport mode trunk
 !
 interface GigabitEthernet1/0/48
 !
@@ -272,10 +385,9 @@ interface GigabitEthernet1/1/3
 interface GigabitEthernet1/1/4
 !
 interface TenGigabitEthernet1/1/1
- description Po2_Cisco_226_Distribution_T1
+ description T1_Cisco_226_Distribution_T1
+ switchport trunk allowed vlan 10,147,212,431,471,666,998
  switchport mode trunk
- load-interval 30
- channel-group 2 mode on
 !
 interface TenGigabitEthernet1/1/2
 !
@@ -295,88 +407,73 @@ interface FortyGigabitEthernet1/1/1
 !
 interface FortyGigabitEthernet1/1/2
 !
+interface TwentyFiveGigE1/1/1
+!
+interface TwentyFiveGigE1/1/2
+!
+interface AppGigabitEthernet1/0/1
+!
 interface Vlan1
  no ip address
 !
-interface Vlan7
- description CLIENT-VOIP
- no ip address
- no ip redirects
- no ip unreachables
- no ip proxy-arp
-!
 interface Vlan10
- description << Network Management VLAN >>
  ip address 10.1.10.10 255.255.255.0
  no ip redirects
  no ip unreachables
  no ip proxy-arp
 !
-interface Vlan311
- no ip address
-!
-interface Vlan555
- no ip address
-!
-interface Vlan556
- no ip address
-!
 ip default-gateway 10.1.10.1
 ip forward-protocol nd
 ip http server
+ip http authentication local
 ip http secure-server
-!
-ip ssh time-out 90
-ip ssh authentication-retries 2
+ip ssh time-out 60
+ip ssh authentication-retries 5
 ip ssh version 2
 !
 !
-ip access-list standard MGMT_LibreNMS
- permit 10.1.11.162
-ip access-list standard MGMT_PRTG
- permit 10.1.11.166
+ip access-list standard MGMT
+ 10 permit 10.1.11.162
+ 20 permit 10.1.11.166
 !
 !
-snmp-server community AmV$tUd10s RW MGMT_LibreNMS
-snmp-server community public RW MGMT_PRTG
-snmp-server location << 226 West 26th Street - HQ2 >>
-snmp-server contact << IT Department >>
-snmp-server system-shutdown
-snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
-snmp-server host 10.1.10.200 AmV$tUd10s 
 !
+!
+snmp-server community AmV$tUd10s RO MGMT
 !
 control-plane
  service-policy input system-cpp-policy
 !
 !
 line con 0
- session-timeout 15 
  logging synchronous
  login local
  stopbits 1
 line vty 0 4
- session-timeout 15 
+ exec-timeout 15 0
  logging synchronous
  login local
- transport input ssh
- stopbits 1
+ transport input all
 line vty 5 15
- session-timeout 15 
+ exec-timeout 15 0
  logging synchronous
- login
+ login local
+ transport input all
+line vty 16 31
+ no login
  transport input ssh
- stopbits 1
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
 !
 !
-mac address-table notification mac-move
-wsma agent exec
 !
-wsma agent config
 !
-wsma agent filesys
-!
-wsma agent notify
 !
 !
 end
