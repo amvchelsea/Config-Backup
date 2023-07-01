@@ -460,8 +460,9 @@ line vty 5 15
  login local
  transport input all
 line vty 16 31
- no login
- transport input ssh
+ login
+ no exec
+ transport input none
 !
 call-home
  ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
