@@ -347,7 +347,8 @@ policy-map TELOS
 !
 interface Port-channel2
  description Po2_Cisco_TapeRoom_Distribution_P2
- switchport trunk allowed vlan 1-800,802-811,813-4094
+ switchport trunk allowed vlan 5,10,20,24,40,147,204,212,411,431,441,451,461
+ switchport trunk allowed vlan add 471,481,491,555,556,666,805,998,999
  switchport mode trunk
 !
 interface GigabitEthernet0/0
@@ -366,7 +367,7 @@ interface GigabitEthernet1/0/4
 !
 interface GigabitEthernet1/0/5
  description Gi1/0/5_BasementCloset_Dell_SW_24
- switchport trunk allowed vlan 10,147,212,461,555,556,998
+ switchport trunk allowed vlan 10,147,212,461,555,556
  switchport mode trunk
 !
 interface GigabitEthernet1/0/6
@@ -501,13 +502,15 @@ interface GigabitEthernet1/1/4
 !
 interface TenGigabitEthernet1/1/1
  description Te1/1/1_Cisco_TapeRoom_Distribution_T3
- switchport trunk allowed vlan 1-800,802-811,813-4094
+ switchport trunk allowed vlan 5,10,20,24,40,147,204,212,411,431,441,451,461
+ switchport trunk allowed vlan add 471,481,491,555,556,666,805,998,999
  switchport mode trunk
  channel-group 2 mode on
 !
 interface TenGigabitEthernet1/1/2
  description Te1/1/2_Cisco_TapeRoom_Distribution_T4
- switchport trunk allowed vlan 1-800,802-811,813-4094
+ switchport trunk allowed vlan 5,10,20,24,40,147,204,212,411,431,441,451,461
+ switchport trunk allowed vlan add 471,481,491,555,556,666,805,998,999
  switchport mode trunk
  channel-group 2 mode on
 !
