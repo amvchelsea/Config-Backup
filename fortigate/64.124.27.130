@@ -2988,7 +2988,7 @@ config system interface
         set dhcp-renew-time 0
         set ipunnumbered 0.0.0.0
         set username ''
-        set password ENC z92Uxb3wFPR9bVeP9p236ultWR5hiGubvrbnUPUHlBxI/D4r8EiszcODqQ81ngENeI8SVmIFcPZzXOAkBISUEQeM3+UikkB50C+AWkLOzWwu73yZtFQHzobuFO6CM7Q+NoRb1kiNKqdqCRjblsvvGniv2WSbNMOkH0IyOBewH18S8lb0o+tqtD7z6N0IRJi5652DTA==
+        set password ENC Tikgsw+IbPJM5HrGeZ/Cw/sxAZFwXifkyCLkXqaXjJtgvmOsFfqvl3qjUmKYVAoLa5OeY2KmJpcVlwaQbnhqt0TuJY1dN3QcuhrK7vEJPbsAo8q4jsiYuFzPPddwcB3NsnZ0Ui9eMAGMGYZajak2jjztASG447dM/WQeDrdbASAEB1CzzgLDVbcTfz9GVi95ivk1Gw==
         set idle-timeout 0
         set disc-retry-timeout 1
         set padt-retry-timeout 1
@@ -3401,7 +3401,7 @@ config system interface
         set dhcp-relay-interface-select-method auto
         set dhcp-relay-service disable
         set ip 63.139.75.188 255.255.255.192
-        set allowaccess ping https ssh
+        unset allowaccess
         set fail-detect disable
         set pptp-client disable
         set arpforward enable
@@ -5894,7 +5894,7 @@ config system ha
     set group-name ''
     set mode standalone
     set sync-packet-balance disable
-    set password ENC hL+hZOw2fpeWcZ5i2lJtQO9XkG3FgOIW4qbbm8Nh/74hZkekBqF5TOxpUin5yxdcXiBdCU4fP85a1itnQNxVlMQVHBDcnCYHUmopBLoeXCyppVynLuzztXKcLAyLYEM8rAsN1f45KhopbcrWz8BAc8vOHQsxL2DOUd5cbeGdWiFUWsVbqtSfjx+ryJj+0yv+r0e/kw==
+    set password ENC FQ/7saRihAebQ8Fqpfq5res8OkgvqB5wm2m/cit7MBFyPK1hCjIjXeuebuG7kFQt47Sh3ElsmNsKnv9x1h/RkigtvniXztzPHxw5SvzTKePt0SMkDcPQk1v6Izm133kqhrb77TujIcXwtRQy6r0zGIZmtikT1Zo7wQu0xfWKdQ18qKo20YXDqhD0XaMLtLeuL/brMQ==
     unset hbdev
     set route-ttl 10
     set route-wait 0
@@ -15888,7 +15888,7 @@ config system autoupdate tunneling
     set address ''
     set port 0
     set username ''
-    set password ENC 8AavydHLsH0iq0SBirjq8/geKiU664hSwcevd1Ue/6ywf6QnVIjWITB0MIjYPZ5/VVxfW17WewlC+2tfvv81dFaPX1KhGfpPZ0skEVLnhzmB9lFQVHxi8Q3vg/yClyZvUzdbUn9rPH43sIWMAGX+frtdLTHoVTyUvM34N8qzKXNhmHc1+j/BWSbzeRdut51Z0k9GOw==
+    set password ENC pOmIPGdN1RYoeaM75Vz1RIU1xECRlfabnVxpsJdeCV8b6BpQU7n+JXEBBaQJtMcvaj1LOlkmnWzC7OjToJY8gAp9kJbCzFQV07lTOn8/6Nu2eVISzWWm1thhNFP/gHuLj8ay4luaRHZ6B9pW6u15EP+3I6duva19RrciCypSKEp+e2rsYZ8SX/2wYXsV9sjZWBa4+g==
 end
 config system alias
 end
@@ -22833,7 +22833,7 @@ config system fortiguard
     set proxy-server-ip 0.0.0.0
     set proxy-server-port 0
     set proxy-username ''
-    set proxy-password ENC rqLDbTL8D2CFk4oIlQhfHef4319osA0Wjz/G5PLXil9tQbdeEDdTUovcOKZVoSTwfKwImWiWN/UBFfvjyXJFAj4uKm3Gf9Y8hgZX/4P2rmp1bzwCyM1oB5n0bemAHZVjm77E72fLBJkLUGQirZQPAlJ1WegdmTXpVkWdzEKg8eDcjoy/FMG4TgfyH9Uhk+K7kuMgCw==
+    set proxy-password ENC PBkdUpb2WYEWCtg5rejGGOO5dmM/kU4tp0S6BrL0zNjEot5pMOnzv6UmJAOMFuhr0NigLZZwVbOB+nclVzRA0FFloLEHiB8rlIAV6WTmSePvxI/aMBfMBK1vaFNw8mL7j2+11IyH8uDWj/3mppswT7nnozkfIsWnqs6ZzhiBvCSbGeZZbd3S+3hO5jsGmq8KUoJPbA==
     set ddns-server-ip 0.0.0.0
     set ddns-server-port 443
     set interface-select-method auto
@@ -23576,7 +23576,7 @@ config system modem
     set phone1 ''
     set dial-cmd1 ''
     set username1 ''
-    set passwd1 ENC jSFr4lYsravMoEhOosKwnq5sRa52xTsQeupqKY10Vmlip2VBuPpNxwXSFTfgkuURzyYJLU4CCivokBzmD485d17P+bAYqmEMX5EVet5W+pj4SunKEqvcVqlNsjR2AISWessTQHf1u7b9MvX0IzubRrqvXKBRBihEDD6HDpMmTrNHEN3fSisrrhKWbURTg2G6+bOpmg==
+    set passwd1 ENC YLcPo9TsDnqnQ7yPRZmI3u7iiquv6qEtYjx1btPZor5/1KC+YTfWPtsHnwOmdQhU1KeG8EXuiPcSbllDb1TZCauLfOEfjOa24klPT14ZA0JvKaq7c+8nAn3RCXuZ7//7krT2iAHcqsUZVEoBJZ5nqAx/D0blLH1qhk1+L0kPFizuSq8WWZav3gvx9nJbp795vxfwdA==
     set extra-init1 ''
     set peer-modem1 generic
     set ppp-echo-request1 enable
@@ -23585,7 +23585,7 @@ config system modem
     set phone2 ''
     set dial-cmd2 ''
     set username2 ''
-    set passwd2 ENC EUfMByJknFCbfk7S8iM5utGe4cxDA1RadY1dZS/Y7BlsPfAqgzpJ6Rblz5eH/D2Y/StESnYV2K+emUHydHW8RTHCsbm2bCRBbaO6tG7FrQkUg1IowRVR5koD0EN305ZQ2/JfL59qIhJXEqGND6XbCFa/2O4KeN+wEMzva1E4+zRuwJBcl5/58tsI1ZppZNUNRatwpg==
+    set passwd2 ENC NaItlagt1RATXaxfX8n6jhD+Ec1jiHVIw8D2aeEQDZNuIh+fevO5BzstkyajWTybpkETPNj9YGmF1mzAurl3VRVcEr+YJxUJ21Bau51LR7RI0b+Hl1v1m7T3O3zaqDi/V3GvfO5mPZd2NmMh5IEZw9SNiPCrhdgIhWBOnzaLCOSE/68PMv7KazIwMkSCJ5Fi6qhCDw==
     set extra-init2 ''
     set peer-modem2 generic
     set ppp-echo-request2 enable
@@ -23594,7 +23594,7 @@ config system modem
     set phone3 ''
     set dial-cmd3 ''
     set username3 ''
-    set passwd3 ENC UJ3fBhbjXbvKu737IvZZMJQjcwNjnTGTTMx+/D6qwumoC6OaSwf1slybygw+dDCVBVAgGbgr06UPT9XfjcS1Vxm0LwtSBtjfWcEZ83ec3mCWwtEukGhVlioxJgtsi8loKxhdSGNd9d3O+uMwnHQlqHx2Kx83AfaM4khAnuXgnxe2xDQDUhF8WlUHsE18OafLrqX7Iw==
+    set passwd3 ENC qoF4M+V1e488pRV5b7gJoTyGC540ykcys/RbTOaD+fL8gac+eRVcU8p2PqXMz+zAda/gAiOFIvydVtWrMqtF8jaUizKuaCECLE3fmNJAZywff4LHX0hNzDXf6eYmYVFc/oHXTPG57cFb5XZzfTbrlsO6Ur+l2QcqkMpxv2TkEdbb+XRrFwXB+xPFTby/9OCmO6IIRQ==
     set extra-init3 ''
     set peer-modem3 generic
     set ppp-echo-request3 enable
@@ -25481,6 +25481,66 @@ config firewall address
         set allow-routing disable
         set fabric-object disable
         set subnet 10.27.0.0 255.255.255.0
+    next
+    edit "occasionalnat3AIRECC"
+        set uuid 2178f47e-1c2d-51ee-03dc-d0c6bfd67c6e
+        set type ipmask
+        set comment ''
+        set associated-interface ''
+        set color 0
+        set allow-routing disable
+        set fabric-object disable
+        set subnet 10.27.16.165 255.255.255.255
+    next
+    edit "occasionalnat3airecc"
+        set uuid 348a7df8-1c2d-51ee-0efb-a6ae7f926b4e
+        set type ipmask
+        set comment ''
+        set associated-interface ''
+        set color 0
+        set allow-routing disable
+        set fabric-object disable
+        set subnet 10.27.16.165 255.255.255.255
+    next
+    edit "EEGCAPTION7AIRECC"
+        set uuid 86981a0a-1c2e-51ee-1245-5fe9d93acd93
+        set type ipmask
+        set comment ''
+        set associated-interface ''
+        set color 0
+        set allow-routing disable
+        set fabric-object disable
+        set subnet 10.27.16.163 255.255.255.255
+    next
+    edit "EEGCaption3"
+        set uuid 9610de7c-1c2e-51ee-ae9f-f44b292e0eff
+        set type ipmask
+        set comment ''
+        set associated-interface ''
+        set color 0
+        set allow-routing disable
+        set fabric-object disable
+        set subnet 10.27.16.162 255.255.255.255
+    next
+    edit "evertzcaptionkellypriAIRECC"
+        set uuid abfe3acc-1c2e-51ee-d8cb-9f055142075f
+        set type ipmask
+        set comment ''
+        set associated-interface ''
+        set color 0
+        set allow-routing disable
+        set fabric-object disable
+        set subnet 10.27.16.161 255.255.255.255
+    next
+    edit "192.168.8.0/24"
+        set uuid e16a4f38-1c39-51ee-a231-1b07510b17b7
+        set type ipmask
+        set comment ''
+        set associated-interface ''
+        set color 0
+        set allow-routing disable
+        set fabric-object disable
+        set subnet 192.168.8.0 255.255.255.0
     next
 end
 config firewall multicast-address
@@ -27713,37 +27773,37 @@ config vpn certificate remote
 end
 config vpn certificate local
     edit "Fortinet_CA_SSL"
-        set password ENC qIO5VeawA4yhK7dmPsu0VAe1OFD+W75BMLnMjUoIjRrfE5A5u+/TxCx5jZD6Rv8ApKEYdQByWYljqku1rtqPvFxyvcX00a/RQ/zcvfagJcOCYgBk1/+sVuiVkPEKj4/1kallMIfoRTn95/iXJ+PcvxMcfq7B+aLwRfa6zg47GBDpfFR8pTNKMCIIUC61Ucg8LNZBug==
+        set password ENC 1BTsGEEcKnFCmrLG2kTgrtyAQdLTKJy13lUoxKIvuvZaWhiDKHqDc0Y+eyjjOjrbzkpPzdjqeyVUjZZJEEb9Une2FSkQ1qw+vGxpC6VTvtou+bX3hIbw+aM/T0n3u+YwZfTeOJJliPqXOT6KGWbHdNO0LrJsTe46RhOZHLt1dFn0A4EbhxyK/TuVKVFCptwkrQGNJA==
         set comments "This is the default CA certificate the SSL Inspection will use when generating new server certificates."
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIFHDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIO+Ze73+TrWACAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECFcAIWKwLUy6BIIEyObbriwcfx0D
-ld1ksuYidOOu112brBObdsCGzJo639iT2+kwAYB0qbH18Yk0ENhkSeoUykJlImTh
-rmR16K8jTV8EFZ3kf6Ngc55k9BN/GCGwTmzMqV67v99WBNdsPjku37Gro2/tDzrZ
-oscLfkV/J1bGngwEamKiH31B/9YlgJZzJrHwZSVx0t9/9exUTBNWqNKbOxjlNhx7
-66vLyQNHQ5PhYc1n8yHF7ueKgDwWGUziJgJKZLVH+HSAQ7E4nZifZUv/YXAhovEC
-NGc8OElUwvyh/af9sKIFkQn1qGTGTB259/R4QcUZkRSYOH+um2Gl+2WubOYJynMM
-wuZ1tHn3+ArInhVPIbUbkp4JCnxUozwn/HA+IAg4AjiZ753GRj8FF0Hb0t2izO+s
-2cojPafvNeJ7cQoDSl0ryT8RF1A07x8syfIhuaN7oul+giyfS2g/vd3JpTIQ/Xy+
-/FNC2Lj5krbwK6SmqmGl0pmQP6+MYc9vbZpyQlLqX4gHwdv9xZLt2oI/ru80uMEo
-H06L/HP4oiP4oYmAuVBYEg7ZiXL7TdYoNMIObzyXXQVpJckxn7k6NhE2/sUNRAmw
-Mx9SViuKEqVNHLMNdN/MBMvqHqL9VJdluAO9by+8fqcP8gh1QX5vvQOhp5jpkQ9C
-wVnUrpdpFMS6angPezQDtBxMGKmU58kfwo7/gRwGlFzgAx2YeVe9L4FRJRtAbS6q
-32TBAkx1/W7qDfWh4cHACZhIStjAYvf3c7/094h5vfAfHy4Yb7Kel0GJwMw37x+k
-AeW43yZAREzi+cTgRPi0Js7Ol/k4+9XlnVcwbYsmP0IIzUsGBEaB6DBPk5QAhq3t
-JXC72U1VoAGeeLQVbG8m4WNLImqe0cJGPouN/RenXRpa+aofzQxQvXnLMHv/3f2u
-1GnqG+wRQhb3dkP3sbE0Wa9cnZGfA0SxIuEre0omgumAukWfYR7WP59yNbYhqF2J
-8G/6aY28py6rIlies5GDNegaozUokSXf+EgwBQFA23Ztfr33zT99j4FCWv310Heq
-W/6fokzEwZ/2ktyEMrincvGKqnpV3bb7ldqhZnRj9N74RC7bMPpBXOroSm9amtBt
-WPdA/mEnbuacIbgaJmR0cWJRqFzm7BF1xHfMoWxP6z1Kv2FJDH0/1mVGTDQoG4qH
-yv9zK2dnUSNNnGcSxNMD42GeHhFYRjiXyQ3Xz39meBrqQh3Du/WE3vmsdOCbH4WC
-9f0jwD2Haupwx42lwpZPF4NISnJWG3CgdeAlLHlYj2zqQ7V1HAEH+lFrjd3NzEiH
-egjbrdzATo/LZPSQJMCjqe3/0nFmjcTx1Ixu4fMi8PLAatCm34sG81RnSBzBGXui
-dsfRh03UAWM5yKuvr9EgfSlffuqh4keLd/r8EteXhL7edTJVv7rt4q1D+YddKcq3
-dP4CPzdyo4zaQiUUawKZjj77JFhRoUibTmdS08BXqT6l1LucU+nM4oy/8dm6Spz9
-/5zjm3pRCTBXmKkqUDZvjwJ04br0ln1Y6RNcM2oRJxj1Cx82aWjZfHVIXWvMiKxu
-P0KIBS2NwFyvAAFbubFxv6nOhSOQo0oSbvTYtk/fBW8uOByriD6Ch9sngy87bUw1
-M2kEriKxmA3guEFnnkh5Lg==
+MIIFHDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIiI9aAFhaIB8CAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECF7nwklOOjcDBIIEyNkOzpR2uEbC
+3si7FoRJ+RRe6H4xL5BFz84FiJHQ6W2XiKxLNzuqiYS3i4vSwAaGowl08k3LVz5S
+I/pUzV7wdgOtvcQ+POlS/xlQ+oWgQ9Qw6hIs2GHPchDPipJJACUU2cnqx2N3M6U2
+rwPIR7TdVvIoKOxL3J05V3Ul/LYwPQ/miGOYdgLSwGtZuRIG4+4AEU+1qiI/ckUx
+Y4xH4rsiZ1EdCmMQsODzkMmxaDnsNLmJsKc3HbcL3tDxbG/2LK4x0kYlyIFk4VT/
+X1Bd+3Y8lXZPFbvUXkSZfQ//4uUfegqX4C0zFt5V3OUEerEoY824R52U+CwJ18zo
+FyFP3toPSzz3xv06RjgB5ooBbTuVoqyqKqMREITRmmgjtt0EzxC0j2jE2wnR1zZI
+ESr3cLhFrT312xb8UdvCO93SX2+kzveU/0ceTzisiumm0YSA5Mnie8UHiWZno7H3
+teG66FCJdPum0UXVF913Pq/Lr1XysO4210yUknleT7E+8q0aicXBOK89sX6R3plO
+ywsdCdCXIRzN8baQ8S1Nj587kzViPz87YXmm8obzRZMEd+tMfto/QoTQiQYSD0Vf
+CRs5FZyPg11LJq8cW1g8o8OeZADknwUrJxPQGU9eI/bPmjEic39DUhx1Kqehk0SU
+yyaHcI5/y6ZSFjGd5nCd3cFDGM00r0vASDpzssYo59P/9+JHJAiYzkNCEyxZ9JTI
+rWl7M2056zXm66MPU6f9F1Ky2rfTJf3DAY9fXsspv7TIbZB8CuDlQCqHCRAL6zyj
+ztgKcfr5TT8aPonAKMxKF1llHEZK9VzNEjFgcA5nP8VMxjDwKYgXQus9RMO3GQ3H
+dZvRyS8fvvLmpD731JK+ycrkiiGh5Fm/vZDJsVyVjRA4FXjctSOgtGoAYoAkgURX
+86YXb3V9SvgQO8XheowXvEbTU0MV41UzalclcOc8m2OU3lOW1JTB8GRIXt590Rec
+qbQ8jncn6hYJzpIHtD8AUR7h6nUy3G74O+qbLJUCrLTyB1IpzHgv0tG76l0aPIRG
+Z0oB9+Xm8qMTLb2rscoz2PyG7J9jI/ikhyb78XrCbfc16vCmD94qz441nyrOSJEt
+znvV1NWnxisoT5Hwv9vqqv+oDTvyeX4fp0A1iNYIj6kMv8GyD6N5b8o667glpNIp
+EfEmPjMEULFy2hmCPPvLgPZRltGS937qsV5ecbFaj4zfz3fPSvu9sBhan/nShPTq
+glfYTblOaz/7fCTTCn40Nhha/FqjX4UJYcXEIQkbXgNj3CApKGuRhjqXvLUXz1sW
+StyHwt10xfjZrC3HqG2JnnjSgnwMKFOyti6efjdyYAdNX9nGUbzQcJOac675ncG2
+GMfurR+s9GyEWw9KbOR4L/oSTf+VV1mcM8IGMiNGIXP5GIfkLLTbIb9m2bgRueYC
+XRkf/k0BQqnoUoFuvf8i1742xnUlxavLb8dE5YdhwpSpUyzQ5FTDj9vU4+yeg5Oj
+U5vLLgvJ9GeGyx/aY+56NJTQxauTwzFQeBOiNmwXc1p7fZ8cZh5vD1b7vtfsFKAC
+XDudXJMxTL7Q1vqMCCn1MIUcjhszL+9ucFuh3NuwEIlv73N9aeFH0o0bjkAhIcTP
+3UP4PrwYlyqVoS/1iy6tBQ==
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIID5jCCAs6gAwIBAgIIH6ZjiMM10G4wDQYJKoZIhvcNAQELBQAwgakxCzAJBgNV
@@ -27775,37 +27835,37 @@ cDQ8gqcGbtfh9I13xc037EGSpqBwZ5fqN9VJ8lMZCghYyrjiAGZvQ57imhyrrUeO
         set enroll-protocol none
     next
     edit "Fortinet_CA_Untrusted"
-        set password ENC H/TdA9hdlk1WaHh4TSZ2GP9xm4XCDR9+uwwG9IHaksqeNLnYdrclT22fTdwVjgDXr7gTnfUY69wizih/MMObfOBh9alZ3xi6Y39kn1pFzJqwWvhOtx2rPsfXLUNlc59Bz9IpLjnBmgOWFFXCSg7g/QACO3/4O3nHcQKkUQtIBuSshvq+gZ5bks1YxLP4LZR6YWWi1g==
+        set password ENC HJuF4YJTu6ad8f/7c4DtOExWuwXLLnB9IXRlyuRxi9LQDJE5S4KoYYJ7oU7KdhViLaWV1A2qiUbQ25nmQ53aHZlKRvdlRcyOIJdzwvVFi60zbBJZpKRujlc8rH4iOaZDzJ+WiMD+YsaXyu05BIbBmRfQiNe1qZ3H4p/tAvy8Z06eihTtPN7NKFCD0YLJMJF8pWMSog==
         set comments "This is the default CA certificate the SSL Inspection will use when generating new server certificates."
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIFHDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIBOAL80UhnxgCAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECIQSzf/n0RVjBIIEyP+dkT6+43ba
-/eMyHJbrMm6c7jDcSOfJflcPqRmIl/Un7ZEhTQA9pjfevSNB2C1FBtjIrdlae17a
-nw9RfhkPEROF7tx1C0bGvC+l5ZymqX2AHP61c8fAulkEB1acJJlWqMyitRmQqcvQ
-y/0y8uXv/zUUiqJ1N2S1UFJqlU9KITG1IHfXzdXYVXWOOqPoLXbAPJSk8EWXy0Px
-PmORhKycGtTN4Qc2/GwSjDlQYwGKmTEZN4SH8j6nDK5vK2+93L1eEU1K3hz6Ilif
-yFtM61RHkF+d+fbJ9NNyw14aWZabQYpYg6mQkzDehXfRFZCneYGmGf6HX/gfDitO
-bwNGeACuZ0vmxFIzUJTgPwddJ8+3lsN6vxNhSUTBc1eLFzhPfYFxO2fjreTZnI3G
-QlvPUlLcoADbA4QcgrYsXs6/gEQ2M5W85n/E8W1NiOxxlYmDkxsPbs3qdUbTl0Yu
-BsHLMZVPfBSPYSYwwsdY/cE0v9249Y+3kf+GB0oU+OojkM3uUo9K7ZFjsTuXEg7K
-LEVNYloaLdyZ3LBgg3IiElQx/OqEmX7VhGjkbUzovQVkQu/5jcTFhtcawy6+G/+6
-dKIqtnQm6RKMkGaqCF3WZJxk6inhmmByPqJsGbgMM3F9/t5Y21BqJQsnFyiw86Eg
-Qxi3+yjoPFTolxB7Y1ExeEBcRajpSANw05KapykqBQYWvy8Qn7/s/CZc6DSEr1YP
-GOeHmKp+GFsvm79Rbo7HgX1Pr3muy2+bEne0yvtaqojBNmCQIxG+KOUx0fn/tt5w
-6VtePRYoH9aZm3dgPl1v3D4kfXdmezhrLrFfg20dBaal4QSxltlCcVynuk+rZ2gY
-5rKod41FXwSUEyY9M8vGtA8crd4IiOzemCyYZKXBm+ZoA29j+9DxNBItyLhAhPpy
-7/60ex6CfgUdA20ihXuw5BH1xwjlcMKCSfP5o6Rq2P6sEaeuhFz6FH5Z3cYrHipW
-OR81LoRSM1BLLVyIXvWfECRTKa/xvTjEZi+1X1cIQwry99IJwht3cAo5s77Rxf1W
-VdXw8HZcULbcxRrrEONzOGFU+vMrKZUfIoRr2IQggPJ8N+1zNMY6WENJZstP8JKC
-bkjHVkPHyyDs8UmD1340rfMrwcnB0XkB2QWib6MFsA1CHzguL9K3M0qa6nWeU4dE
-9QTfzGa40GpU1lU48GgE+yraSSg2zknMJQW+hJGmwzAgVSkpgMBXMDnr7Zk4YK7c
-giy2ZaoU0+3oj6+CtRDGz69eMJTgiz5hIwq8l0L7k5b6l5aSclI+jEbW20RUGL7Z
-1DD/5LKYP87tlNq2sr/ji9n0rSq08bWVbj/ok64nVUvQF62VVLTzfcZ/qTIUJWpQ
-CfNLLG5CdZcxQSxInJ4RwUr8YWSgSEA0JI5weKofsIMc7Up1mP5NPJS72SYCOjYV
-RcdB1MCaozyQ9YNR074QZ5sTJiycs3d3wEj8V5YfzY6wgC/M+FxvkZHJZNWcNxD/
-tuLMIfzzLI8v+2AkiGNTGu9YMBprcQhfJU+k5XqzQAAii5K7te1IXJPnRjSccMYP
-bRF0llvZXmKxI+fROXUKV/yeAKAn89z2hw4dbj8w/FVcWeSgCOI+nw2a4RFvkIae
-JSqeyN3CFZ2WEdESpS/oDQ==
+MIIFHDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIFqoy1knqai4CAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECMwMVOwMsOIiBIIEyLlpwtQzsf7D
+9QfJcIzMAYmS1i6sQ6ZBDsamR1T5WU8FCA7TlFTch09KGNlZN7LNG0Kf2NXO4ZLf
+N9XV8a3F5l+zaaa2AANA9CRdpAZhrPS8Pel1dA6ThjlD6qnmeAuCJUdq0R/G/7qq
+wP464AYKzic/UFCvcZhRwUOptx1kCgV9kKRRalWNzTe/JIfDodG7xhwI6jh+U4aX
+8vbfHpbRSIgkaF09RrkWS17If6AN1F5XGtYJAcC1+fBATavP2t+WkAockQhrY3vB
+9Ysbe2EXj3XgnlxXoOC9pg93IU2udzbUY+k0sw12h7fPBPyR4HtEfSKhZFVYwux4
+vQoTCwwyHmyXSytN/dFkCG6t0t9p7QvkbEoOIq/4GUbLdEypi+QwZoRn0CQP9tPZ
+DpDwiyYzCjuy6PpdByNzbaH8r2C4HhBggxJzPA+K1xzM7tr8ETCD0YmqRATPXAr/
+PZ+BoanspmvxlbYl4RIg/kZmCsC9NtRXn+Pf+/oFreCY94Tzvclb57STuxvH1UCC
+1mZFXt9O92Jy36aw79rYuegscrsdHTt1RnWGRGbH7+jW5Sd6g6K56vcCNcq4p79x
+3U3pwZcJwydEfL4yQwkhf18Wvynch9jii32DHKPdQ6ArvE+VjSETp9F5z98my2vD
+xhG9miREMJauL2jL3msm6z+5nwajuM2EJaFSkYLLVvwF8AXlDIcFnNHGUcbFvpKP
+Siqf06sjxxJEKDrp7P1M7KFT0Up+yPaigD8fUoR4W1R8yd1J+Abamqdi4yzO56KT
+FDfHLAwf7heo1o4VfWH43WBoorZPfYDM/EwpamyHL+HCXMoY+4bd26QKXYk2vdeo
+0mke+hJaQlDuLAo2Ky+4kDs9DP6wUnA5DwWM5QAepFFAVhlFv4rqtpAlSNIPaDTG
+me03zY4/DV3hSlTMCWeJu9iBtAUd6pxrnDjq+Y9fG48KC0wGpY5H3dwutb3tYnYd
+0dZaSp1Q1yXEzEEkzpiEyTvqxoVFdWYjZued3tg9hDbdxJVGBFDOy+QH9MzpMhxb
+a1niAksGM033ivDRsRSvTF1rQZPdXBPYIRAbyZh38PGE6nW8BWXve/QvyusiZxfJ
+XLyWifTB8dxF3eNDSR+jIhZ2RI98C/rzPr+4Gshn/j/BYVJaJbD4Ahf9MgTwvCeN
+oQEbEZi9/OoJLGl1/hJ5yVptwErGz7vQdXOlHf1w7yW4n10H5r0HPn6atn6qQ2K1
+qXf2zRjJFgtHHn2ysJwltsaRgKjBD1kKHMHtGj2VKb8QnMuuG+8DIk800PTc4oiH
+4k6Z02O1AmIokwD9wjt3pzE8W4am7mVsp/+RjCukZpr+5D/JzwCeJN7aK9u72ur9
+SBnBEvKbsM2XAe4t6Pn/IgiHStgYqNaUUMP90PD3ZpZu4uYYBt4DqO7RvPGxqeU4
++T6A9gxqbLnriAlWOAhkFHVEguqEPeJmM157fity8dbMe3kKRF596IUC7Bj9tPqD
+GGxHj57KzgpehN9sKBNp5AIS5k6zKkC4CvwiOAbINqRUoQ9F7dxu3fBzZkjkjoqu
+4eKbA2VOu8OrMCcgvFxAyXeGxUZFpPUmA+MOrEiBabvaLee9JV7kWlJAGhGJYeK2
+45FXYGsjp4Y6BxI1Z78dOw==
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIID8DCCAtigAwIBAgIIa12veUW2FxYwDQYJKoZIhvcNAQELBQAwga4xCzAJBgNV
@@ -27838,37 +27898,37 @@ cLZ+7Q==
         set enroll-protocol none
     next
     edit "Fortinet_SSL"
-        set password ENC uq/ASTjigR6CHyEdMYx3TRCiFj+mqJNzp07FskD9mIZXqxRxaBIHEeejhaKqKkiLOZkxKkYJTWPwLr712NxyuUTwMlbrRE5LivwKsj20Ig54DPEK5i68pk+BMX+GT/ZeulKoDV6V6dUbNoVfvCZN3z25Vej4w2HGPwZONCfOqOkw+wuvp9Qr8DTvoxYGtp6eVL1V+A==
+        set password ENC yT9Inrzh5nFYupMuy4BRhNT+MB0qB6FqemC6lUAUB+hI0vGn41mN5ztzYXFfYzXYnSn7hsTFMu0/REaN5ABdNsVd1B3mySD5dvZ4n0YSsGGT+Ohfbcbe3UOXGqBg3HLq81CaHlR/lYPmZkJOpk8WLrIPmPwZvynauBWOSarhEtLhEPz3ZOTNfd6/Y+LcvuOV3sRoUQ==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIFHDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIc+xZM+Do0jcCAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECOThVFmjSRI/BIIEyAHLixM9gs3B
-IIDit9RgrmzTGBx74Rf8dWaUgMBlDKBVxH5V2bK+pJCdCw/Uf6k4qZVGef4cu71G
-MacTWIFVepA+Glzob6uJ3JxQfF7dFYDwVZKSWYECxSK/qPkb2pGMeg32dFUzr5kl
-zt0CALXa0+QrYt/hOWScq7ztW0B2QL6mPio2ZkR1nqtqrNZIHRJHMnDyRu81Mxwr
-IO2f0Tv7O+MzjWipZzOqghuZ2axnOx4XcBReSDSj49ZeWc8k8+14Gjvxe1qck8Kk
-/DfXTg70O5gpHsLY7b8I8/w9dtHyBS45MszAcBpcA/kjheQ20bKvXxErYqYxTYkq
-/0XP/CQQVOODyDXLV82cno8cFjehFspIJxSomTMBsJtNSuR+pKKJzul6ZV+nGp+/
-NeIxB/fD2TO+BfoADnhLUMcBs/DTgBdqlDf9RS2kyK2ijdygO/KqCypw5xHwBjc7
-lnsRIb9cO8tuRHrM2NJLPPAzUpUx5yJWouyl8mvIoc21vsjR2QqM8HSZXoDDmV/V
-qvRE+YhM2GAKmkriIyNaJKSnz5cuA9Dbm4XTZPViOgZcjhAr2NnxrHZb34dTB/KK
-f26lqJRT0nVXa2zbvb1JQAQ4XmjCQvLtBEF/8eIBU29ppU0mp4AiBIZos1PdZ1mj
-oP6AD/cQFV/6FYlxogxSiwHcUYqVqwab36ENtDJtch4bwOj+fhS5WEPIq0EDIjHn
-DcuHLFP7T2KpcST+HNIhUlDAeDvrlhsO3zpvCAapAJPNQ94HwF8kKMWbjXz/R13Q
-RXpzX2f9JfcsIR7bneeZY8bExgJJcVAKx6WeSzPFTK3NOBzqXgGR1jH0D+SwJHSS
-SpRGWbwF2RTVfc+N/EYKB4HR2KTWyIGeaJOCZ4exPYKBypeWjvfyKVUFK8y/d//D
-+6Gfx27fioWedpTI7RJ4ePnPBn3ex/Z9/CjKrhJ4o4DZ/14T0Wpnk7raOOhIeJbI
-Kv/zFgVR85B2dmp87PtjjTq5klEWPe6wPHEMI7LVzs5Dsli9XwSHuc9kTygm8T/O
-vEZ8z9Bxm9EHhxHsnXx4CfY8SgUD69XGWHEd1WhOfCdCNFhtzQY+Rl83ujP3uQ6F
-ccACp0sNimJOOOGzZMLoyM0MgiAUZtz39hHoTu21mtTp8ZBnvxVdoGjllu0vOPBf
-pue2ESujgwAF5/AzwZV9DhnqmsDhxwsWiCayyQCyaRoxrtPLv5FN3rv6LVmk1jAt
-1I2Kb7ItKCEpsSFeH2Ewk2hZ/1amOxBC90BRHaxMroGv6u/MqWmRSkL/N85LwGzX
-VqJHTbmRK4xoJojSM3JVGba9X+D8zG0sP7r5OyYM9sGcvoWF306fcQIbljMfFU65
-Ytqkm3Nb0FkZvjBuoOEE7HhKUjhDmHOtY2jYtcNOEWdqTZ8FlKcfD/q1Mpa2N9Pm
-JRNeIFRjwZiTQUTIqsUqIoRwSANCafLScuZuwslf4Hd3rBfbIGiTC3C/0BaTWhGh
-Fawh4s5LYi5VgTx8hteOdCvCsKVwFX9VM3UFS+42ZVSrqNuTooi5Ky2gxOowH1sh
-GOAry7F8vTDz3H6CsSjhMNBTPPQd33v/JpCizOmry638UnekD+/1eOFzcRC3TZqP
-WF9R1xHU4eRRwF+nuwxYrg==
+MIIFHDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIpyPaY/T6NLACAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECOBPA5XcRvofBIIEyJzMp98W3/lr
+5E1PlkWxSF6JyjkSJ0irx/yDIQTcEUZx6VRZVvhu5B9uXFX6T6vyD7dA9JYqgHab
+d00/zHJ/sTvZRuJ+XtpThL5CDtZprEt3LeYzydwPAhw0YOS7VmTZpY6u4lGa/aqx
+2nU3neiWjtNhkIOXgm7u3HApgD7L/svQI2bRVOJYETp5w1Qd5bolcbMWmr/uZsmK
+z/JljBTTz1eomZmhfnLAV5JJLJ0CbxCvTb3eatr7juh3SvBigZyhtpgEDWf0tQMW
+kzy6NP/Q0KfPPE86vus5xNos6b2+hi8sQL3Ikgb91HVHU/ImVHb5T4TzSLDRIikX
+k7vmVRlMJ9ZD9CcFTMlYFCce5Ws34H5KVw5hIrXujZif3EhVCMj7qb2TMTDQiWHV
+rZjNXbRUPdFeOUbVwd1UzZ9hYDE0yRuzfIRd/vRsyAiZrYhGQuIvon67luA++P8X
+6kotSGBoMnq0YSoo2AisZVt6TP5bmj+dWlbi00ZGz1Jte3RbPoA7oepAvB27xdyV
+vJ+Qg81RBDYe0HCvcutao/Q+3FXoZB0InO9y/VxzZc8D45iLsrQ2eQ2Xtz00nOHT
+xwLsfDlqgMdlUy3BtyRx6Z+85aLFeNhqbeh6InmVVN4pALqxXCtzaSUnM/HXrllb
+JhKrlSE1nGrUPuV0Y7REGRnhFonSh2rP81SFMEtvhgSS52pDuoQoauxDsSqSYNfz
+Fq1EAScTCgjrBC7vzA16G9cmNEolK2IwDlAk7mwyGy3tCICHwm366hKslJqyRFwR
+UeinpzqsBrwVHv+1DZ5dJX8j1Z7Clqz/hEazu3f6QYxxZYAaf2VjNqTfcK2QqxKV
++yerx1lrbmNtvxiwe7LB16/yhZRxxs3K+lVTrRdokVSHOBaw84dmXetQKh3xo6ty
+1xtfWqxuhZZlLqXi/v6dkzesCcMSoCy6a+Ax9gmL1qvT1X0lc7GrSEWEjQRuELvm
+IYZugMd2rVfd/w0X4oQre5TWL5ST+lDDlgXbNe3amX4Q+XK7ahOiXi+Z73TlN3et
+UggShfHc9zwwtrYBozKZjI2mkm5aLtWELSwsaFB0s82pV5z98KcXMAa5bzXy8KVp
+NbquxGGed72oP2D6TQQiZ/1n1nq9lkzZvfFV1+l6KPgfgQgGzctKooysczAb1oh+
+F2a9yDs+Kvt6Wjew/QwY/OICGzrYytzj4aepUXLS09rZSye3yIlJAe3ktDZiUqgj
+XPEYI5p5D9mFryzlYelpEiZMawu1+MNyvcYbI6N/BZKqplWtUnDoYMZYie3d0RTT
+SMMKmgG2ghWtnTrvxHH/bgGS2+fLOT18jiI/x832z59FQWwcvQOCL2ez33MoAZSZ
+9cIa2jjyiN42cC10DEbK7Dvmw7oXTec0GJ8IBGnYVLWXsVL08PW4I1yd8YAAkJdO
+cn94POnLzs9UflupzLco467qrGEQmOTJPrBlAjxmBkkZs1IOQ7vbC9ZEexP884iV
+kgAKPLmSMCwnEVWU8ILHnegs6Fy1RklUDrhLbj6BxvZN14bIhird2mX20CIAdRu0
+g038kXhikaFo5RooiZFfEQdT7IhXnRvhqV/MXPCrBUDO2A1xIbV2Xslo1qrJFG+k
+uFykkyjb63tdF0j8kjQnxQ==
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIID4DCCAsigAwIBAgIIOuW2oCScT3IwDQYJKoZIhvcNAQELBQAwgZ0xCzAJBgNV
@@ -27900,25 +27960,25 @@ kIGcMC9RLmGIjy8gKzUAbli6bLQpZgRigfPVbe79frEIV1ws
         set enroll-protocol none
     next
     edit "Fortinet_SSL_RSA1024"
-        set password ENC sr4SioiX4SjFD2RkaLeL8uVlEGi28DkzpErtlmfCkKu6t04bvUXPHNuvNuXDxBIJwhpDuSSaiMz14wljBbHy3g90Y1RbvIpguH0nHagE/xHBp+f9m6juSd18vb6h9YQ/4Bs9nvxPNdSWDg1hUYYseyZ0/ZKvZSKqh87mSyjQV0CtGGnU92kxI1w3Icu7FHN1EXObgA==
+        set password ENC Lfby4NNrN1fCddoUds7Ck2RxkPzKKBoo9C1G/ztjLyjk3ks8LXzSln3Yoc2+L9eRDhGzaVt9QNWrH0NnIKrZ3pH9XXEMRoWKucKrDsLjz870ZEffMIDkBpZjBvrNehSz4ZdYHsMlXpOxmppMT2U9mJ2JBE+jjkfLlQ+bqyGNdA32Q4gZx0DDWnemh2mh9/xsbyDSzw==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIC1DBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIPVOs/9VLz5QCAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECKU+TQmHF2Z7BIICgM9e5g54VA0y
-a49ZyT4EPVlogccXI5tBxf8xWkgojvuDLrk+ZnxkqtObFKuEl+XAQZ7bZqmaiyAz
-NZ0fv4LzGGpvJz4VUV3UufAeoG0UnVOZbRfKU+f9FmImNe1XR+0VjdDOYQtAau99
-tc6pfV5yzJDyXHMzPxsBN1//oaubHguDGsQc1pPqUu5xDCliNCrthvq0FeLbomMb
-21ChA3qe0cfUrmzYH1B6hs7tWIkyTr686yIuDIl99HS4/XLQorWmp+31U4q6tGjI
-fyLsVtJZHfgikWI2CX50qKPECof38oDyp2QaIGCcqLn3TtUm+rpDX4CzP5slFFhP
-gMgpMCsOdN5YYIZ89jkrSTlbcw9xZlNeYR634raUioVK1xtlenx+vlB3eN/B9p3j
-FEizFRo4Ntt4JeuM7ZAGqLZ5B3LA1zOvLATth1PWnm5G4cUY4zrXN0TgPlHaTZ7i
-/CHN1sdtoOd3lx3vlLjtrXUOVznlUjDoxWp2Wh1mvZJgqhZ+mSwxGo2IMP/6fkoH
-m1klB/yPC7/CIcSzQZRKP6KKce7i+Ib9Yvq3P9Y8ugzUDJQD1EyyayfsnJKLQimL
-O7YymQi08Ejdd4uF+fyRXJkufHZeQYo5pzwFvqtocfqjr1Bh0li3MVCUnNN5Jcjd
-6VNAvP52/WkfjjcicFHsULAxkTrGi+RFxP2dgQba7/yimkkqfQQLkFqzbtrDtMQO
-vw3pQPkVm5BgrMmRyWByNVQhtKu/v2kd3O6V4uHyX/7xb9E4MWkDQDfmoFKwcKbH
-gftEcG6QBxHpOxuwJ9UH6BPFoy4vg1oe/E9qHbHCqqFJVTnhM9WS/8SYUVXAvpRE
-bHx5U65HjlY=
+MIIC1DBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIzl5Y1EUp8S4CAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECJd/KnTj7oAgBIICgH8mqLqCjvkG
+idatlHJK+paVQwkkwP71dueFXi/ETmH4hnex1mLsN7Kt1DK7zV1reMIf494dr4vJ
+7dWsWaLM00BoxZMXIOoR+MEDcSaExe4dQeqPVknUSuhz4uSPV1bz8XdlR2Kw0ODX
+sxqnl0wZIbh8KNfwDviy1OfM7WawTIVnCMyn1WKfeXYQWus9oC6cnAgnR9gtL0B7
+EaE9IEG6zcRF7MRLYfb5/30FFHd6e4WEdM8hAEFN/vdBb+Hvt98p6UxTT7rBWo/b
+RUN8s5+pZGnbH9x5lmwEu5mgs8Gay1FsrAwRfJyng2F/o+0g9uTlqfv5ho6NvdKC
+1XlKmi3tRt//XON8lO1cF8nDhw4JoAsDuwpqbC+A3syV7NeKdNlp29DrBWH6Y5aY
+Yxgq76WQpzhESLEqG0f8LpMMfC4j6wBYKDEn4gk0tZLfUOZme2o3JYFqjSLda9mw
+S7GvDwYFv989R7UoTmufKqg9xHLIcnZZHUX8vP5rnr3KLgVz3QPvK1/xRhCwgnDc
+ridjJ5ElkoaHu/snJow8VJtkJ6+/oaSQ7xpVBlJ+cmrNvlf9hyrdqV7Rpyr1Jccj
+UqsqGpKOtJl9ISvnxC7kfUtEHA37X8oaAKg20Q/myp4wHo0JASXuSH5YBpSdh6Aj
+wtMC3i7cnGUmXHiNRl68EomHlI6WtJ1byg4AuBIXvXPrQEqx26ZpoQiNgJhWc6dP
+HE11uKnSX9c600s6J7mxLQfe4Nw4BAZmLwxTlgs0Z+rJ2CeRpFs7ugJB3q08VF5l
++0qPWKjwKUH0M+8O2bDHYAwLoxXjIi6ruPoMT/MKkbGkLb3fczy3b/Rp8iNoyniV
+kO0T+riZDKQ=
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIIC2zCCAkSgAwIBAgIIWpBqhuPkxucwDQYJKoZIhvcNAQELBQAwgZ0xCzAJBgNV
@@ -27945,37 +28005,37 @@ GqVFylkmnTKjbfiVpSbN
         set enroll-protocol none
     next
     edit "Fortinet_SSL_RSA2048"
-        set password ENC nXgItShjUb8PhnwHcVuNK3VwV75nAmRNoFhbbwMEWDcTNZyNducQgr3uUpa8YPzGJghQ7pRuQ3X2Q8T99Fgc8vpAWUsC6Pzfjffrb4NmKjaswF5GUkN/Au2XvWy0xmLuGQGEOoE+Ws1hkatrLMqMuyJH7LpguCqqUk3yM2E6UYijJySqv2SmAWOp6PTrcdoAzXB6IQ==
+        set password ENC aUpiz9/x/CJyM/ErrAg0XKQM/4UgBU9BxNlSpd35Yhp2p9ZMt3ebA2XTAtRO94oXyFOb4hIx3JCFjOS0WugVRMY9KO5q/UQszcb78EcoklAxOIXQzlsCijBkdoBGpUjwdcSSVd3apzm8EB01W0TbNaSAXOb14vEerT+754A1PRJmBi4+8vc0TxssKaZRMC3fa4PEPw==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIFHDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIuSTgQmD05ZgCAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECNlIybNur9mGBIIEyIG8BSl/WQbo
-2U1ktNsvjIkU/MX2fuK9ObKJNlSIym7YmOPhLBxzhZSfMSVZAAuy13I5Ii0Dc72c
-T69MGWopTtSZj0to/VjzJbgKjieApz8z3Ua6C4ckVtsnW0yVtmqFuj50EVt04Bdm
-cgAv/w4nvLJbf2pqxZVz5eQOGbmfjY+CwIeE5Ex60eAASaJCM/Yih6rgmgM1gP/v
-QWOpzwjIhCchI5pJiY/rLj4Lk8uGuATEqZRTp7XEt3v5XPbMy7970FzE+2U1Gq54
-MeNT5R5Azf13BavFmAQsJUx5UQwH/L0Ovesuf76kUSF2FDimvzL4lCQMuJ8ZnmUR
-c28tqx/GmT5nRBqpH/rUTqL83R93yZ2cxOzulPrXb9WV5MoTDjmF5Ay2UwZOfj/o
-wXSG6PdTNcK2+tq4fBJoB5tXzwotvT0UgSKQzRE8KybVffbu3aibb+Q1/WPTagBk
-vnGOXkDQWrqstTzAt+YWfUUSRnD9sJW1t2Db1N5Z05X/3j5TZVJ019M1h2Xre4+R
-HYQJrH3DyOE2GIsQmTebFrbv2fXMSK8FjzY0Em8PhI56kcac4GPrd2VrSRqbfHoY
-ARt4Gmrh1QlbCd2x4i9gc9evbnH82dA1n6vHt5/APMd1Ycj9m3UMDv4o20vj7cA8
-Fyp+xF4xRgwHDhlxL988j4w35KEi1dtJzeQZWMbFoJTI+dJmNcZOaLsSpvs/d9i6
-JwGBoii0veQVeA/lS9k8q0/fKMFf5Nq2v+uRzypyq22WrLIhAjfVSbFF4vLe+F06
-QD71cd4z3fSkZ3vnDbKADWXNhppnnDjfmpN9fEOXs9ct58CsBqrzToGZN49xTkrA
-+zyg4dJIZI8vMQJS+xQ2mswsDuWfY3RFf8Sz8WuSOAnYXrDM/YkPCYxYzlB1+nAO
-oFahskPc7gRpB7EFSvwAyapPw/L7395xhsujOW760nUcn3r1M6jdCmUOmAXuB1BP
-WO5tPuLqhyTCElwqojq/5n80wG2snmEzLF+7y90hT5PfEFoAYtSUqBR94+lcjPaK
-L0ndZbeNWmiANn0Yl7uN/obg8iA9Zxh6xHFFTqCUa9nxuXFgKu/wia9pFri2RUCT
-J2KBJE9hnYXB9SfhrKjc/eGzSIL+77ule4ZYaKrSTzSSMHn96obGgHy6KQ+A9yZO
-QIeYeBH2JcvE1P8aftJvRWWaICMG0K4Km18HCf9OD2jotNr8rwR1R9R07MVfWzqU
-IfN42fkFTrhUaQjqowtLGL5wbl8OEDQ+aR0kOM8kJEG+Kf1n1Dk9mwSIT4J3vwTl
-FrJvKm3z6QCqO4Oc6/sYU1P7oLIUuUxgliVmD3B3E4SmIHUyoJ+k097IdQGbo60B
-IM3A5gHPoSXH6VZMxGbMEOWtcJir/NW8u1YMGpU5DhNI45gQPFj8fpfNZfrTPPFo
-fMxq/rNoy2lnRsiKwrzmuDYFBkG9gjkASM7w9k+APgSFSGQIIXkJOgaGjHLjdhrO
-MeqoIEfE2T391cNjvbvPHnmAV5ktmtbTpbiLtVs16+I5TYoYRXaf6p7pNSaACXOM
-xOt5JlTsn0ibYj3OjEliS5BERSzzcKnGAv9nnTvByIUcrzapR7Pqd3LOc5zABNt/
-SrKrytybZ8eNy5VZT14++A==
+MIIFHDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIktu51yhNKVkCAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECO2PLa14MypkBIIEyEzRjO+lcxdz
+lOEYscy9PwuLS10TiKK0o5xXMZHILgOaO4LGKsD3eQhHZLcVGIJSoxwItvk59gTG
+87gBbPFGvGLC2hXlVRn4Mc8qFELeoKMRWef8wQ41GZlU74Rzci56xyx6GhPflwIz
+fsC9x3N8J3KCwXoqQMwC3IIorQR1/9FsZ7nMmVpntfgW0mbZsA9sJ58A2CmNs8XO
+ekJkNrL+rzJhnCrK790qp2O8nGjQfSQp74wQEIFJZUr1+7+i2PXFXJ2Q53Mkwbiz
+YfRU2OUZgEH8yyR8h3eOHVP7+RLblig657Nk8tWc+bYTTqaBdKNi0TWkhzNX3MIq
+XCGCuB8QjPrq0OygWrAisQuKHJ+/M0eV89JmXsoHtDMPj5yJp1LDrsku+wBUl6uq
+JCw6mWheMNeZt1gp7NPMs4r37QQl6gWdnoFy4+Oe5V6JgR4UsO63nkhC4K33PZO+
+WRL5DZxUl3hxWSQNH6YBfkYjI0HkfCpGYCtyOBL054G25T7zTrzgkOI8R38yTVhR
+lniigrUBamm//nmcsOUVHuJiGR/uTHyoPUii+ui+YwgA+Vi+rXtjTnjfenO4Pz51
+gZuROnLaXzE42BHaYaCFfX1iluYrOwZ6OiMS3sHx5YDjwFqii+GF7rhYge91EDfb
+kD9FsmXAjjqjVyG68YVyocZtyCa1YBezlchoQ8Cj0btqPEHCCIE20hyoP54SuKY0
+VjiFtKxyha6iSKEtSsCqmSJqXbSK5F4d59OQ1OUn61tLCSJitLpMv5ix+a4FQjeX
+0y90ijaMshnmd97bjxywu0ovAejYx23RisTt4chb4wUZo1v7VJsowKTjUr6Ic77f
+1YuSp5y/kCBqz4CQKYlsJlBJUAOJLkOGIh9eeKyWr9niEdKKY7CJ/wtUSOlw1UKv
+vpHEdZkPEwQQQG/0Vea7XLpJe6Cz49uuZ0Co/UkL/k+w4nOOITAmHVVXhalRYM1U
+8cnSakmFiioHMF7GTxwP39diMhnwn5qcETbxKmYp1mGDA1jb11o15McOUqQVDsod
+A9VHxdRPXoSkfhHh1YWRm31xcoy5AZBpJksWEdYtNnV2AvAFtZKgldoIf6yzW190
+Uh54HtEfyD/6Wvsot0g+EmiPh1Trqt5VClGiMY0WE3HniutkXpEHuCF17cIOdlwA
+OLCnP4oLwrJo7FQ0yxk2L38I+FINIO/ETvZ/v4tOSMCAbf9MPHOrIArdtkgnwqNi
+AsXPW5YjZX5UHxKKYWhVojKEzZacGwt/ACiFkdmdqcIgNq079f/P+V2m6ZmcmQmb
+p8NAe2P54xxMp1bWxrUY/oEytuyNeW+C9ZmX9+9qDI1+oNcUHJwaUvj2dYP5Did6
+RAF11MpoQMuz5GsE0hFxquOQ/wjmaYzpDYbDcfBieOuc9oL/1M5hspc6V11lL+39
+dfY8ftKfvS3b3jfow0YUHOqQ8fLU7RI4XSpRp8ePWJ2I+VuyP6YUmrw2zbNtWMp1
+l1G9nHml2RXBWMv8pmksPVAnPA+hBflXwrkvuzmwaGw2KQM29ZmssqSwbBWrslVU
+h8fFT4d6oz/jZfoD0Bfk5VTdt/iy1oWIw4Ekd94D+BRmNl5WENm/VBng+ZzDQyzV
+8MaDfLMpOYIQHBESoi6H4Q==
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIID4DCCAsigAwIBAgIIWiWAKz2BMLIwDQYJKoZIhvcNAQELBQAwgZ0xCzAJBgNV
@@ -28007,61 +28067,61 @@ WANYLtTn0ymYoxM5IdKtlmOyoI3TbCpUiXa+N69mMIUXCuMA
         set enroll-protocol none
     next
     edit "Fortinet_SSL_RSA4096"
-        set password ENC kSq8KVVkqxyedsjErABO1SOmRwH5Xw7Wa2weroXG8bcM+BNprEynxaKqf3PhVjS0mWdznFRZYgYAgpWm2647NZWJymFZjoWdl0GdJSUiOCgtoSXLqFPiLpPKeGjjaSliRi2zY0gAntZmAGqBYYnoPPGDC9kewQWJXJ/ta2SCW3gxAGvjsPTwZYughKO3S22ef9gNgQ==
+        set password ENC EkDFPIJ/W59BW8RiIvMiRRsNoZntats2nB4vQ4IIE3DhmKUuxOZ1L37KErHVDRvM1kJawNPQ4jnIg0S29PhbzCowNVx+A0LPHo2XTTAZnhIup1y0Vnu0X1Gv4M+OkoXaxxDlH4Jq7QzF4yclJvm1tt21gVLed8RJLSoMwCjThdliUpYkzhQyY/aRYV5NU+SRc9U8XA==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-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
-uEv/4Bj9B42uGY+acEUiFA==
+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
+ooqauzn/dREtvnrfOMJ9dg==
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIIF4DCCA8igAwIBAgIIOrNC3EHW/f8wDQYJKoZIhvcNAQELBQAwgZ0xCzAJBgNV
@@ -28104,18 +28164,18 @@ J0AXan8s+svxsz9r04jRkSRtF/1o3zwpHNOJL9qmji7idvvJ+eLXcSwRYdiONNVe
         set enroll-protocol none
     next
     edit "Fortinet_SSL_DSA1024"
-        set password ENC WyycfJKtPr8ZzkqGiilv+GL/YkyhT6wMW/y4va9RJUlqjSRXM3HbWoh4WvxzXYveOnJUDrYF0saFfWkib1ZYyGvkJ1Y6JFukJ7xklYerWrnU3Bgyu+Hbfuh8CFJFxZaEhfxyAlbChxVdZ/L6+ycXn22sK9zLj0dH2opqGMd1VlFtcyzlY9fuhgzkO6mCQ61fG7St3A==
+        set password ENC 1kV1A18OHzvIWlbvhaoaBf7dbBr2Xz10ayFx+FnwWYl4eKOIUJuNZ3w2OuuzDhlBBp277x+a3vLZ1Mw4RcwC3RPD/vpR6KBPxHfChb1ardx2d1VL19Jk9S8p6jgj8xLQqWVjV0h4a4gV/OYQfLnjbgdFDO/Q9jfJtaZvhMdYMLAPIBQCxT36QYhKw0P3kveSBjvNfA==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIBpDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQICX7TZ5mZc9YCAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECDxl7otPiSDCBIIBUB8ostEQmIUA
-unYigBOlzqPS4XM2nSD3oH2i1yQcdqCk+TMveuyDD4my5LNld+w5pZB/dvQkKLNz
-XmJJ6bqHKsuIgJ+DWMjGftMLtlzilOZO2A0OS71w3pQBuZP8hmhaEtfZEoE/tWbG
-mbMTeEJEOI30vGpwyNP9Tz6byBnRz2XugIZzX14FDtISZPYnrQU0AvW6+W6fDDpV
-Zdu5Us/b8YRrdsAPivc5ETFBm1/h2PMpRJHA5rqiId6pBTtAVlTDej/k9S6vvDTI
-6iCCbkbrLTCgsp/ae/p8rfnKpRLAf12tWuQjRPyO7OxHBosMJMNfmW6R4BfCASqB
-gwEI3rkpWZlTfTscBMytdVX6adRaqIMhN48nhUia0zb19RV9ckJaBno0TCsWtVWQ
-4kIvNCEIqG0RAD4FzMZ40AMBxxReSUksIjXq/GOr3U64CipShqfB8g==
+MIIBpDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIM3TziGaJL5cCAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECFAqu6iBdDW+BIIBUIsWE+MDPm0O
+9amHPPfacAw+kTXtLcLIl4AjmqvIQ+2ZxasRV7JoFzRQawjVztTGBZNNjjgNpdmQ
+2hoKfQUvg7AfbNaklNRKeM408nbY8z+P0dfwdiiTKOYH64NLxQ5SvSekW/JP7Eqi
+CfNeOMq85aGuQMj9kxKqYoFzYDoxecxtj5lKGYK6xOFQcnOQ6URFebcYsDPjxnBN
+ZVAFvTihsmlUGWCPn1HzrlaH+WjPFCe4dMBSg9hdAE+VZGn9WaNB/2J/UnB8oDgp
+03tfUnWkB0SBfskuwKSNBoFhymNae+2Tf8xTJ9vzOjXtUEF0BwMCKLk2GcFu3DhC
+hYgdy2ZAhbmJD9iEaNH0rUMkAY7Z0CaOfoZE1xwwi9JEwT3bWiaJ0V9BhRBVSg4D
+OWGQKyFs6/Jjuqq0dE2GRlw8uVTTtfdaKtrKKz6cC9ZoZgP9K5yP9A==
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIIDnjCCA1ugAwIBAgIIffGisVoxEI0wCwYJYIZIAWUDBAMCMIGdMQswCQYDVQQG
@@ -28146,24 +28206,24 @@ BwMBMAsGCWCGSAFlAwQDAgMwADAtAhRceJvOZFLLW7nfUJGGYMlcNbmxywIVAN/0
         set enroll-protocol none
     next
     edit "Fortinet_SSL_DSA2048"
-        set password ENC drQcXVdkZOGtXyNkOMED/+pYivrPhQsfCXIXHtzZutgF2ndbA5DQ/IPCCrzsrMSXIG+XyLum8TixCWa+Kl8+4I2bp5GmkwAavkei2Jp5SJgeUW16l2Gdcc+j9tHy3TfprhtriBYXq+vobhdXhlRatoEakG7VxCnJBitA8cwyaIQQVsZIbaoBi9DVaUBbMP75MJ8CCg==
+        set password ENC NQN3lqSa3jFelufCw4FTXURfuM/9yuZ/91Xu3Apao4J7gYubAXjioCFFXEKJC4oq1Ue3Qf2KUE7v+aIiPiR7zrozNhZYrZffXytRv7vGpjCc333XBq2GZ2PSlVRIVga3XguJxiEAh6yuogHCL9yFO9EVzpefMfgESMxgjFpSkFRa06VBICu4qEzbeafS5m66sTl8SA==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIICxDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIkHhmRZ6JER0CAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECGKY+WOi5ZTQBIICcOjiFBiF7g6j
-dWN5CNhCndg/A8UZqez2ygKBp0tOwTuOKatGj1WEbM3csnIJk+CmOnT5Wtoubs5l
-ESdWnHE/0HU5IZlnAM0sNZ53jgruBwGYOwFQjw/I0HurSn2tcZDP8QF2jSxiqNia
-tle9T0iAnmwsVDYtHnYmqTTNpPz6Yd0wiGwtDjgeduCYSBbjK6lYnwEmCXEnQPMf
-xQjuVfG7DqSdNb4EUfvFMtsSoa1GdJTEKlBs0CRvVlvCETcw42Anw4eeErGJrtyD
-j3HeXc+sVT5w0GDpxldyZqPLl+w//tMmpShmRM/x1/3YInWTAh2ZQBCK4MD4vFWO
-W7emXeqV/OTqE3r2FSfTnhwR4wd5tX6SDgEjI3K/9dvDRH54XRt/Y2+XVL9dNZiu
-OZIpikG2IYkUW6h1hFScbOjyTurW02R+vMeq8fJfRqLOJRAJ7r3D+2tVHbizhP7U
-wgj4a/xOlc7S0XXto4Q13mfh/7ztwi7C6lHTKYOlXCKQDnlz50tF4d8mW5R8rloM
-2bZvtzSy8IObg+1JEfGonzaVNDrD4QfFJEmBDu2G1JOGldio7P25DZutdGrxrZF0
-tuY/uQ4o3otmIa7OaiIauQfpGvjaOFY+ZNdA4+nDRzBMs8HPxUuToImgX5kg2trT
-2MDTotysMYLKmERlTvJSZMO99DyCzj+Z42apVDgl1Yona5noTL8dsuQVaiKXbm4P
-Ss5uODvd1zu3tT5MaQsTj7f36etpcSQXEAZPCqh4MecRbqCja0yeNeBXR3LX641G
-UEBv6VVf+Urj7N1KTSo9VvNhUe6U8oIz6KsUhfC6CNvP97irKd6QbQ==
+MIICxDBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQI1nYBA2iWzFwCAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECFcSybuuFg+ABIICcPgk/KRc3Vx8
+tHWWnJCOnUkx5WuPfbvOF63NVBZnQONRcIG6zWoiznAl0nmAH2RsfLG/T5/3kTxD
+xDkzYQ+5yLyfMkkwRWc8eixD0uGttCXO8zkJD+zG5+OnkPCJc0YwOVQiO9L6Ut8S
+7XSgtMF4DSd6TQchSlCV7U40JHFNjieEfe+TN+cvkVs0cV5hJASX7Z+t/TOiFubd
+ZIBzaFsmPQDXzvCszssFSDBrhgqcoTCk0Kq34ipye4gSNOau5R7CCvsJ6QPVz9T/
+QWCgjo0/41OQEBkbMcFH/fPcl0KmDQB4HVAvXfPb+5Xonyff4lCWZgUN/FOWXNa+
+Dai3mZ9/s1K08X18EJr/Qib4zJxKvj/07EZCZoVGYynILlK0Ev7sFdcenV0irioU
+jI7hepwq4C++cu1WkOC9SVHmKc1TUNb8blpVmb8RVESH6L7cp/eHfrGe/v3CXVlP
+TfziJjDGwOshkvuUCHncsrASKLKkwc4UyF0MWiRSXH/uR/xA+ExU5i0Cd03d+UBd
+88FWtxzl7lkuDPyI38CrXR4vujuzpxchYP+Bpjko/jGgH6Sd2F/uQWcb79NHfG6k
+54H5nCGeyQcRa5HD47jqf4+fE1AMqA4jOyUDrDpLJ5Ct98MhLs/nZ36xZOcu6PS8
+FXW9+ak/b3NK9RZC5whZFoxS6y3wGVuvRdqnNSuPzZhCRqGNGdb3M+cltkModDub
+vfb4jqznAujfbP9Q0zk6iIuD4USdkeZ5dZNgDgE4ixu52JiX2PMrRJqFJumVhnqz
+SBx5/Vrd4HgdyhtnBLBUfSuFBLcUeqzv+333urUcjh1GuaicmN7D6Q==
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIIFRTCCBOugAwIBAgIIaQKwMIpNT6QwCwYJYIZIAWUDBAMCMIGdMQswCQYDVQQG
@@ -28203,14 +28263,14 @@ oduKKYyLFhAVVKY23HzP5C+/ZQtkAhMCIFyET5BOS563Q6gdirsJnRlpbayB8Rcq
         set enroll-protocol none
     next
     edit "Fortinet_SSL_ECDSA256"
-        set password ENC eDnT77+ByUh2dF4kJVL4a6/Wumt/OTelBIC+mRHqdUBwwc/NhB/GOJ/hcOngVgSvLBKlixha77JeEpGYEPAdbbKUGy9tQE6SI79Xpo5Bg7XTm+yW0qvttRvt411AIieaORfqID3qInFaMMT+3qYx/XqLzc0Kd5TfsNXYRfmOL6yvYKJiLwvAE+fwq+/9dYgty7hvuw==
+        set password ENC eMw6gAjzRUhNym2ARdNYYI8bysv1sNxWnP8YwosRaP7kU0C7fK4BoLv051+Ovy3qVSCfIogcc4HZVOVMmctQfgm3eG8M02of7RP7kn5MLBfHXgnu7VEmeDuN1EE0SjTTn/hvuvzWqC+0HYnbF8hsYIqSvp56Aq5sBjfJiNzf3iy3xBCQlam1vduel2641pGoSxMigw==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIHjME4GCSqGSIb3DQEFDTBBMCkGCSqGSIb3DQEFDDAcBAhEY2U/Q16nlgICCAAw
-DAYIKoZIhvcNAgkFADAUBggqhkiG9w0DBwQIYXLpp5PsxC4EgZDMQnUWfNmJbzxj
-yrEmGs83YjYyj5Ao1KQUcDjmm8QV3IRaJhB58xwJL5NmcoN478G9icbqqc8wzChB
-WMRohQKkGF11Hy1CIKIJkG6SNIkLyACnIwMcfkeurTmrNeIGlCgwgcO5dxDrODVC
-cCU3IS2p8TQAy/iGl/iQF2jNK1SwlBE0C/QPKMKU/wIiFzy/zBI=
+MIHjME4GCSqGSIb3DQEFDTBBMCkGCSqGSIb3DQEFDDAcBAghzx9v1BxMDAICCAAw
+DAYIKoZIhvcNAgkFADAUBggqhkiG9w0DBwQI9UkRqROesdEEgZCXFdwL0NMp3Rx9
+5uQx71TG/+x3fR1Z5VdlRlBm1xoUKVstY1vEn7vw5VT3b6U0Y/TfUNKFOyroILUK
+mE0wlSAA2Cf5D9Ktl8B0ha83oDxCTaWlCmXb3tryeNhEwnUCbrjnoNoyA71SHpg2
+loVn20XzmzVllQCD1Fx3+atmb2FCbxEICylXJJNebheCM6eX0iA=
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIICVDCCAfqgAwIBAgIIZih4i4hXrQ8wCgYIKoZIzj0EAwIwgZ0xCzAJBgNVBAYT
@@ -28234,15 +28294,15 @@ RMfDaAlFzk7/RL0sjpuCrF38Sp+HO56A
         set enroll-protocol none
     next
     edit "Fortinet_SSL_ECDSA384"
-        set password ENC Nfo9vnuwIGcjTS5l7Yf3Sm/UUf8GzvAjzdFBPGKAmmXogv5CMD+nDVzpb00G2/NOqPWfrDOwuuRsuOUMC3hKQrem1qoMYFGY7BOL5efyH36fBKES4bYnhPQw7GCanniMlnnaZIqTtRJDA6RDZJw60angDuKFYszX/wxk8F7ThHULNu7TdUULk9q4ZqbYhvCI530VmA==
+        set password ENC Jj3y2AKk8tfk8b1IzFTVZtvOYVIXdhdk5gQleR0EK5cVdogwpSoPopUoSzIKLvFYp8mgZcoUjrO7HqXscXw0QdOqqy+wCLfLASUBhzw/Fqw7lkzK9+RGOTsN381+723AOcpmjqWBQ1uDJtiLsiOLhVanD9DS7FhMWmHWnLZ1cqckNOCn53+0m94j3n8rOgXB/EXr7Q==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIBEzBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIQu3vsigey7kCAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECDP3Zuo85TfkBIHAm5Cs34mEvehz
-2CJ3PfTq2g7AwAwWmM8gzMCvqwuRhf1ZiE4G6GcEqIsQlWMpeYhKaJA65CbzSOCf
-+hEeQoYrx176KOFP4PFBCK/3YAwU7ZL2WFkKXq3mGCIFzOxK2nr2yT7sijijLrTi
-ioxdfwmxn6MALjBn+PSWYnbgDhdXk1WCUr/6eOdydZS6c9iVhag+o/07PsnnJSzT
-dPlm9OhCO8fuytFm+uc5bw1IQdvfSsyvU6GPI8CqPE9DXavvM8wy
+MIIBEzBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQI7Ai7mLyeMZ8CAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECLMr1o+JmlfEBIHAILE+5pVKHxj6
+vy1M4NvUlhXNWGOBKyj2eP9SzS+nZoYDN6Ln+k4WKL4Ui6jfHtefrAPZL5HZUR1p
+1KTPWMhzcm+KDgFLWPTuy98ev+lRNemL5oBnYT60FYRMvV47hkHvk2WFEZBpQD+7
+91meaK+cZu6joMv/7VMmhth7HhDgJAjYGOkun04n6JNOGFHlH5RNXFXKqaTYfSQE
+tZFhp2p02Pdp26AmK1EAOiuAzHA9GjNCC+8hYBhMnCNHR/5a7pno
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIICkTCCAhegAwIBAgIIQkXhDOMD0k0wCgYIKoZIzj0EAwIwgZ0xCzAJBgNVBAYT
@@ -28267,16 +28327,16 @@ BnpCUUctqzNujmJlcrezz/G+2qsEc+PGX4h0L3Pgd//jPwIxAKOx3OWLybpjYv2h
         set enroll-protocol none
     next
     edit "Fortinet_SSL_ECDSA521"
-        set password ENC HPKE4F1BboOKNKFM0rL3l95LAkSn203eg9HzqXFI15xxKSKFr9CLTOlS+aJSh43cX7pecCy+OlGGAGBnrDrS5c/jSyVP55KpqgqBV5mENGdp+CCqyoJpEy0MfUXbfES3y4tliKKiLlc9avTcXqUrc/zlaFho4kmheqwcfzjEqEWpyLK3MIZBgCIoFVXKzNaMPPF0nw==
+        set password ENC COzO78BC+urTJGEyv1sFvWEXOOmGzMgcaQV7W3OWk33zKkS22ESjnxFJ5oXZxOcXK4htgd/+WoZkajOdRRQBzlTVQqoLjgpVkcSGj/48d2NRjtcmwrvNcz30OzS016il5XKo9YpQQKI5bvQ6S6l2VldRsA+zY0bvO7j09v63PgelOAYOKhuZu2rYSqUXrzODD+e5gg==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIBSzBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIweijKUx51H4CAggA
-MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECB4/pJKBvv1uBIH4MXVSPzPCc7RR
-OpEUC1dsEKDJAvS1vfu7rQrm8vgnH6sBFOMQ6MJq0tfvWZTqqXbOI02sohOrPOnv
-6OEZGbt2gRh/txfKjibOP9kgGgTRm/EzXCGXQj1GECoKe21f99a8x2gXgzvGAJWb
-cLDWWAia0hYO/K/cC3jWhywy8lyIEns+6ZVdFeizzjrNynUxsl2Y7AGWfnYfET+o
-9Fn/V0xGMh4DTn1HX5VgYsWAigbeVsvK7LZKLLZMIzltv+jlwHuDmmcXFE6NhxBO
-YZ6/MgzMMFThpb2Iplx1w0B3uRG1PUEr/610Og8Hj9gVukX3rEumwHF0UZ9C7VA=
+MIIBSzBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQI1GRSLwwiRX4CAggA
+MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECFWzDEwPCC8oBIH4an63JN6l7L3R
+cZp2AvdwGBmXGnwsTGYBgu9Y/yPvfbCHIzz0owJUQD4Kcy61V3IZY96geXrajjg6
+m1HePNmEoxscVF2XI553jcOKk/DqNXvKwGpVmOSzydQMbNmW4lh57YW2sbcHDQJ7
+M8HJ9TH0EDOJQ+zfCslLecm7p74kPldJSf5NjJyuP8OkLdeqQU7B51ll/+3QE7mG
+IK4x/HZgQxEpyRNalk83svvFl76qsVWbtS+YyXp+kHKqG1BuBnLFNvcA/TxLNoX4
+oZQiMBMIPGX0t4Ktjf2SOAW3ibEnkPxQMd5sHGfBqkM2ptOuRIhaWx6C2xpOW90=
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIIC3DCCAj2gAwIBAgIIBmIoQX9EDUMwCgYIKoZIzj0EAwIwgZ0xCzAJBgNVBAYT
@@ -28303,12 +28363,12 @@ mDvJt3sOXLk5Rf5WbnNtiQ==
         set enroll-protocol none
     next
     edit "Fortinet_SSL_ED25519"
-        set password ENC wafseVMklsaFCkMOWkc2zTrZ7k8+x8YUetQ5nASzZ+wFGhJK73p23WvPgJ+xI9Whilgmp8ip0Smdb0i6bUygNf/knXqshxY7Z384Lw8vjzBgbHgz6zdazJXR5u/IZ7zLIhGUvEcJqtDPeqP1zcJm3CwlG6ZoHAVDd1ePIxPeNDyr3MH6VtlTCSp0m3oUoLfUPyZCRQ==
+        set password ENC qkcP//8iYg1CNja0n6GhugQSHO+o1mN73Tq/nCWX3KvaoZ3Z1Gv0fkkedsYW8HIvwYSyssWfbA1BBiBnhRh9CGU2XSGlemJ0Vv1COclEIAeUY6U5YjJmga72MGaoBa8W5uIFQRDwBBnHMDsDaXjdrnJRwrpmo7hpuWe98WN47vWcWgb5bBhR/FQRu4LEETIf8yr21Q==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIGKME4GCSqGSIb3DQEFDTBBMCkGCSqGSIb3DQEFDDAcBAgex2He9MYmHgICCAAw
-DAYIKoZIhvcNAgkFADAUBggqhkiG9w0DBwQII0LbLP9549oEOO3ouSg4byBAyxbb
-TCEIxwXbIc/l3lZE5iLgb1nHFuwPsJdJ3qf32vDh/c+aThM7z+gKyWTmIrtF
+MIGKME4GCSqGSIb3DQEFDTBBMCkGCSqGSIb3DQEFDDAcBAh7335oNWoblwICCAAw
+DAYIKoZIhvcNAgkFADAUBggqhkiG9w0DBwQIp38QjsfRXMEEOPA/bKAWXlwsL5Wq
+SIztFvbTRpETwyXWgTSDYZSf0Ov/wJ6/5av7BixNG79t+Z60JblGqsdGojMK
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIICFDCCAcagAwIBAgIITOk/0R24ue0wBQYDK2VwMIGdMQswCQYDVQQGEwJVUzET
@@ -28331,13 +28391,13 @@ d0z2YQZJVAE=
         set enroll-protocol none
     next
     edit "Fortinet_SSL_ED448"
-        set password ENC v5zdlq8hShnYxs0cVzOzogDyXzbXb/ZC0nnD1kGq3J0pxOEMk5hmsjQJvg/K7oKNz40FJ/Ekew37sd2KIBuDQ42UlmeSSKKKCfGuNkur3pwmD5gbpnOWfbRC6ZfqGGP37cTsMETNNZQHqoab9xEFfb9z5+ze0qzzsrGXE2zlWTtbuGzyctIZN4AZBPMvCmXQ47Wukg==
+        set password ENC Rkke12i6jhopt9LjY3Hrv2bn4VVMHlwTJZ4q7Fja847762KSCyWFkHblUQs6FHQ1DPUYi+NooX4bepCfqzuc/PyGoCCu0BFcfOxTGta8c8/taD5TYlAZ1S2r2KUKi2A1R1sOFTkWBrrutn/xqMICPuVjl9goPybxZsTLMZByU/yp6+bnD/22RM+dxKWOBQwRQj9K7g==
         set comments "This certificate is embedded in the hardware at the factory and is unique to this unit. "
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIGiME4GCSqGSIb3DQEFDTBBMCkGCSqGSIb3DQEFDDAcBAjZDfduTfkwewICCAAw
-DAYIKoZIhvcNAgkFADAUBggqhkiG9w0DBwQIprb1OIoR9jAEUJK4W+AIRogl5/5a
-gThIAvnyjnNSeWiYf6IIIUbHHu2Rg33HmMXdKO2d9qG/DsLudMyJEuOz85G+1N4x
-WRqYYr/zANb7SmH/YQHLehbOXkdm
+MIGiME4GCSqGSIb3DQEFDTBBMCkGCSqGSIb3DQEFDDAcBAjKwhp9eoNg5gICCAAw
+DAYIKoZIhvcNAgkFADAUBggqhkiG9w0DBwQIbilohnRVvygEUIgeFQ+gUWhYJF3G
+EHTJjuZRvSrVPm7EqnEC6wuLHSrN3dXHSwZ+A35np/qbzD5EQIiGBNvV04w7DnLu
+OA72AXh57YXWCPpb1+4SU9L/R0s4
 -----END ENCRYPTED PRIVATE KEY-----"
         set certificate "-----BEGIN CERTIFICATE-----
 MIICXzCCAd+gAwIBAgIILK+BHpYWLi4wBQYDK2VxMIGdMQswCQYDVQQGEwJVUzET
@@ -29300,7 +29360,7 @@ config user local
         set passwd-time 0000-00-00 00:00:00
         set authtimeout 0
         set auth-concurrent-override disable
-        set ppk-secret ENC ZdtN1lQgcRJfDdwshgac5Au2QqdRHNCXXfYzxAIAIPNwsrEdygyiqwSyvTjtLSDvBsLby3rr2uLrRcKU1hJ/QjyTGBZkcRSNAuEA7+sAqvl8knkJmkX5oBCRkeWv6riP5Ts39RpXyrfomVAQagNBvPYrXAt12mHZdsf3glRrFvhhDWLVqy94EGCfw355/5EZl+L0oQ==
+        set ppk-secret ENC 49aNqOu6ahVv1RnevOXjfP4OUxXTgr7mlQrrngV8dJzpl9ApM+TyW3dqARJ6fOe2Y5h97e3F/cgOaxKOcuHKRDaDFYS2ksInOOkeR7GOyNviFNxqlWhU8Ec9IvAPwoLUBjlKvLLqS73ScuMjEmthorwy3CKoECrVnaEd8Q3ozbZD7bdWzskEa6x0TIy+DyzmeZEbiA==
         set ppk-identity ''
         set passwd ENC zREoiyXs6kGarKe9q5RxBOfwKqLgJZE23m5PHEuHEIWXcL//nt8t9/sFQnoyspClCwFA3H9+s2GAqmnWkIl0uhQayJOtsRYcS0PM/RQbi8V9fvALUhyLly/qIvHfX+U765IEN1EHGWVwR8pUCTjHwIOsfNwSPVJdt3UpK35bj4EqPNtL42TlDFYH2CtbYB7mw/fvDQ==
     next
@@ -32237,267 +32297,60 @@ config firewall ippool
         set arp-intf ''
         set comments ''
     next
+    edit "OTTNAT166-AIRECC"
+        set type one-to-one
+        set startip 131.239.169.18
+        set endip 131.239.169.18
+        set arp-reply enable
+        set arp-intf ''
+        set comments ''
+    next
+    edit "OTTNAT167AIRECC"
+        set type one-to-one
+        set startip 131.239.169.19
+        set endip 131.239.169.19
+        set arp-reply enable
+        set arp-intf ''
+        set comments ''
+    next
+    edit "OCCASIONALNAT3-AIRECC"
+        set type one-to-one
+        set startip 131.239.169.15
+        set endip 131.239.169.15
+        set arp-reply enable
+        set arp-intf ''
+        set comments ''
+    next
+    edit "EEGCAPTION7AIRECC"
+        set type one-to-one
+        set startip 131.239.169.13
+        set endip 131.239.169.13
+        set arp-reply enable
+        set arp-intf ''
+        set comments ''
+    next
+    edit "EEGCAPTION3AIRECC"
+        set type one-to-one
+        set startip 131.239.169.12
+        set endip 131.239.169.12
+        set arp-reply enable
+        set arp-intf ''
+        set comments ''
+    next
+    edit "EVERTZCAPTIONKELLYPRI-AIRECC"
+        set type one-to-one
+        set startip 131.239.169.11
+        set endip 131.239.169.11
+        set arp-reply enable
+        set arp-intf ''
+        set comments ''
+    next
 end
 config firewall ippool6
 end
 config firewall ldb-monitor
 end
 config firewall vip
-    edit "Evertz Caption Kelly Primary"
-        set id 0
-        set uuid a5957a30-5847-51ec-e118-6c66f5a0014b
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.161
-        set mappedip "10.27.16.161"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "EEG Caption 3"
-        set id 0
-        set uuid aaeca990-5847-51ec-8fb8-6d6ee4e8a959
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.162
-        set mappedip "10.27.16.162"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "Nick Cannon Prim"
-        set id 0
-        set uuid b0994b50-5847-51ec-58e9-ee745e0ae34f
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.163
-        set mappedip "10.27.16.163"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "Elemental-Windstream1"
-        set id 0
-        set uuid b1010c7c-5847-51ec-602e-308718042fc3
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.164
-        set mappedip "10.27.28.126"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "Occasional_NAT3"
-        set id 0
-        set uuid b16bdcf0-5847-51ec-55ad-af72dd839084
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.165
-        set mappedip "10.27.16.165"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "Elemental-Windstream4"
-        set id 0
-        set uuid b1d092da-5847-51ec-f53c-cda290bce7bb
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.130
-        set mappedip "10.27.28.130"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "Elemental-Windstream2"
-        set id 0
-        set uuid b2385442-5847-51ec-e821-068d8632b32d
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.168
-        set mappedip "10.27.28.121"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "OTT_NAT_166"
-        set id 0
-        set uuid b2a19d30-5847-51ec-72de-725c3b61defb
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.166
-        set mappedip "10.27.16.166"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "OTT_167"
-        set id 0
-        set uuid b3065478-5847-51ec-c36f-7d8ffa381c3b
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.167
-        set mappedip "10.27.16.167"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "ILO-2"
-        set id 0
-        set uuid b367fa8e-5847-51ec-15a1-463c8888a562
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.186
-        set mappedip "10.27.5.245"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "Zixi"
-        set id 0
-        set uuid b3bef3fc-5847-51ec-c148-8741cf46590a
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.160
-        set mappedip "10.27.28.23"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "LiveU_5"
-        set id 0
-        set uuid b4791c96-5847-51ec-29e8-3fff70ce30f2
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.169
-        set mappedip "10.27.29.102"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "temp_enc"
-        set id 0
-        set uuid b4dac496-5847-51ec-0143-07edff249b06
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.140
-        set mappedip "10.27.28.140"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "LiveU_Spare"
-        set id 0
-        set uuid b53f7968-5847-51ec-f9de-080fecb1f353
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.154
-        set mappedip "10.27.28.204"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "Ilo-1"
-        set id 0
-        set uuid b5a43236-5847-51ec-eef8-2099d360c9b8
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.185
-        set mappedip "10.27.5.244"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "ilc_Primary_Windstream"
-        set id 0
-        set uuid b5ffbed0-5847-51ec-2cb4-4e34fb5a934d
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.137
-        set mappedip "192.168.50.107"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
-    edit "ilc-Backup-Windstream"
-        set id 0
-        set uuid b66a8c10-5847-51ec-a72e-e26a232ad3c0
-        set comment ''
-        set type static-nat
-        set extip 63.139.75.136
-        set mappedip "192.168.50.105"
-        set extintf "any"
-        set arp-reply enable
-        set nat-source-vip disable
-        set portforward disable
-        set gratuitous-arp-interval 0
-        set ssl-client-rekey-count 0
-        set color 0
-    next
     edit "LiveU-211"
         set id 0
         set uuid b6d55bda-5847-51ec-5e0a-50cb8f788e0b
@@ -34897,7 +34750,7 @@ config firewall policy
         set action accept
         set schedule "always"
         set schedule-timeout disable
-        set service "ALL"
+        set service "ALL_ICMP" "DNS" "HTTP" "HTTPS" "NTP"
         set tos-mask 0x00
         set anti-replay enable
         set dynamic-shaping disable
@@ -34943,7 +34796,7 @@ config firewall policy
         set nat enable
     next
     edit 17
-        set status enable
+        set status disable
         set name ''
         set uuid 63a3a344-5848-51ec-38c5-ae8488ba906c
         set srcintf "monitor-control"
@@ -34999,7 +34852,7 @@ config firewall policy
         set nat disable
     next
     edit 29
-        set status enable
+        set status disable
         set name ''
         set uuid 6430047e-5848-51ec-f729-f5f751ea6306
         set srcintf "monitor-control"
@@ -35055,7 +34908,7 @@ config firewall policy
         set nat disable
     next
     edit 30
-        set status enable
+        set status disable
         set name ''
         set uuid 64c0fa06-5848-51ec-5360-c5669fcc54d2
         set srcintf "monitor-control"
@@ -35111,7 +34964,7 @@ config firewall policy
         set nat disable
     next
     edit 31
-        set status enable
+        set status disable
         set name ''
         set uuid 655068a8-5848-51ec-0de2-c7ab09eeabd9
         set srcintf "monitor-control"
@@ -35167,7 +35020,7 @@ config firewall policy
         set nat disable
     next
     edit 7
-        set status enable
+        set status disable
         set name ''
         set uuid 65e2e4f8-5848-51ec-a818-7e1959536378
         set srcintf "monitor-control"
@@ -36267,7 +36120,7 @@ config firewall policy
         set nat disable
     next
     edit 45
-        set status enable
+        set status disable
         set name ''
         set uuid 813585d0-5848-51ec-44f0-69b5de7b5500
         set srcintf "monitor-control"
@@ -38005,62 +37858,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 118
-        set status enable
-        set name ''
-        set uuid 934369d6-5848-51ec-e6ec-03b1d7256969
-        set srcintf "inet-primary"
-        set dstintf "management"
-        set srcaddr "cayala-home" "fw_public" "AMV26_Public" "amv26"
-        set dstaddr "Ilo-1"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 209
         set status enable
         set name ''
@@ -38101,62 +37898,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 118)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 178
-        set status enable
-        set name ''
-        set uuid 93efd89c-5848-51ec-fb5e-1802396207e6
-        set srcintf "inet-primary"
-        set dstintf "management"
-        set srcaddr "cayala-home" "fw_public" "AMV26_Public" "amv26"
-        set dstaddr "ILO-2"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -38229,62 +37970,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 102
-        set status disable
-        set name "cc"
-        set uuid 9cd2ec42-5848-51ec-db1d-7a93581d338d
-        set srcintf "inet-primary"
-        set dstintf "office-lan"
-        set srcaddr "CaptionMax1" "CaptionMax2" "Level3Public" "WindstreamPublic" "amv26-CC" "CaptionMax3" "CaptionMax4" "Captionmax5" "CaptionMax6"
-        set dstaddr "Nick Cannon Prim"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 213
         set status enable
         set name ''
@@ -38341,62 +38026,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 101
-        set status disable
-        set name ''
-        set uuid 98a23cf4-5848-51ec-040f-3dcbee4786ef
-        set srcintf "inet-primary"
-        set dstintf "office-lan"
-        set srcaddr "CaptionMax1" "CaptionMax2" "Level3Public" "WindstreamPublic" "CaptionMax3" "CaptionMax4" "Captionmax5" "CaptionMax6" "63.139.75.188" "amv26-CC"
-        set dstaddr "EEG Caption 3"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 214
         set status enable
         set name ''
@@ -38437,62 +38066,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 101)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 99
-        set status disable
-        set name ''
-        set uuid 949abbae-5848-51ec-8d2f-cb5ce622e4a8
-        set srcintf "inet-primary"
-        set dstintf "office-lan"
-        set srcaddr "CaptionMax1" "CaptionMax2" "AMV26_Public" "Level3Public" "WindstreamPublic" "CaptionMax4" "Captionmax5" "CaptionMax6" "CaptionMax3" "amv26-CC"
-        set dstaddr "Evertz Caption Kelly Primary"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "TELNET"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -38733,62 +38306,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 279
-        set status disable
-        set name ''
-        set uuid 95fe4434-5848-51ec-30de-2406a8521017
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "AMVDM"
-        set dstaddr "63.139.75.172"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 229
         set status enable
         set name ''
@@ -38829,62 +38346,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 279)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 240
-        set status disable
-        set name ''
-        set uuid 9690bf3a-5848-51ec-fe87-155da2b15c8b
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "CaptionMax1" "CaptionMax2" "AMV26_Public" "Level3Public" "WindstreamPublic" "CaptionMax4" "Captionmax5" "CaptionMax6" "CaptionMax3"
-        set dstaddr "Closed Caption 6"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "TELNET"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -38957,62 +38418,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 234
-        set status disable
-        set name ''
-        set uuid 97389aca-5848-51ec-8b12-e8db6cacc451
-        set srcintf "inet-primary"
-        set dstintf "office-lan"
-        set srcaddr "CaptionMax1" "CaptionMax2" "AMV26_Public" "Level3Public" "WindstreamPublic" "CaptionMax4" "Captionmax5" "CaptionMax6" "CaptionMax3"
-        set dstaddr "Closed Caption 6"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "TELNET"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 216
         set status enable
         set name ''
@@ -39053,62 +38458,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 234)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 103
-        set status disable
-        set name ''
-        set uuid 9e473d08-5848-51ec-bd27-086c3d8f5ffb
-        set srcintf "inet-primary"
-        set dstintf "office-lan"
-        set srcaddr "CaptionMax1" "CaptionMax2" "AMV26_Public" "Level3Public" "WindstreamPublic"
-        set dstaddr "Occasional_NAT3"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -39589,62 +38938,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat enable
     next
-    edit 156
-        set status disable
-        set name ''
-        set uuid a427c012-5848-51ec-0f57-9ad7167d11e8
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "AMVDM"
-        set dstaddr "Elemental-Windstream2" "Elemental-Windstream4"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 235
         set status enable
         set name ''
@@ -39685,62 +38978,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 156)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 218
-        set status disable
-        set name ''
-        set uuid a4ba3d20-5848-51ec-9b00-d9dbfc2a15d7
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "AMV26_Public" "74.10.149.130"
-        set dstaddr "Elemental-Windstream2" "Elemental-Windstream4"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -39813,62 +39050,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 155
-        set status disable
-        set name ''
-        set uuid a54fc5ca-5848-51ec-1812-c2aac10aa3a6
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "AMVDM"
-        set dstaddr "Elemental-Windstream1"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 239
         set status enable
         set name ''
@@ -39925,62 +39106,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 219
-        set status disable
-        set name ''
-        set uuid a5e24170-5848-51ec-9f6b-6a0e75c2f95e
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "AMV26_Public" "74.10.149.130"
-        set dstaddr "Elemental-Windstream1"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 244
         set status enable
         set name ''
@@ -40021,62 +39146,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 219)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 148
-        set status disable
-        set name ''
-        set uuid a677caba-5848-51ec-3722-cf69356772d5
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "all"
-        set dstaddr "temp_enc"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -40189,62 +39258,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 137)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 106
-        set status disable
-        set name ''
-        set uuid a7be54f2-5848-51ec-b190-d0631e157671
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "all"
-        set dstaddr "Elemental-Windstream4"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -41641,62 +40654,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 145
-        set status disable
-        set name ''
-        set uuid b97cdf38-5848-51ec-2121-ac539b88656d
-        set srcintf "inet-primary"
-        set dstintf "Client01"
-        set srcaddr "all"
-        set dstaddr "LiveU_5"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 206
         set status enable
         set name ''
@@ -41737,62 +40694,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 145)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 149
-        set status disable
-        set name ''
-        set uuid ba202404-5848-51ec-8b8d-1c2518ff485b
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "all"
-        set dstaddr "LiveU_Spare"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -41864,6 +40765,372 @@ config firewall policy
         set traffic-shaper-reverse ''
         set per-ip-shaper ''
         set nat disable
+    next
+    edit 218
+        set status enable
+        set name "occasionalnatout"
+        set uuid e361ee48-1c2c-51ee-e65a-17266df6f27f
+        set srcintf "office-lan"
+        set dstintf "ISP05"
+        set srcaddr "occasionalnat3AIRECC"
+        set dstaddr "all"
+        set internet-service disable
+        set internet-service-src disable
+        unset reputation-minimum
+        set rtp-nat disable
+        set action accept
+        set schedule "always"
+        set schedule-timeout disable
+        set service "ALL"
+        set tos-mask 0x00
+        set anti-replay enable
+        set dynamic-shaping disable
+        set utm-status disable
+        set inspection-mode flow
+        set profile-protocol-options "default"
+        set ssl-ssh-profile "no-inspection"
+        set logtraffic all
+        set logtraffic-start disable
+        set capture-packet disable
+        set auto-asic-offload enable
+        set np-acceleration enable
+        set permit-any-host disable
+        set permit-stun-host disable
+        set fixedport disable
+        set ippool enable
+        set poolname "OCCASIONALNAT3-AIRECC"
+        set session-ttl 0
+        set vlan-cos-fwd 255
+        set vlan-cos-rev 255
+        set wccp disable
+        set disclaimer disable
+        set email-collect disable
+        set natip 0.0.0.0 0.0.0.0
+        set diffserv-forward disable
+        set diffserv-reverse disable
+        set tcp-mss-sender 0
+        set tcp-mss-receiver 0
+        set comments " (Copy of 196)"
+        set block-notification disable
+        set replacemsg-override-group ''
+        set srcaddr-negate disable
+        set dstaddr-negate disable
+        set service-negate disable
+        set timeout-send-rst disable
+        set captive-portal-exempt disable
+        set dsri disable
+        set radius-mac-auth-bypass disable
+        set delay-tcp-npu-session disable
+        unset vlan-filter
+        set traffic-shaper ''
+        set traffic-shaper-reverse ''
+        set per-ip-shaper ''
+        set nat enable
+    next
+    edit 238
+        set status enable
+        set name ''
+        set uuid e9d94fd2-1c2c-51ee-7ba7-5e418396b19d
+        set srcintf "office-lan"
+        set dstintf "ISP05"
+        set srcaddr "EEGCAPTION7AIRECC"
+        set dstaddr "all"
+        set internet-service disable
+        set internet-service-src disable
+        unset reputation-minimum
+        set rtp-nat disable
+        set action accept
+        set schedule "always"
+        set schedule-timeout disable
+        set service "ALL"
+        set tos-mask 0x00
+        set anti-replay enable
+        set dynamic-shaping disable
+        set utm-status disable
+        set inspection-mode flow
+        set profile-protocol-options "default"
+        set ssl-ssh-profile "no-inspection"
+        set logtraffic all
+        set logtraffic-start disable
+        set capture-packet disable
+        set auto-asic-offload enable
+        set np-acceleration enable
+        set permit-any-host disable
+        set permit-stun-host disable
+        set fixedport disable
+        set ippool enable
+        set poolname "EEGCAPTION7AIRECC"
+        set session-ttl 0
+        set vlan-cos-fwd 255
+        set vlan-cos-rev 255
+        set wccp disable
+        set disclaimer disable
+        set email-collect disable
+        set natip 0.0.0.0 0.0.0.0
+        set diffserv-forward disable
+        set diffserv-reverse disable
+        set tcp-mss-sender 0
+        set tcp-mss-receiver 0
+        set comments " (Copy of 196)"
+        set block-notification disable
+        set replacemsg-override-group ''
+        set srcaddr-negate disable
+        set dstaddr-negate disable
+        set service-negate disable
+        set timeout-send-rst disable
+        set captive-portal-exempt disable
+        set dsri disable
+        set radius-mac-auth-bypass disable
+        set delay-tcp-npu-session disable
+        unset vlan-filter
+        set traffic-shaper ''
+        set traffic-shaper-reverse ''
+        set per-ip-shaper ''
+        set nat enable
+    next
+    edit 219
+        set status enable
+        set name ''
+        set uuid e55ca29c-1c2c-51ee-720f-fc9cbc0ce957
+        set srcintf "office-lan"
+        set dstintf "ISP05"
+        set srcaddr "evertzcaptionkellypriAIRECC"
+        set dstaddr "all"
+        set internet-service disable
+        set internet-service-src disable
+        unset reputation-minimum
+        set rtp-nat disable
+        set action accept
+        set schedule "always"
+        set schedule-timeout disable
+        set service "ALL"
+        set tos-mask 0x00
+        set anti-replay enable
+        set dynamic-shaping disable
+        set utm-status disable
+        set inspection-mode flow
+        set profile-protocol-options "default"
+        set ssl-ssh-profile "no-inspection"
+        set logtraffic all
+        set logtraffic-start disable
+        set capture-packet disable
+        set auto-asic-offload enable
+        set np-acceleration enable
+        set permit-any-host disable
+        set permit-stun-host disable
+        set fixedport disable
+        set ippool enable
+        set poolname "EVERTZCAPTIONKELLYPRI-AIRECC"
+        set session-ttl 0
+        set vlan-cos-fwd 255
+        set vlan-cos-rev 255
+        set wccp disable
+        set disclaimer disable
+        set email-collect disable
+        set natip 0.0.0.0 0.0.0.0
+        set diffserv-forward disable
+        set diffserv-reverse disable
+        set tcp-mss-sender 0
+        set tcp-mss-receiver 0
+        set comments " (Copy of 196)"
+        set block-notification disable
+        set replacemsg-override-group ''
+        set srcaddr-negate disable
+        set dstaddr-negate disable
+        set service-negate disable
+        set timeout-send-rst disable
+        set captive-portal-exempt disable
+        set dsri disable
+        set radius-mac-auth-bypass disable
+        set delay-tcp-npu-session disable
+        unset vlan-filter
+        set traffic-shaper ''
+        set traffic-shaper-reverse ''
+        set per-ip-shaper ''
+        set nat enable
+    next
+    edit 234
+        set status enable
+        set name ''
+        set uuid e810c798-1c2c-51ee-2901-2525470612e8
+        set srcintf "office-lan"
+        set dstintf "ISP05"
+        set srcaddr "EEGCaption3"
+        set dstaddr "all"
+        set internet-service disable
+        set internet-service-src disable
+        unset reputation-minimum
+        set rtp-nat disable
+        set action accept
+        set schedule "always"
+        set schedule-timeout disable
+        set service "ALL"
+        set tos-mask 0x00
+        set anti-replay enable
+        set dynamic-shaping disable
+        set utm-status disable
+        set inspection-mode flow
+        set profile-protocol-options "default"
+        set ssl-ssh-profile "no-inspection"
+        set logtraffic all
+        set logtraffic-start disable
+        set capture-packet disable
+        set auto-asic-offload enable
+        set np-acceleration enable
+        set permit-any-host disable
+        set permit-stun-host disable
+        set fixedport disable
+        set ippool enable
+        set poolname "EEGCAPTION3AIRECC"
+        set session-ttl 0
+        set vlan-cos-fwd 255
+        set vlan-cos-rev 255
+        set wccp disable
+        set disclaimer disable
+        set email-collect disable
+        set natip 0.0.0.0 0.0.0.0
+        set diffserv-forward disable
+        set diffserv-reverse disable
+        set tcp-mss-sender 0
+        set tcp-mss-receiver 0
+        set comments " (Copy of 196)"
+        set block-notification disable
+        set replacemsg-override-group ''
+        set srcaddr-negate disable
+        set dstaddr-negate disable
+        set service-negate disable
+        set timeout-send-rst disable
+        set captive-portal-exempt disable
+        set dsri disable
+        set radius-mac-auth-bypass disable
+        set delay-tcp-npu-session disable
+        unset vlan-filter
+        set traffic-shaper ''
+        set traffic-shaper-reverse ''
+        set per-ip-shaper ''
+        set nat enable
+    next
+    edit 197
+        set status enable
+        set name ''
+        set uuid 09b6a8ca-94d6-51ec-d55b-e4eddf9382b0
+        set srcintf "office-lan"
+        set dstintf "ISP05"
+        set srcaddr "10.27.16.167"
+        set dstaddr "all"
+        set internet-service disable
+        set internet-service-src disable
+        unset reputation-minimum
+        set rtp-nat disable
+        set action accept
+        set schedule "always"
+        set schedule-timeout disable
+        set service "ALL"
+        set tos-mask 0x00
+        set anti-replay enable
+        set dynamic-shaping disable
+        set utm-status disable
+        set inspection-mode flow
+        set profile-protocol-options "default"
+        set ssl-ssh-profile "no-inspection"
+        set logtraffic all
+        set logtraffic-start disable
+        set capture-packet disable
+        set auto-asic-offload enable
+        set np-acceleration enable
+        set permit-any-host disable
+        set permit-stun-host disable
+        set fixedport disable
+        set ippool enable
+        set poolname "OTTNAT167AIRECC"
+        set session-ttl 0
+        set vlan-cos-fwd 255
+        set vlan-cos-rev 255
+        set wccp disable
+        set disclaimer disable
+        set email-collect disable
+        set natip 0.0.0.0 0.0.0.0
+        set diffserv-forward disable
+        set diffserv-reverse disable
+        set tcp-mss-sender 0
+        set tcp-mss-receiver 0
+        set comments " (Copy of 196)"
+        set block-notification disable
+        set replacemsg-override-group ''
+        set srcaddr-negate disable
+        set dstaddr-negate disable
+        set service-negate disable
+        set timeout-send-rst disable
+        set captive-portal-exempt disable
+        set dsri disable
+        set radius-mac-auth-bypass disable
+        set delay-tcp-npu-session disable
+        unset vlan-filter
+        set traffic-shaper ''
+        set traffic-shaper-reverse ''
+        set per-ip-shaper ''
+        set nat enable
+    next
+    edit 196
+        set status enable
+        set name ''
+        set uuid f459d90c-94d5-51ec-fbec-d8e9f19310ad
+        set srcintf "office-lan"
+        set dstintf "ISP05"
+        set srcaddr "10.27.16.166"
+        set dstaddr "all"
+        set internet-service disable
+        set internet-service-src disable
+        unset reputation-minimum
+        set rtp-nat disable
+        set action accept
+        set schedule "always"
+        set schedule-timeout disable
+        set service "ALL"
+        set tos-mask 0x00
+        set anti-replay enable
+        set dynamic-shaping disable
+        set utm-status disable
+        set inspection-mode flow
+        set profile-protocol-options "default"
+        set ssl-ssh-profile "no-inspection"
+        set logtraffic all
+        set logtraffic-start disable
+        set capture-packet disable
+        set auto-asic-offload enable
+        set np-acceleration enable
+        set permit-any-host disable
+        set permit-stun-host disable
+        set fixedport disable
+        set ippool enable
+        set poolname "OTTNAT166-AIRECC"
+        set session-ttl 0
+        set vlan-cos-fwd 255
+        set vlan-cos-rev 255
+        set wccp disable
+        set disclaimer disable
+        set email-collect disable
+        set natip 0.0.0.0 0.0.0.0
+        set diffserv-forward disable
+        set diffserv-reverse disable
+        set tcp-mss-sender 0
+        set tcp-mss-receiver 0
+        set comments ''
+        set block-notification disable
+        set replacemsg-override-group ''
+        set srcaddr-negate disable
+        set dstaddr-negate disable
+        set service-negate disable
+        set timeout-send-rst disable
+        set captive-portal-exempt disable
+        set dsri disable
+        set radius-mac-auth-bypass disable
+        set delay-tcp-npu-session disable
+        unset vlan-filter
+        set traffic-shaper ''
+        set traffic-shaper-reverse ''
+        set per-ip-shaper ''
+        set nat enable
     next
     edit 184
         set status enable
@@ -42285,66 +41552,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat enable
     next
-    edit 39
-        set status enable
-        set name ''
-        set uuid bf15ae20-5848-51ec-e278-c37cbef51210
-        set srcintf "office-lan"
-        set dstintf "ISP05"
-        set srcaddr "private-office-lan"
-        set dstaddr "all"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set permit-any-host disable
-        set permit-stun-host disable
-        set fixedport disable
-        set ippool disable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat enable
-    next
     edit 176
         set status enable
         set name ''
@@ -42581,62 +41788,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 181
-        set status disable
-        set name ''
-        set uuid c219c426-5848-51ec-4a4e-4021873e4633
-        set srcintf "inet-primary"
-        set dstintf "ilc-lan"
-        set srcaddr "Datapath_new" "amv26-CC"
-        set dstaddr "ilc_Primary_Windstream"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 207
         set status enable
         set name ''
@@ -42677,122 +41828,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 181)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 182
-        set status disable
-        set name ''
-        set uuid c3867476-5848-51ec-56d3-3a610795dea1
-        set srcintf "ilc-lan"
-        set dstintf "inet-primary"
-        set srcaddr "MaxView"
-        set dstaddr "all"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set permit-any-host disable
-        set permit-stun-host disable
-        set fixedport disable
-        set ippool disable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat enable
-    next
-    edit 183
-        set status disable
-        set name ''
-        set uuid c4409bda-5848-51ec-eaad-e8b4bc5a4682
-        set srcintf "inet-primary"
-        set dstintf "ilc-lan"
-        set srcaddr "Datapath_new" "amv26-CC"
-        set dstaddr "ilc-Backup-Windstream"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -43040,62 +42075,6 @@ config firewall policy
         set traffic-shaper-reverse ''
         set per-ip-shaper ''
         set nat enable
-    next
-    edit 138
-        set status disable
-        set name ''
-        set uuid d89e8a56-5848-51ec-0066-5065afea4c2c
-        set srcintf "inet-primary"
-        set dstintf "streaming_lan"
-        set srcaddr "all"
-        set dstaddr "Zixi"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload disable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
     next
     edit 248
         set status enable
@@ -43505,14 +42484,14 @@ config firewall policy
         set per-ip-shaper ''
         set nat enable
     next
-    edit 224
+    edit 227
         set status enable
-        set name ''
-        set uuid e3886cde-5848-51ec-4cc0-b685b8cb5994
+        set name "seccams"
+        set uuid e4134688-5848-51ec-ef7c-fa48cd4cb739
         set srcintf "int-router-net"
         set dstintf "147"
         set srcaddr "all"
-        set dstaddr "NAS"
+        set dstaddr "10.27.147.100/32"
         set internet-service disable
         set internet-service-src disable
         unset reputation-minimum
@@ -43528,7 +42507,7 @@ config firewall policy
         set inspection-mode flow
         set profile-protocol-options "default"
         set ssl-ssh-profile "no-inspection"
-        set logtraffic all
+        set logtraffic utm
         set logtraffic-start disable
         set capture-packet disable
         set auto-asic-offload enable
@@ -43561,14 +42540,14 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 227
+    edit 224
         set status enable
         set name ''
-        set uuid e4134688-5848-51ec-ef7c-fa48cd4cb739
+        set uuid e3886cde-5848-51ec-4cc0-b685b8cb5994
         set srcintf "int-router-net"
         set dstintf "147"
         set srcaddr "all"
-        set dstaddr "10.27.147.100/32"
+        set dstaddr "NAS"
         set internet-service disable
         set internet-service-src disable
         unset reputation-minimum
@@ -43584,7 +42563,7 @@ config firewall policy
         set inspection-mode flow
         set profile-protocol-options "default"
         set ssl-ssh-profile "no-inspection"
-        set logtraffic utm
+        set logtraffic all
         set logtraffic-start disable
         set capture-packet disable
         set auto-asic-offload enable
@@ -43789,62 +42768,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat disable
     next
-    edit 238
-        set status disable
-        set name ''
-        set uuid e8427936-5848-51ec-29dc-4d8502454758
-        set srcintf "inet-primary"
-        set dstintf "office-lan"
-        set srcaddr "CaptionMax1" "CaptionMax2" "CaptionMax3" "CaptionMax4" "Captionmax5" "CaptionMax6"
-        set dstaddr "Closed Caption 6"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "TELNET"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic utm
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 222
         set status disable
         set name ''
@@ -43905,7 +42828,7 @@ config firewall policy
         set status enable
         set name ''
         set uuid e8e2a924-5848-51ec-9483-bcbc20d8d584
-        set srcintf "inet-primary"
+        set srcintf "port1"
         set dstintf "storage-mpio"
         set srcaddr "all"
         set dstaddr "qnap"
@@ -44021,66 +42944,6 @@ config firewall policy
         set dstintf "ISP05"
         set srcaddr "all"
         set dstaddr "amv26-CC"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set permit-any-host disable
-        set permit-stun-host disable
-        set fixedport disable
-        set ippool disable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat enable
-    next
-    edit 236
-        set status disable
-        set name ''
-        set uuid 67297002-5848-51ec-22af-b76ab5a08589
-        set srcintf "int-router-net"
-        set dstintf "inet-primary"
-        set srcaddr "all"
-        set dstaddr "all"
         set internet-service disable
         set internet-service-src disable
         unset reputation-minimum
@@ -45289,62 +44152,6 @@ config firewall policy
         set per-ip-shaper ''
         set nat enable
     next
-    edit 193
-        set status disable
-        set name ''
-        set uuid 7ab5919a-94d5-51ec-9a2f-e9bfa05ef805
-        set srcintf "inet-primary"
-        set dstintf "office-lan"
-        set srcaddr "all"
-        set dstaddr "OTT_NAT_166"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "SRT-OTT-UDP-Custom"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
     edit 223
         set status enable
         set name ''
@@ -45353,62 +44160,6 @@ config firewall policy
         set dstintf "office-lan"
         set srcaddr "all"
         set dstaddr "NEW_OTT_NAT_166"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "SRT-OTT-UDP-Custom"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments " (Copy of 193)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 194
-        set status disable
-        set name ''
-        set uuid 811ce86c-94d5-51ec-f423-d644def3ca87
-        set srcintf "inet-primary"
-        set dstintf "office-lan"
-        set srcaddr "all"
-        set dstaddr "OTT_167"
         set internet-service disable
         set internet-service-src disable
         unset reputation-minimum
@@ -45497,181 +44248,6 @@ config firewall policy
         set tcp-mss-sender 0
         set tcp-mss-receiver 0
         set comments " (Copy of 193) (Copy of 194)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat disable
-    next
-    edit 196
-        set status enable
-        set name ''
-        set uuid f459d90c-94d5-51ec-fbec-d8e9f19310ad
-        set srcintf "office-lan"
-        set dstintf "ISP05"
-        set srcaddr "10.27.16.166"
-        set dstaddr "all"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set permit-any-host disable
-        set permit-stun-host disable
-        set fixedport disable
-        set ippool disable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat enable
-    next
-    edit 197
-        set status enable
-        set name ''
-        set uuid 09b6a8ca-94d6-51ec-d55b-e4eddf9382b0
-        set srcintf "office-lan"
-        set dstintf "ISP05"
-        set srcaddr "10.27.16.167"
-        set dstaddr "all"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "ALL"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic all
-        set logtraffic-start disable
-        set capture-packet disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set permit-any-host disable
-        set permit-stun-host disable
-        set fixedport disable
-        set ippool disable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments " (Copy of 196)"
-        set block-notification disable
-        set replacemsg-override-group ''
-        set srcaddr-negate disable
-        set dstaddr-negate disable
-        set service-negate disable
-        set timeout-send-rst disable
-        set captive-portal-exempt disable
-        set dsri disable
-        set radius-mac-auth-bypass disable
-        set delay-tcp-npu-session disable
-        unset vlan-filter
-        set traffic-shaper ''
-        set traffic-shaper-reverse ''
-        set per-ip-shaper ''
-        set nat enable
-    next
-    edit 198
-        set status disable
-        set name "Pat Test 2_25"
-        set uuid 14599ae4-967a-51ec-33db-9674ffa55873
-        set srcintf "inet-primary"
-        set dstintf "FatPipe"
-        set srcaddr "64.124.136.95"
-        set dstaddr "10.27.16.166"
-        set internet-service disable
-        set internet-service-src disable
-        unset reputation-minimum
-        set rtp-nat disable
-        set action accept
-        set schedule "always"
-        set schedule-timeout disable
-        set service "SRT-OTT-UDP-Custom"
-        set tos-mask 0x00
-        set anti-replay enable
-        set dynamic-shaping disable
-        set utm-status disable
-        set inspection-mode flow
-        set profile-protocol-options "default"
-        set ssl-ssh-profile "no-inspection"
-        set logtraffic disable
-        set logtraffic-start disable
-        set auto-asic-offload enable
-        set np-acceleration enable
-        set session-ttl 0
-        set vlan-cos-fwd 255
-        set vlan-cos-rev 255
-        set wccp disable
-        set disclaimer disable
-        set email-collect disable
-        set natip 0.0.0.0 0.0.0.0
-        set diffserv-forward disable
-        set diffserv-reverse disable
-        set tcp-mss-sender 0
-        set tcp-mss-receiver 0
-        set comments ''
         set block-notification disable
         set replacemsg-override-group ''
         set srcaddr-negate disable
@@ -47631,6 +46207,66 @@ config firewall policy
         set per-ip-shaper ''
         set nat enable
     next
+    edit 240
+        set status enable
+        set name ''
+        set uuid ea9336ca-1c33-51ee-c552-c80f6349d03b
+        set srcintf "147"
+        set dstintf "int-router-net"
+        set srcaddr "10.27.147.100/32"
+        set dstaddr "all"
+        set internet-service disable
+        set internet-service-src disable
+        unset reputation-minimum
+        set rtp-nat disable
+        set action accept
+        set schedule "always"
+        set schedule-timeout disable
+        set service "ALL"
+        set tos-mask 0x00
+        set anti-replay enable
+        set dynamic-shaping disable
+        set utm-status disable
+        set inspection-mode flow
+        set profile-protocol-options "default"
+        set ssl-ssh-profile "no-inspection"
+        set logtraffic all
+        set logtraffic-start disable
+        set capture-packet disable
+        set auto-asic-offload enable
+        set np-acceleration enable
+        set permit-any-host disable
+        set permit-stun-host disable
+        set fixedport disable
+        set ippool disable
+        set session-ttl 0
+        set vlan-cos-fwd 255
+        set vlan-cos-rev 255
+        set wccp disable
+        set disclaimer disable
+        set email-collect disable
+        set natip 0.0.0.0 0.0.0.0
+        set diffserv-forward disable
+        set diffserv-reverse disable
+        set tcp-mss-sender 0
+        set tcp-mss-receiver 0
+        set comments " (Copy of 236)"
+        set block-notification disable
+        set replacemsg-override-group ''
+        set srcaddr-negate disable
+        set dstaddr-negate disable
+        set service-negate disable
+        set timeout-send-rst disable
+        set captive-portal-exempt disable
+        set dsri disable
+        set radius-mac-auth-bypass disable
+        set delay-tcp-npu-session disable
+        unset vlan-filter
+        set traffic-shaper ''
+        set traffic-shaper-reverse ''
+        set per-ip-shaper ''
+        set nat enable
+    next
 end
 config firewall traffic-class
 end
@@ -47794,7 +46430,7 @@ VvLBRor7qHdWUlvlro1lcBM0WrEaSTQFS378M3SpwdO9SV8PImsFLtWgE9guBCMD78wbMi
         set source built-in
     next
     edit "Fortinet_SSH_ED25519"
-        set password ENC V+ytelI2RhK4CPP8BnQmV1dG3f97/qeH5kFcaHYkmo/G3Bb0i0//7cWu7kAr5lIhCe7qKlLQ6hgNuab4WARehoZunJoIFyKDj1d1Q3hfxmU9zWpFGlHw4XhqKFFF2zKG5TfyjQNyGd0omuBnhC1MuEkyvfCR5Uf2hlwAA3rywBsq+I/N7lSxw2RqD99VHpaDpP7xfw==
+        set password ENC EvGZ1b8lmmgH4EgsvCXQ8BCJS/ZIFhUfZajlz8wtOz5Cpvpf73K/vntw5j+jzL/PGmZPLvz8ZmBlVi84F1oCJQ4Pf1l3evLx+Q3aEaVK1YaEkptfpiTav6K3iyHgHISNSBAwD7yYUZTYUVstCkdhX+53ivpI7P3JneEyKIvfdhsCxUYjSSCuM1phavn09hQ8YAda4Q==
         set private-key "-----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABBddR6bAg
 qc+yECfnAD+xcmAAAAEAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIFT9y+8uLmWsImy7
@@ -48696,7 +47332,7 @@ config router static
         set status enable
         set dst 0.0.0.0 0.0.0.0
         set gateway 63.139.75.129
-        set distance 10
+        set distance 99
         set weight 0
         set priority 999
         set device "inet-primary"
@@ -48826,26 +47462,42 @@ config router static
     next
 end
 config router policy
-    edit 32
-        set input-device "Client01"
+    edit 37
+        set input-device "int-router-net"
         set input-device-negate disable
-        set src "10.27.29.0/255.255.255.0"
+        set src "192.168.8.0/255.255.255.0"
         set src-negate disable
-        set dst "0.0.0.0/0.0.0.0"
+        set dst "10.27.147.0/255.255.255.0"
         set dst-negate disable
         set action permit
         set protocol 0
-        set gateway 131.239.169.1
-        set output-device "ISP05"
+        set gateway 10.2.11.254
+        set output-device "147"
         set tos 0x00
         set tos-mask 0x00
         set status enable
         set comments ''
     next
-    edit 30
-        set input-device "AMPP-LAN"
+    edit 14
+        set input-device "office-lan"
         set input-device-negate disable
-        set src "10.27.25.0/255.255.255.0"
+        set src "10.27.16.0/255.255.252.0"
+        set src-negate disable
+        set dst "0.0.0.0/0.0.0.0"
+        set dst-negate disable
+        set action permit
+        set protocol 0
+        set gateway 64.124.27.129
+        set output-device "port1"
+        set tos 0x00
+        set tos-mask 0x00
+        set status disable
+        set comments ''
+    next
+    edit 26
+        set input-device "office-lan"
+        set input-device-negate disable
+        set src "10.27.16.50/255.255.255.255" "10.27.16.51/255.255.255.255" "10.27.16.60/255.255.255.255" "10.27.16.100/255.255.255.255" "10.27.16.168/255.255.255.255"
         set src-negate disable
         set dst "0.0.0.0/0.0.0.0"
         set dst-negate disable
@@ -48869,6 +47521,22 @@ config router policy
         set protocol 0
         set gateway 131.239.169.1
         set output-device "ISP05"
+        set tos 0x00
+        set tos-mask 0x00
+        set status enable
+        set comments ''
+    next
+    edit 25
+        set input-device "int-router-net"
+        set input-device-negate disable
+        set src "192.168.8.12/255.255.255.255"
+        set src-negate disable
+        set dst "0.0.0.0/0.0.0.0"
+        set dst-negate disable
+        set action permit
+        set protocol 0
+        set gateway 0.0.0.0
+        set output-device "port2"
         set tos 0x00
         set tos-mask 0x00
         set status enable
@@ -49034,10 +47702,10 @@ config router policy
         set status enable
         set comments ''
     next
-    edit 14
-        set input-device "office-lan"
+    edit 30
+        set input-device "AMPP-LAN"
         set input-device-negate disable
-        set src "10.27.16.0/255.255.252.0"
+        set src "10.27.25.0/255.255.255.0"
         set src-negate disable
         set dst "0.0.0.0/0.0.0.0"
         set dst-negate disable
@@ -49047,7 +47715,7 @@ config router policy
         set output-device "port1"
         set tos 0x00
         set tos-mask 0x00
-        set status disable
+        set status enable
         set comments ''
     next
     edit 20
@@ -49130,38 +47798,6 @@ config router policy
         set status enable
         set comments ''
     next
-    edit 25
-        set input-device "int-router-net"
-        set input-device-negate disable
-        set src "192.168.8.12/255.255.255.255"
-        set src-negate disable
-        set dst "0.0.0.0/0.0.0.0"
-        set dst-negate disable
-        set action permit
-        set protocol 0
-        set gateway 0.0.0.0
-        set output-device "port2"
-        set tos 0x00
-        set tos-mask 0x00
-        set status enable
-        set comments ''
-    next
-    edit 26
-        set input-device "office-lan"
-        set input-device-negate disable
-        set src "10.27.16.50/255.255.255.255" "10.27.16.51/255.255.255.255"
-        set src-negate disable
-        set dst "0.0.0.0/0.0.0.0"
-        set dst-negate disable
-        set action permit
-        set protocol 0
-        set gateway 64.124.27.129
-        set output-device "port1"
-        set tos 0x00
-        set tos-mask 0x00
-        set status enable
-        set comments ''
-    next
     edit 19
         set input-device "streaming-lan2"
         set input-device-negate disable
@@ -49214,6 +47850,54 @@ config router policy
         set input-device "147"
         set input-device-negate disable
         set src "10.27.147.0/255.255.255.0"
+        set src-negate disable
+        set dst "0.0.0.0/0.0.0.0"
+        set dst-negate disable
+        set action permit
+        set protocol 0
+        set gateway 131.239.169.1
+        set output-device "ISP05"
+        set tos 0x00
+        set tos-mask 0x00
+        set status enable
+        set comments ''
+    next
+    edit 32
+        set input-device "Client01"
+        set input-device-negate disable
+        set src "10.27.29.0/255.255.255.0"
+        set src-negate disable
+        set dst "0.0.0.0/0.0.0.0"
+        set dst-negate disable
+        set action permit
+        set protocol 0
+        set gateway 131.239.169.1
+        set output-device "ISP05"
+        set tos 0x00
+        set tos-mask 0x00
+        set status enable
+        set comments ''
+    next
+    edit 35
+        set input-device "int-router-net"
+        set input-device-negate disable
+        set src "192.168.8.0/255.255.255.0"
+        set src-negate disable
+        set dst "0.0.0.0/0.0.0.0"
+        set dst-negate disable
+        set action permit
+        set protocol 0
+        set gateway 131.239.169.1
+        set output-device "ISP05"
+        set tos 0x00
+        set tos-mask 0x00
+        set status enable
+        set comments ''
+    next
+    edit 36
+        set input-device "office-lan"
+        set input-device-negate disable
+        set src "10.27.16.0/255.255.252.0"
         set src-negate disable
         set dst "0.0.0.0/0.0.0.0"
         set dst-negate disable
@@ -49411,8 +48095,8 @@ config router isis
     set adv-passive-only6 disable
     set auth-mode-l1 password
     set auth-mode-l2 password
-    set auth-password-l1 ENC z4bdLJPWq2H/GdymVamNnGVMU3PTCMIVUd0FIbzcSv4Rj82RiX/TtCwFc+Jx7d14yEDF444FOYPzc7rGQLIz3RVkiPa2Jj3hempk49oOuJVPI1Sk3keJu4jqNlOKV/i8tsOYrbGEZzHzqxHsH5F9GsUtvKt7kwIbI8qubwJ7W+e2YJ6+aVDpioeZpC304e8DyL2wFA==
-    set auth-password-l2 ENC CFiVyx5gLqL5y1t3Ih3utfHtGgu5DNnU5H4QKGZaRYTOkJXYqqQPvqG0TeV7MQmgx2SCS2UripLTqvEka4HZJbDy+wDwr+IwhPFoIJyXiJgv9o576PPn8UfwjM9wgTtvhKnP8+/DvT8xDcEJJr/RhCDjZEu91zjKrwEJ9ZH8zE0CtMAdmAqE8+gDvGufmAfZ4tvZ5w==
+    set auth-password-l1 ENC /oaWAyJlL1iz6GmjEjsRF3MI25l8l6oc6+I9Tg2gYTgOcYLRXl24J/YzXBOtj3SKkqQLBMGTIU/czxGQRbdrPFq7UjhIqCmNEvacAk9PwD7i0IKKXiM8ASzfsfC5hHfbdkarAtSprLJZxfRwGdPKLLsvlssevVYBB+YlPrib0ncv6KdTrqDMHysS0y3OreG+zLibiA==
+    set auth-password-l2 ENC ES4vWS6MVH87t8ZoUG8I6Cf+z13Vah9dD6sbcDnX1823Q2v4Fp1X/6YtBAZAqHxRPRi7352uuBBo6etYOYau2c5zWRcQpMBOHWq3WcPEnBG0M8AD0UK5cR9G+J3Te1sz4AcgFfvUUxRFjDypw7kFTkgPH1TSARv1A+GQArziLg97wPiY6V9MfKRZ23t/qCNJQdKMaA==
     set auth-sendonly-l1 disable
     set auth-sendonly-l2 disable
     set ignore-lsp-errors disable
