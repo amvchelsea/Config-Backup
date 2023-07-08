@@ -86,9 +86,7 @@ switch 1 provision c9300-48p
 !
 !
 !
-ip routing
 !
-ip multicast-routing 
 no ip domain lookup
 ip domain name amv.lan
 !
@@ -245,6 +243,7 @@ interface Port-channel3
 interface GigabitEthernet0/0
  vrf forwarding Mgmt-vrf
  no ip address
+ no ip route-cache
  speed 1000
  negotiation auto
 !
@@ -601,6 +600,7 @@ interface FortyGigabitEthernet1/1/2
 !
 interface Vlan1
  no ip address
+ no ip route-cache
  shutdown
 !
 interface Vlan7
@@ -609,6 +609,7 @@ interface Vlan7
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan10
  description << Network Management VLAN >>
@@ -616,6 +617,7 @@ interface Vlan10
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan14
  description VOIP-LAN
@@ -623,33 +625,39 @@ interface Vlan14
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan20
  no ip address
+ no ip route-cache
 !
 interface Vlan24
  no ip address
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan226
  ip address 10.1.226.2 255.255.255.0
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan254
  no ip address
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan311
  no ip address
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
  shutdown
 !
 interface Vlan400
@@ -657,6 +665,7 @@ interface Vlan400
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
  shutdown
 !
 interface Vlan411
@@ -665,18 +674,21 @@ interface Vlan411
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan431
  no ip address
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan441
  no ip address
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
  shutdown
 !
 interface Vlan481
@@ -684,6 +696,7 @@ interface Vlan481
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan491
  description "Client07"
@@ -691,21 +704,25 @@ interface Vlan491
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan555
  no ip address
+ no ip route-cache
 !
 interface Vlan600
  no ip address
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan610
  no ip address
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan807
  description AIRESPRING20MB
@@ -713,10 +730,12 @@ interface Vlan807
  no ip redirects
  no ip unreachables
  no ip proxy-arp
+ no ip route-cache
 !
 interface Vlan811
  description 160.72.98.0/25
  no ip address
+ no ip route-cache
 !
 interface Vlan999
  description << Network Transit VLAN >>
@@ -724,24 +743,9 @@ interface Vlan999
  no ip redirects
  no ip unreachables
  no ip proxy-arp
- ip hello-interval eigrp 100 3
- ip hold-time eigrp 100 9
+ no ip route-cache
 !
-!
-router eigrp 100
- network 10.1.10.0 0.0.0.255
- network 10.10.255.0 0.0.0.255
- network 192.168.8.0
- network 192.168.168.0
- passive-interface default
- no passive-interface Vlan999
- no passive-interface Vlan10
- no passive-interface GigabitEthernet1/0/4
- no passive-interface GigabitEthernet1/0/44
- no passive-interface GigabitEthernet1/0/47
- no passive-interface GigabitEthernet1/0/48
- no eigrp log-neighbor-changes
-!
+ip default-gateway 10.1.10.1
 ip forward-protocol nd
 ip http server
 ip http authentication local
