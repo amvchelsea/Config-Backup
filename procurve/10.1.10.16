@@ -105,11 +105,6 @@ vlan 10
    tagged 48
    ip address 10.1.10.16 255.255.255.0
    exit
-vlan 14
-   name "VOIP"
-   tagged 48
-   no ip address
-   exit
 vlan 102
    name "Transcoding"
    untagged 30-39
