@@ -19,10 +19,10 @@
 ! VTP: --------------
 ! VTP: VTP Operating Mode                : Transparent
 ! VTP: Maximum VLANs supported locally   : 1005
-! VTP: Number of existing VLANs          : 27
+! VTP: Number of existing VLANs          : 26
 ! VTP: Configuration Revision            : 0
-! VTP: MD5 digest                        : 0x3C 0xD8 0x9C 0x64 0xAE 0x02 0x27 0xC6 
-! VTP:                                     0x83 0x1C 0xDE 0xEC 0xF0 0xEB 0xFF 0x84 
+! VTP: MD5 digest                        : 0x1E 0x21 0x18 0xD9 0x0C 0xCF 0x66 0x86 
+! VTP:                                     0xB7 0x95 0x95 0x7F 0xF7 0xB9 0xCA 0x7E 
 ! 
 ! NAME: "c93xx Stack", DESCR: "c93xx Stack"
 ! PID: C9300-48P         , VID: V05  , SN: FJC254813KW
@@ -208,8 +208,6 @@ redundancy
 transceiver type all
  monitoring
 !
-vlan 5 
-!
 vlan 10
  name Network_Management
 !
@@ -347,8 +345,8 @@ policy-map TELOS
 !
 interface Port-channel2
  description Po2_Cisco_TapeRoom_Distribution_P2
- switchport trunk allowed vlan 5,10,20,24,40,147,204,212,411,431,441,451,461
- switchport trunk allowed vlan add 471,481,491,555,556,666,805,998,999
+ switchport trunk allowed vlan 10,20,24,40,147,204,212,411,431,441,451,461,471
+ switchport trunk allowed vlan add 481,491,555,556,666,805,998,999
  switchport mode trunk
 !
 interface GigabitEthernet0/0
@@ -502,15 +500,15 @@ interface GigabitEthernet1/1/4
 !
 interface TenGigabitEthernet1/1/1
  description Te1/1/1_Cisco_TapeRoom_Distribution_T3
- switchport trunk allowed vlan 5,10,20,24,40,147,204,212,411,431,441,451,461
- switchport trunk allowed vlan add 471,481,491,555,556,666,805,998,999
+ switchport trunk allowed vlan 10,20,24,40,147,204,212,411,431,441,451,461,471
+ switchport trunk allowed vlan add 481,491,555,556,666,805,998,999
  switchport mode trunk
  channel-group 2 mode on
 !
 interface TenGigabitEthernet1/1/2
  description Te1/1/2_Cisco_TapeRoom_Distribution_T4
- switchport trunk allowed vlan 5,10,20,24,40,147,204,212,411,431,441,451,461
- switchport trunk allowed vlan add 471,481,491,555,556,666,805,998,999
+ switchport trunk allowed vlan 10,20,24,40,147,204,212,411,431,441,451,461,471
+ switchport trunk allowed vlan add 481,491,555,556,666,805,998,999
  switchport mode trunk
  channel-group 2 mode on
 !
@@ -524,8 +522,8 @@ interface TenGigabitEthernet1/1/6
 !
 interface TenGigabitEthernet1/1/7
  description Te1/1/7_HP5K_Basement_Distribution_D21
- switchport trunk allowed vlan 5,10,20,24,40,147,204,212,411,431,441,451,461
- switchport trunk allowed vlan add 471,481,491,555,556,666,805,998,999
+ switchport trunk allowed vlan 10,20,24,40,147,204,212,411,431,441,451,461,471
+ switchport trunk allowed vlan add 481,491,555,556,666,805,998,999
  switchport mode trunk
 !
 interface TenGigabitEthernet1/1/8
